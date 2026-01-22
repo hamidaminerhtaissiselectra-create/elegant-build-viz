@@ -33,6 +33,7 @@ import networkServerImage from "@/assets/reseau-baie-cables.webp";
 import reseauSwitchImage from "@/assets/reseau-switch.webp";
 import reseauWifiImage from "@/assets/reseau-wifi-install.webp";
 import reseauMaisonImage from "@/assets/reseau-maison-particulier.webp";
+import servicePageImage from "@/assets/service-page-reseau.webp";
 // Gallery-specific images (unique to ServiceShowcase)
 import galleryReseauRack from "@/assets/gallery-reseau-rack.webp";
 import galleryReseauSwitch from "@/assets/gallery-reseau-switch.webp";
@@ -243,9 +244,9 @@ const Reseau = () => {
 
         {/* IMAGE BREAK STRATÉGIQUE */}
         <ImageBreak 
-          image={reseauWifiImage}
-          alt="Borne WiFi professionnelle installée par HD Connect"
-          caption="Connectivité WiFi performante et fiable pour votre entreprise"
+          image={servicePageImage}
+          alt="Salle serveur professionnelle avec câblage Cat7 organisé et switchs haute performance avec LEDs actives"
+          caption="Infrastructure réseau haute performance avec câblage certifié Fluke"
         />
 
         {/* CTA INTERMÉDIAIRE */}

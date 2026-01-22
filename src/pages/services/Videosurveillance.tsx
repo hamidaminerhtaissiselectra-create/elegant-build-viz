@@ -33,6 +33,7 @@ import videoInstallImage from "@/assets/vs-install-facade.webp";
 import vsMonitoringImage from "@/assets/vs-monitoring-center.webp";
 import vsInstallOutdoorImage from "@/assets/vs-installation-outdoor.webp";
 import cameraMaisonImage from "@/assets/camera-maison-particulier.webp";
+import servicePageImage from "@/assets/service-page-videosurveillance.webp";
 // Gallery-specific images (unique to ServiceShowcase)
 import galleryVsPtzCamera from "@/assets/gallery-vs-ptz-camera.webp";
 import galleryVsControlRoom from "@/assets/gallery-vs-control-room.webp";
@@ -269,8 +270,8 @@ const Videosurveillance = () => {
         <ContentSection
           title="Comment Fonctionne une Vidéosurveillance Intelligente ?"
           imagePosition="left"
-          image={vsMonitoringImage}
-          imageAlt="Système vidéosurveillance avec analyse IA"
+          image={servicePageImage}
+          imageAlt="Centre de contrôle vidéosurveillance IA avec moniteurs multi-écrans affichant des flux vidéo HD en temps réel"
           backgroundColor="default"
           badge="Technologie IA"
           badgeIcon={<Eye className="w-4 h-4" />}

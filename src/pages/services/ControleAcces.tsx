@@ -33,6 +33,7 @@ import accessBiometricImage from "@/assets/acces-biometrie-porte.webp";
 import accessBadgeReaderImage from "@/assets/acces-badge-office.webp";
 import accessInterphoneImage from "@/assets/access-interphone.webp";
 import interphoneMaisonImage from "@/assets/interphone-video-maison.webp";
+import servicePageImage from "@/assets/service-page-controle-acces.webp";
 // Gallery-specific images (unique to ServiceShowcase)
 import galleryAccesRfid from "@/assets/gallery-acces-rfid.webp";
 import galleryAccesBiometric from "@/assets/gallery-acces-biometric.webp";
@@ -294,7 +295,7 @@ const ControleAcces = () => {
         </section>
 
         {/* IMAGE BREAK STRATÉGIQUE */}
-        <ImageBreak image={accessInterphoneImage} alt="Interphone vidéo IP installé par HD Connect" caption="Contrôlez les accès à distance avec nos solutions d'interphonie vidéo" />
+        <ImageBreak image={servicePageImage} alt="Borne de contrôle d'accès biométrique avec reconnaissance faciale et lecteur d'empreinte digitale" caption="Solutions d'accès biométrique haute sécurité pour entreprises" />
 
         {/* CTA INTERMÉDIAIRE */}
         <CTAIntermediate title="Sécurisez vos accès dès maintenant" subtitle="Obtenez une étude gratuite de vos besoins en contrôle d'accès par nos experts." phoneNumber={contactInfo.phoneMobile} variant="accent" />

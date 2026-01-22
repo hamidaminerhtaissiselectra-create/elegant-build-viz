@@ -34,6 +34,7 @@ import antenneTntMesureImage from "@/assets/antenne-tnt-immeuble.webp";
 import antenneCollectiveImage from "@/assets/antenne-collective.webp";
 import antenneTntInstallImage from "@/assets/antenne-tnt-install.webp";
 import antenneMaisonImage from "@/assets/antenne-maison-particulier.webp";
+import servicePageImage from "@/assets/service-page-antenne.webp";
 // Gallery-specific images (unique to ServiceShowcase)
 import galleryAntenneParabole from "@/assets/gallery-antenne-parabole.webp";
 import galleryAntenneTnt from "@/assets/gallery-antenne-tnt.webp";
@@ -241,6 +242,13 @@ const AntenneSatellite = () => {
             </AnimatedSection>
           </div>
         </section>
+
+        {/* IMAGE BREAK STRATÉGIQUE */}
+        <ImageBreak 
+          image={servicePageImage}
+          alt="Antenniste professionnel ajustant une parabole satellite et antenne TNT sur toit avec mesureur de signal"
+          caption="Installation précise par antennistes certifiés avec mesure de signal professionnelle"
+        />
 
         {/* CTA INTERMÉDIAIRE */}
         <CTAIntermediate 

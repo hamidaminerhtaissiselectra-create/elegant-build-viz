@@ -33,6 +33,7 @@ import domotiqueTabletImage from "@/assets/domotique-tablet-wall.webp";
 import domotiqueLightSwitchImage from "@/assets/domotique-light-smart.webp";
 import domotiqueThermostatImage from "@/assets/domotique-thermostat.webp";
 import domotiqueMaisonImage from "@/assets/domotique-maison-particulier.webp";
+import servicePageImage from "@/assets/service-page-domotique.webp";
 // Gallery-specific images (unique to ServiceShowcase)
 import galleryDomotiqueTablet from "@/assets/gallery-domotique-tablet.webp";
 import galleryDomotiqueSwitch from "@/assets/gallery-domotique-switch.webp";
@@ -283,9 +284,9 @@ const Domotique = () => {
 
         {/* IMAGE BREAK STRATÉGIQUE */}
         <ImageBreak 
-          image={domotiqueThermostatImage}
-          alt="Thermostat connecté installé par HD Connect"
-          caption="Gérez votre confort et vos économies d'énergie depuis votre smartphone"
+          image={servicePageImage}
+          alt="Interface de contrôle domotique KNX sur tablette murale dans salon moderne avec éclairage ambiant violet"
+          caption="Maison intelligente : pilotez tout depuis une interface unique"
         />
 
         {/* CTA INTERMÉDIAIRE */}

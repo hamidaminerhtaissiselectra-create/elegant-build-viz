@@ -26,6 +26,7 @@ import BlogCTASection from "@/components/BlogCTASection";
 import heroInstallationImage from "@/assets/hero-installation-unique.webp";
 import technicianWorkImage from "@/assets/installation-outdoor-work.webp";
 import installCameraUniqueImage from "@/assets/installation-alarm-config.webp";
+import servicePageImage from "@/assets/service-page-installation.webp";
 // Gallery-specific images (unique to ServiceShowcase)
 import galleryInstallCamera from "@/assets/gallery-install-camera.webp";
 import galleryInstallAlarm from "@/assets/gallery-install-alarm.webp";
@@ -239,9 +240,9 @@ const Installation = () => {
 
         {/* IMAGE BREAK */}
         <ImageBreak 
-          image={installCameraUniqueImage}
-          alt="Installation professionnelle de système de vidéosurveillance par HD Connect"
-          caption="Nos techniciens certifiés assurent une installation propre et professionnelle"
+          image={servicePageImage}
+          alt="Technicien professionnel installant une caméra de sécurité sur échelle avec outils de précision"
+          caption="Installation professionnelle par techniciens certifiés avec équipement professionnel"
         />
 
         {/* CTA INTERMÉDIAIRE */}
