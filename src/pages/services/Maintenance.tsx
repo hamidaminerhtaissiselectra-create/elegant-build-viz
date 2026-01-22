@@ -32,6 +32,7 @@ import heroMaintenanceImage from "@/assets/hero-maintenance.webp";
 import maintenanceTechImage from "@/assets/maintenance-check-panel.webp";
 import maintenanceDiagnosticImage from "@/assets/maintenance-diagnostic.webp";
 import maintenanceTeamImage from "@/assets/maintenance-equipe-terrain.webp";
+import servicePageImage from "@/assets/service-page-maintenance.webp";
 // Gallery-specific images (unique to ServiceShowcase)
 import galleryMaintenanceDiag from "@/assets/gallery-maintenance-diag.webp";
 import galleryMaintenanceRepair from "@/assets/gallery-maintenance-repair.webp";
@@ -242,9 +243,9 @@ const Maintenance = () => {
 
         {/* IMAGE BREAK STRATÉGIQUE */}
         <ImageBreak 
-          image={maintenanceTeamImage}
-          alt="Équipe de maintenance HD Connect en intervention"
-          caption="Notre équipe intervient rapidement pour assurer la continuité de vos systèmes"
+          image={servicePageImage}
+          alt="Technicien certifié effectuant un diagnostic de maintenance préventive sur panneau de contrôle avec équipement de mesure professionnel"
+          caption="Maintenance préventive par techniciens certifiés pour une sécurité continue"
         />
 
         {/* CTA INTERMÉDIAIRE */}

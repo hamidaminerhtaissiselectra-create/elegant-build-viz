@@ -27,6 +27,7 @@ import ServiceShowcase from "@/components/ServiceShowcase";
 import heroLocationImage from "@/assets/hero-location-unique.webp";
 import locationEquipementUniqueImage from "@/assets/location-equipement-table.webp";
 import locationDeliveryImage from "@/assets/location-chantier-livraison.webp";
+import servicePageImage from "@/assets/service-page-location.webp";
 // Gallery-specific images (unique to ServiceShowcase)
 import galleryLocationSolar from "@/assets/gallery-location-solar.webp";
 import galleryLocationEvent from "@/assets/gallery-location-event.webp";
@@ -325,9 +326,9 @@ const Location = () => {
 
         {/* IMAGE BREAK */}
         <ImageBreak 
-          image={locationEquipementUniqueImage}
-          alt="Équipements de sécurité professionnels disponibles en location chez HD Connect"
-          caption="Caméras autonomes, alarmes Grade 2, contrôle d'accès : tout pour sécuriser vos sites temporaires"
+          image={servicePageImage}
+          alt="Tour de vidéosurveillance mobile autonome solaire 4G sur chantier de construction avec caméras de sécurité"
+          caption="Solutions de sécurité autonomes pour chantiers : caméras solaires 4G sans électricité requise"
           accentColor="primary"
         />
 

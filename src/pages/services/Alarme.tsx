@@ -33,6 +33,7 @@ import alarmPanelImage from "@/assets/alarme-panel-modern.webp";
 import alarmMotionSensorImage from "@/assets/alarm-motion-sensor.webp";
 import alarmSirenOutdoorImage from "@/assets/alarme-sirene-exterieur.webp";
 import alarmeMaisonImage from "@/assets/alarme-maison-particulier.webp";
+import servicePageImage from "@/assets/service-page-alarme.webp";
 // Gallery-specific images (unique to ServiceShowcase)
 import galleryAlarmKeypad from "@/assets/gallery-alarm-keypad.webp";
 import galleryAlarmPir from "@/assets/gallery-alarm-pir.webp";
@@ -264,9 +265,9 @@ const Alarme = () => {
 
         {/* IMAGE BREAK STRATÉGIQUE */}
         <ImageBreak 
-          image={alarmSirenOutdoorImage}
-          alt="Sirène d'alarme extérieure haute puissance avec flash LED stroboscopique et protection anti-sabotage installée sur une façade de maison"
-          caption="Dissuasion maximale avec nos sirènes flash extérieures haute puissance certifiées NF&A2P"
+          image={servicePageImage}
+          alt="Panneau d'alarme NF&A2P certifié avec écran tactile et détecteurs de mouvement PIR pour sécurité résidentielle"
+          caption="Système d'alarme certifié NF&A2P avec détection intelligente par IA"
         />
 
         {/* CTA INTERMÉDIAIRE - VERSION COLORÉE */}

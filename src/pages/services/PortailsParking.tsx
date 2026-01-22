@@ -34,6 +34,7 @@ import garageMotorisImage from "@/assets/garage-motorise.webp";
 import barriereLevantImage from "@/assets/barriere-parking-auto.webp";
 import barriereParkingImage from "@/assets/barriere-parking.webp";
 import portailMaisonImage from "@/assets/portail-maison-particulier.webp";
+import servicePageImage from "@/assets/service-page-portails.webp";
 // Gallery-specific images (unique to ServiceShowcase)
 import galleryPortailCoulissant from "@/assets/gallery-portail-coulissant.webp";
 import galleryPortailGarage from "@/assets/gallery-portail-garage.webp";
@@ -241,6 +242,13 @@ const PortailsParking = () => {
             </AnimatedSection>
           </div>
         </section>
+
+        {/* IMAGE BREAK STRATÉGIQUE */}
+        <ImageBreak 
+          image={servicePageImage}
+          alt="Portail automatique motorisé haute sécurité s'ouvrant au coucher du soleil avec système de contrôle intelligent"
+          caption="Motorisation de portails avec accès intelligent et contrôle par smartphone"
+        />
 
         {/* CTA INTERMÉDIAIRE */}
         <CTAIntermediate 

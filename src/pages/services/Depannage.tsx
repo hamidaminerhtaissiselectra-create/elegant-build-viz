@@ -28,6 +28,7 @@ import ServiceShowcase from "@/components/ServiceShowcase";
 import heroDepannageImage from "@/assets/hero-depannage-unique.webp";
 import depannageTechUniqueImage from "@/assets/depannage-diagnostic-work.webp";
 import depannageUrgenceImage from "@/assets/depannage-sensor-replace.webp";
+import servicePageImage from "@/assets/service-page-depannage.webp";
 // Gallery-specific images (unique to ServiceShowcase)
 import galleryDepannageDiagnostic from "@/assets/gallery-depannage-diagnostic.webp";
 import galleryDepannageRepair from "@/assets/gallery-depannage-repair.webp";
@@ -235,9 +236,9 @@ const Depannage = () => {
 
         {/* IMAGE BREAK */}
         <ImageBreak 
-          image={depannageUrgenceImage}
-          alt="Technicien effectuant un diagnostic sur un système de sécurité"
-          caption="Diagnostic complet et réparation rapide par nos experts certifiés"
+          image={servicePageImage}
+          alt="Technicien d'urgence effectuant un diagnostic électronique sur panneau de sécurité avec véhicule d'intervention en arrière-plan"
+          caption="Intervention express par techniciens certifiés avec équipement de diagnostic mobile"
         />
 
         {/* CTA INTERMÉDIAIRE */}
