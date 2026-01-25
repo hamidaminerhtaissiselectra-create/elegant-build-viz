@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
  * Objectif: 1000-1200 mots au total sur la page d'accueil
  */
 
-// Bloc 1: Mission HD Connect (150-200 mots)
+// Bloc 1: Mission HD Connect (Answer-First optimisé)
 export const MissionBlock = () => (
   <section className="section-padding bg-secondary/30">
     <div className="container mx-auto px-4">
@@ -20,11 +20,13 @@ export const MissionBlock = () => (
           HD Connect : Votre Partenaire Sécurité de Confiance
         </h2>
         <div className="prose prose-lg max-w-none text-muted-foreground text-center">
+          {/* Answer-First: première phrase autonome et citable */}
           <p>
-            Depuis plus de 10 ans, HD Connect accompagne les particuliers et les professionnels dans la protection de leurs biens et de leurs proches. Notre mission est simple : rendre la sécurité électronique accessible, fiable et adaptée à chaque besoin spécifique.
+            <strong>HD Connect est le spécialiste français de l'installation de systèmes de sécurité professionnels depuis plus de 10 ans.</strong> Nous accompagnons les particuliers et les professionnels dans la protection de leurs biens avec des équipements certifiés NF&A2P et des techniciens formés en continu.
           </p>
+          {/* Preuves d'autorité intégrées naturellement */}
           <p>
-            Nous croyons qu'une sécurité efficace repose sur trois piliers fondamentaux : des <strong>équipements de qualité</strong> issus des meilleures marques du marché, une <strong>installation professionnelle</strong> réalisée par des techniciens certifiés, et un <strong>service après-vente réactif</strong> disponible 24h/24. Cette philosophie nous a permis de fidéliser plus de 500 clients et de devenir une référence en Île-de-France et dans les grandes métropoles françaises.
+            Notre expertise repose sur trois piliers : des <strong>équipements de marques reconnues</strong> (Hikvision, Ajax, Honeywell), une <strong>installation conforme aux normes</strong> en vigueur, et un <strong>service après-vente disponible 24h/24</strong>. Plus de 500 clients nous font confiance en Île-de-France et dans les grandes métropoles françaises.
           </p>
         </div>
       </div>
@@ -32,12 +34,12 @@ export const MissionBlock = () => (
   </section>
 );
 
-// Bloc 2: Nos Solutions de Sécurité (120-180 mots)
+// Bloc 2: Nos Solutions de Sécurité (Answer-First optimisé)
 export const SolutionsBlock = () => {
   const solutions = [
-    { icon: Lock, title: "Protection contre les intrusions", description: "Alarmes, vidéosurveillance et contrôle d'accès pour dissuader et détecter toute tentative d'effraction." },
-    { icon: Zap, title: "Surveillance à distance 24/7", description: "Accédez à vos caméras et gérez vos systèmes depuis votre smartphone, où que vous soyez." },
-    { icon: Users, title: "Gestion des accès", description: "Contrôlez qui entre et sort de vos locaux avec des badges, digicodes ou systèmes biométriques." },
+    { icon: Lock, title: "Protection contre les intrusions", description: "Alarmes certifiées NF&A2P et vidéosurveillance 4K pour détecter et dissuader toute tentative d'effraction." },
+    { icon: Zap, title: "Surveillance à distance 24/7", description: "Accès sécurisé à vos caméras depuis votre smartphone, où que vous soyez dans le monde." },
+    { icon: Users, title: "Gestion des accès", description: "Badges RFID, biométrie et digicodes pour contrôler qui entre et sort de vos locaux." },
   ];
 
   return (
@@ -47,8 +49,9 @@ export const SolutionsBlock = () => {
           <h2 className="text-3xl font-bold text-foreground mb-4">
             Des Solutions de Sécurité Complètes et Intégrées
           </h2>
+          {/* Answer-First: phrase autonome */}
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            HD Connect propose une gamme complète de services de sécurité électronique, de l'étude initiale à la maintenance préventive, pour une protection sans faille de vos espaces.
+            <strong>HD Connect propose 9 services de sécurité électronique</strong> : vidéosurveillance, alarme, contrôle d'accès, domotique, réseau, maintenance, antennes, portails et location de matériel. De l'étude initiale à la maintenance préventive.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -70,12 +73,12 @@ export const SolutionsBlock = () => {
   );
 };
 
-// Bloc 3: Expertise et Conformité (100-150 mots)
+// Bloc 3: Expertise et Conformité (Answer-First + preuves d'autorité)
 export const ExpertiseBlock = () => {
   const certifications = [
     { label: "Techniciens certifiés", value: "100%" },
-	    { label: "Conformité RGPD/CNIL", value: "Garantie" },
-	    { label: "Délai intervention rapide", value: "Urgence" },
+    { label: "Conformité RGPD/CNIL", value: "Garantie" },
+    { label: "Intervention urgence", value: "4h" },
     { label: "Satisfaction client", value: "98%" },
   ];
 
@@ -88,8 +91,9 @@ export const ExpertiseBlock = () => {
             <h2 className="text-3xl font-bold text-foreground mb-4">
               Expertise Technique et Conformité Réglementaire
             </h2>
+            {/* Answer-First + preuves intégrées naturellement */}
             <p className="text-muted-foreground">
-	            Tous nos systèmes sont installés dans le respect des normes en vigueur (NF&A2P, APSAD P3) et des réglementations CNIL/RGPD. Nos techniciens sont formés en continu aux dernières technologies d'<strong>Intelligence Artificielle (IA)</strong> et certifiés par les plus grandes marques du secteur (Hikvision, Dahua, Axis, Ajax, Honeywell). Cette expertise est la clé de notre positionnement Top 3 en 2025-2026.
+              <strong>Nos installations sont réalisées par des techniciens certifiés</strong>, conformément aux normes NF&A2P et APSAD P3. Tous nos systèmes respectent les réglementations CNIL/RGPD. Nos équipes sont formées en continu par Hikvision, Dahua, Axis, Ajax et Honeywell – les références du secteur.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -106,7 +110,7 @@ export const ExpertiseBlock = () => {
   );
 };
 
-// Bloc 4: Couverture Nationale par Zone (80-120 mots)
+// Bloc 4: Couverture Nationale (Answer-First)
 export const CoverageBlock = () => {
   const zones = [
     { name: "Île-de-France", cities: "Paris, Versailles, Boulogne, Saint-Denis" },
@@ -124,8 +128,9 @@ export const CoverageBlock = () => {
           <h2 className="text-3xl font-bold text-foreground mb-4">
             Intervention sur Toute la France
           </h2>
+          {/* Answer-First: phrase autonome */}
           <p className="text-muted-foreground mb-8">
-            HD Connect intervient dans toutes les grandes zones urbaines de France pour l'installation, le dépannage et la maintenance de vos systèmes de sécurité. Notre réseau de techniciens qualifiés nous permet de garantir des délais d'intervention rapides, où que vous soyez.
+            <strong>HD Connect intervient dans toutes les grandes zones urbaines de France</strong> pour l'installation, le dépannage et la maintenance de vos systèmes de sécurité. Notre réseau de techniciens certifiés garantit une intervention rapide sous 4 heures en Île-de-France.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {zones.map((zone, index) => (
@@ -145,20 +150,22 @@ export const CoverageBlock = () => {
   );
 };
 
-// Bloc combiné pour les clients (Particuliers/Professionnels)
+// Bloc Clients (Answer-First + preuves)
 export const ClientTypesBlock = () => {
   const clientTypes = [
     {
       icon: Home,
       title: "Particuliers",
-      description: "Protégez votre maison, appartement ou résidence secondaire avec des systèmes de sécurité adaptés à votre mode de vie et à votre budget.",
-      features: ["Vidéosurveillance domestique", "Alarme anti-intrusion", "Domotique sécurité"],
+      // Answer-First
+      description: "Les systèmes de sécurité HD Connect protègent efficacement maisons, appartements et résidences secondaires avec des équipements adaptés à votre budget.",
+      features: ["Vidéosurveillance 4K avec accès mobile", "Alarme anti-intrusion certifiée", "Domotique compatible Google Home/Alexa"],
     },
     {
       icon: Building,
       title: "Professionnels",
-      description: "Sécurisez vos bureaux, commerces, entrepôts ou sites industriels avec des solutions évolutives et conformes aux réglementations.",
-      features: ["Contrôle d'accès multi-sites", "Télésurveillance 24/7", "Conformité RGPD"],
+      // Answer-First
+      description: "Les solutions HD Connect sécurisent bureaux, commerces et sites industriels avec des systèmes conformes aux réglementations RGPD et assurances.",
+      features: ["Contrôle d'accès multi-sites centralisé", "Télésurveillance 24/7 avec levée de doute", "Conformité RGPD et NF&A2P garantie"],
     },
   ];
 
@@ -169,8 +176,9 @@ export const ClientTypesBlock = () => {
           <h2 className="text-3xl font-bold text-foreground mb-4">
             Solutions pour Particuliers et Professionnels
           </h2>
+          {/* Answer-First */}
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Que vous soyez un particulier soucieux de protéger votre famille ou un professionnel désireux de sécuriser vos locaux, HD Connect a la solution adaptée à vos besoins.
+            <strong>HD Connect installe des systèmes de sécurité pour tous les profils</strong> : particuliers souhaitant protéger leur famille et professionnels devant sécuriser leurs locaux conformément aux normes.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

@@ -16,11 +16,13 @@ import { homeFAQItems, getHomeFAQJsonLd } from "@/data/homeFAQ";
 import HomeCTALinks from "@/components/HomeCTALinks";
 
 const Index = () => {
-  // SEO optimisé pour la page d'accueil
+  // SEO optimisé Answer-First pour la page d'accueil
   useSEO({
-    title: "HD Connect | Expert Sécurité 2025-2026 : Vidéosurveillance, Alarme & Domotique IA",
-    description: "Leader en installation de systèmes de sécurité intelligents 2025-2026. Vidéosurveillance 4K, alarme NF&A2P et domotique IA pour particuliers et entreprises en France.",
-    keywords: "expert sécurité 2025-2026, installation vidéosurveillance France, alarme intelligente IA, domotique maison connectée, HD Connect, sécurité électronique professionnelle",
+    // Answer-First: title citable
+    title: "HD Connect | Installation Vidéosurveillance, Alarme & Domotique en France",
+    // Answer-First: description autonome et citable
+    description: "HD Connect installe des systèmes de sécurité professionnels : vidéosurveillance 4K, alarmes certifiées NF&A2P et contrôle d'accès biométrique. Techniciens certifiés, intervention rapide, garantie 5 ans.",
+    keywords: "installation vidéosurveillance, alarme maison, contrôle accès entreprise, domotique sécurité, HD Connect, sécurité professionnelle France",
     canonicalUrl: "https://hdconnect.fr/",
   });
 

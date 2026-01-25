@@ -26,83 +26,94 @@ const ServiceSchema = ({
 }: ServiceSchemaProps) => {
   const baseUrl = 'https://hdconnect.fr';
 
-  // Service Schema
+  // Service Schema avec Answer-First
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: serviceName,
+    // Answer-First: description autonome et citable
     description: serviceDescription,
     provider: {
       '@type': 'LocalBusiness',
       name: 'HD Connect',
+      // Answer-First: slogan citable
+      description: 'HD Connect est le spécialiste français de l\'installation de systèmes de sécurité professionnels depuis 2015.',
       telephone: '+33 6 27 13 53 04',
-	      email: 'kamal@hdconnect.fr',
-	      address: {
-	        '@type': 'PostalAddress',
-	        addressLocality: cityName || 'Paris',
-	        addressRegion: 'Île-de-France',
-	        postalCode: '75001',
-	        addressCountry: 'FR',
-	      },
-	      url: baseUrl,
-	      logo: `${baseUrl}/logo.png`,
-	      priceRange: '€€€',
-	      openingHours: 'Mo-Su 00:00-23:59',
-	      slogan: 'Votre sécurité, notre expertise. Installation, maintenance et dépannage 24/7. Intervention Rapide Urgence.',
-	      certification: 'NF&A2P, APSAD P3',
-	      knowsAbout: ['Vidéosurveillance IA', 'Alarme NF&A2P', 'Contrôle d\'accès biométrique', 'Domotique', 'Réseau VDI', 'Sécurité 2025-2026'],
-	      review: {
-	        '@type': 'Review',
-	        reviewRating: {
-	          '@type': 'Rating',
-	          ratingValue: '4.9',
-	          bestRating: '5',
-	        },
-	        author: {
-	          '@type': 'Person',
-	          name: 'Client Vérifié',
-	        },
-	        reviewBody: 'Installation rapide et professionnelle. Le système d\'alarme IA est très fiable.',
-	      },
-	    },
+      email: 'kamal@hdconnect.fr',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: cityName || 'Paris',
+        addressRegion: 'Île-de-France',
+        postalCode: '75001',
+        addressCountry: 'FR',
+      },
+      url: baseUrl,
+      logo: `${baseUrl}/logo.png`,
+      priceRange: '€€€',
+      openingHours: 'Mo-Fr 09:00-18:00',
+      // Preuves d'autorité
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        bestRating: '5',
+        reviewCount: '215',
+      },
+      // Certifications (preuves)
+      hasCredential: [
+        'Certification NF&A2P',
+        'APSAD P3',
+        'Installateur certifié Hikvision',
+        'Installateur certifié Ajax'
+      ],
+    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Services de Sécurité 2025-2026',
+      name: 'Services de Sécurité HD Connect',
       itemListElement: [
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
             name: 'Installation Alarme NF&A2P',
+            description: 'Installation d\'alarmes certifiées pour maisons et entreprises',
           }
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Vidéosurveillance IA 4K',
+            name: 'Vidéosurveillance 4K',
+            description: 'Installation de caméras 4K avec accès mobile et enregistrement',
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Contrôle d\'Accès',
+            description: 'Installation de systèmes de contrôle d\'accès biométrique et badges',
           }
         }
       ]
     },
-	    areaServed: cityName
-	      ? {
-	          '@type': 'City',
-	          name: cityName,
-	          '@id': `${baseUrl}/villes/${cityName.toLowerCase().replace(/\s/g, '-')}`,
-	        }
-	      : [
-	          { '@type': 'Country', name: 'France' },
-	          { '@type': 'State', name: 'Île-de-France' },
-	          { '@type': 'City', name: 'Paris' },
-	          { '@type': 'City', name: 'Lyon' },
-	          { '@type': 'City', name: 'Marseille' },
-	        ],
+    areaServed: cityName
+      ? {
+          '@type': 'City',
+          name: cityName,
+          '@id': `${baseUrl}/villes/${cityName.toLowerCase().replace(/\s/g, '-')}`,
+        }
+      : [
+          { '@type': 'Country', name: 'France' },
+          { '@type': 'State', name: 'Île-de-France' },
+          { '@type': 'City', name: 'Paris' },
+          { '@type': 'City', name: 'Lyon' },
+          { '@type': 'City', name: 'Marseille' },
+        ],
     url: `${baseUrl}${serviceUrl}`,
     ...(serviceImage && { image: `${baseUrl}${serviceImage}` }),
-	    award: 'Certification NF&A2P & APSAD P3, Garantie 5 Ans',
-	    serviceType: 'Sécurité Électronique & IA 2025-2026, Intervention Rapide Urgence',
-	    hasMap: 'https://maps.app.goo.gl/HDConnectLocation',
+    // Preuves d'autorité
+    award: ['Garantie 5 ans installation', 'Plus de 500 clients satisfaits'],
+    serviceType: serviceName,
   };
 
   // FAQ Schema
