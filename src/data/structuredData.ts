@@ -15,10 +15,26 @@ export const organizationSchema = {
     "height": 512
   },
   "image": "https://hdconnect.fr/og-image.webp",
-  "description": "Leader français en sécurité électronique 2025-2026 : vidéosurveillance IA 4K, alarmes certifiées NF&A2P/APSAD, contrôle d'accès biométrique. Intervention Rapide Urgence en Île-de-France et grandes villes. Visez le Top 3 Sécurité.",
+  // Answer-First: description autonome et citable
+  "description": "HD Connect est le spécialiste français de l'installation de systèmes de sécurité professionnels. Vidéosurveillance 4K, alarmes certifiées NF&A2P et contrôle d'accès biométrique pour particuliers et entreprises depuis 2015.",
   "foundingDate": "2015",
   "telephone": "+33 6 27 13 53 04",
   "email": "kamal@hdconnect.fr",
+  // Preuves d'autorité intégrées
+  "knowsAbout": [
+    "Installation vidéosurveillance 4K",
+    "Alarme anti-intrusion NF&A2P",
+    "Contrôle d'accès biométrique",
+    "Domotique maison connectée",
+    "Maintenance systèmes sécurité",
+    "Conformité RGPD vidéosurveillance"
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certification NF&A2P" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "APSAD P3" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Installateur certifié Hikvision" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Installateur certifié Ajax" }
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Créteil",
@@ -38,16 +54,22 @@ export const organizationSchema = {
       "telephone": "+33627135304",
       "contactType": "customer service",
       "areaServed": "FR",
-      "availableLanguage": ["French"]
+      "availableLanguage": ["French"],
+      "hoursAvailable": "Mo-Fr 09:00-18:00"
     },
     {
       "@type": "ContactPoint",
       "telephone": "+33627135304",
-      "contactType": "sales",
+      "contactType": "emergency",
       "areaServed": "FR",
-      "availableLanguage": ["French"]
+      "availableLanguage": ["French"],
+      "hoursAvailable": "Mo-Su 00:00-23:59",
+      "description": "Dépannage urgence 24/7"
     }
-  ]
+  ],
+  // Preuves d'expérience
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 15 },
+  "award": ["Plus de 500 clients satisfaits", "Garantie 5 ans installation", "Intervention rapide 4h"]
 };
 
 export const localBusinessSchema = {
@@ -60,6 +82,9 @@ export const localBusinessSchema = {
   "telephone": "+33 6 27 13 53 04",
   "email": "kamal@hdconnect.fr",
   "priceRange": "€€€",
+  // Answer-First: description autonome
+  "description": "HD Connect installe des systèmes de sécurité professionnels pour protéger maisons et entreprises. Techniciens certifiés, équipements NF&A2P, intervention rapide en France.",
+  "slogan": "Votre sécurité, notre expertise depuis 2015",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Créteil",
@@ -97,65 +122,79 @@ export const localBusinessSchema = {
       "closes": "18:00"
     }
   ],
+  // Preuves d'autorité
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
     "reviewCount": "215",
     "bestRating": "5"
-  }
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Client vérifié" },
+      "reviewBody": "Installation rapide et professionnelle. Le système de vidéosurveillance fonctionne parfaitement."
+    }
+  ],
+  // Certifications (preuves)
+  "hasCredential": "Certification NF&A2P, APSAD P3, Installateur certifié Hikvision et Ajax"
 };
 
 export const servicesSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "Services HD Connect",
-  "description": "Nos services d'installation, dépannage et location de systèmes de sécurité",
+  // Answer-First
+  "description": "HD Connect propose 9 services de sécurité électronique : installation vidéosurveillance, alarme, contrôle d'accès, domotique, réseau, maintenance, antennes, portails et location de matériel.",
+  "numberOfItems": 9,
   "itemListElement": [
     {
       "@type": "Service",
       "position": 1,
-      "name": "Installation Vidéosurveillance IA 4K",
-      "description": "Installation de caméras de surveillance IA 4K pour particuliers et professionnels. Analyse vidéo intelligente, accès mobile 24/7, stockage cloud sécurisé.",
+      "name": "Installation Vidéosurveillance",
+      // Answer-First: description citable
+      "description": "L'installation de caméras de vidéosurveillance 4K permet de surveiller et protéger vos biens 24h/24. Accès mobile, enregistrement NVR, analyse vidéo IA.",
       "url": "https://hdconnect.fr/services/videosurveillance",
       "provider": { "@id": "https://hdconnect.fr/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },
-      "serviceType": "Installation de systèmes de vidéosurveillance"
+      "serviceType": "Installation vidéosurveillance professionnelle"
     },
     {
       "@type": "Service",
       "position": 2,
-      "name": "Installation Alarme Anti-Intrusion NF&A2P/APSAD",
-      "description": "Systèmes d'alarme certifiés NF&A2P/APSAD avec détection IA. Télésurveillance 24/7, intervention 4h Urgence.",
+      "name": "Installation Alarme Anti-Intrusion",
+      "description": "Une alarme anti-intrusion certifiée NF&A2P protège efficacement maison et entreprise contre les cambriolages. Détecteurs, sirènes et télésurveillance 24/7.",
       "url": "https://hdconnect.fr/services/alarme",
       "provider": { "@id": "https://hdconnect.fr/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },
-      "serviceType": "Installation de systèmes d'alarme"
+      "serviceType": "Installation alarme certifiée NF&A2P"
     },
     {
       "@type": "Service",
       "position": 3,
       "name": "Contrôle d'Accès Biométrique",
-      "description": "Solutions de contrôle d'accès professionnelles : badges RFID, biométrie, interphonie vidéo, gestion centralisée par IA.",
+      "description": "Le contrôle d'accès sécurise les entrées avec badges RFID, biométrie et digicodes. Gestion centralisée pour bureaux, immeubles et sites industriels.",
       "url": "https://hdconnect.fr/services/controle-acces",
       "provider": { "@id": "https://hdconnect.fr/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },
-      "serviceType": "Installation de contrôle d'accès"
+      "serviceType": "Installation contrôle d'accès professionnel"
     },
     {
       "@type": "Service",
       "position": 4,
-      "name": "Domotique Sécurité Intelligente",
-      "description": "Automatisation de votre habitat par IA : éclairage, chauffage, volets, sécurité. Contrôle smartphone, économies d'énergie, scénarios de protection avancés.",
+      "name": "Domotique Maison Connectée",
+      "description": "La domotique centralise et automatise la gestion de votre sécurité. Alarme, caméras et éclairage dans une application unique compatible Google Home et Alexa.",
       "url": "https://hdconnect.fr/services/domotique",
       "provider": { "@id": "https://hdconnect.fr/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },
-      "serviceType": "Installation domotique"
+      "serviceType": "Installation domotique sécurité"
     },
     {
       "@type": "Service",
       "position": 5,
       "name": "Infrastructure Réseau",
-      "description": "Câblage structuré, WiFi professionnel, firewall et sécurité réseau pour entreprises.",
+      "description": "Un réseau informatique professionnel garantit la fiabilité de vos systèmes connectés. Câblage structuré Cat 6/7, fibre optique et WiFi entreprise.",
       "url": "https://hdconnect.fr/services/reseau",
       "provider": { "@id": "https://hdconnect.fr/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },
@@ -164,12 +203,42 @@ export const servicesSchema = {
     {
       "@type": "Service",
       "position": 6,
-      "name": "Maintenance Préventive IA et Dépannage 4h",
-      "description": "Maintenance préventive par diagnostic IA et dépannage 4h Urgence 24/7 de vos équipements de sécurité. Contrats sur mesure.",
+      "name": "Maintenance et Dépannage",
+      "description": "La maintenance préventive garantit le bon fonctionnement de vos systèmes de sécurité. Contrats annuels et dépannage urgence 4h en Île-de-France.",
       "url": "https://hdconnect.fr/services/maintenance",
       "provider": { "@id": "https://hdconnect.fr/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },
       "serviceType": "Maintenance systèmes de sécurité"
+    },
+    {
+      "@type": "Service",
+      "position": 7,
+      "name": "Installation Antennes et Satellite",
+      "description": "L'installation d'antennes TNT et paraboles satellite assure une réception TV optimale. Intervention pour particuliers, copropriétés et professionnels.",
+      "url": "https://hdconnect.fr/services/antenne-satellite",
+      "provider": { "@id": "https://hdconnect.fr/#organization" },
+      "areaServed": { "@type": "Country", "name": "France" },
+      "serviceType": "Installation antenne et satellite"
+    },
+    {
+      "@type": "Service",
+      "position": 8,
+      "name": "Portails et Automatismes",
+      "description": "La motorisation de portails et barrières automatise et sécurise vos accès extérieurs. Portails coulissants, portes de garage et interphonie.",
+      "url": "https://hdconnect.fr/services/portails-parking",
+      "provider": { "@id": "https://hdconnect.fr/#organization" },
+      "areaServed": { "@type": "Country", "name": "France" },
+      "serviceType": "Installation portails automatiques"
+    },
+    {
+      "@type": "Service",
+      "position": 9,
+      "name": "Location Matériel Sécurité",
+      "description": "La location de matériel de sécurité répond aux besoins temporaires : chantiers, événements, surveillance provisoire. Caméras solaires et alarmes portables.",
+      "url": "https://hdconnect.fr/services/location",
+      "provider": { "@id": "https://hdconnect.fr/#organization" },
+      "areaServed": { "@type": "Country", "name": "France" },
+      "serviceType": "Location équipement sécurité"
     }
   ]
 };

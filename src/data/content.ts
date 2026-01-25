@@ -5,6 +5,8 @@ export const content = {
   company: {
     name: "HD Connect",
     slogan: "Votre sécurité, notre expertise.",
+    // Answer-First: phrase autonome citable par IA
+    answerFirst: "HD Connect est le spécialiste français de l'installation de systèmes de sécurité professionnels : vidéosurveillance 4K, alarmes certifiées NF&A2P et contrôle d'accès biométrique pour particuliers et entreprises.",
     contact: {
       email: "kamal@hdconnect.fr",
       phoneMobile: "+33 6 27 13 53 04",
@@ -28,8 +30,9 @@ export const content = {
 
   // --- Section Hero ---
   hero: {
-    title: "Expert Sécurité 2025-2026 : Solutions Intelligentes & IA",
-    subtitle: "Vidéosurveillance IA 4K, Alarmes NF&A2P et Contrôle d'Accès Biométrique. Installation, Dépannage Urgence 4h et Location 24/7 en Île-de-France et Grandes Villes. Visez le Top 3 Sécurité.",
+    // Answer-First: première phrase optimisée IA/vocal
+    title: "HD Connect installe des systèmes de sécurité professionnels pour protéger efficacement maisons et entreprises",
+    subtitle: "Vidéosurveillance IA 4K, Alarmes certifiées NF&A2P et Contrôle d'Accès Biométrique. Installation par techniciens certifiés, intervention urgence 4h, garantie 5 ans. Plus de 500 clients satisfaits en Île-de-France.",
     ctaQuote: "Demander un Devis Gratuit",
     ctaContact: "Contactez-nous",
   },
@@ -37,59 +40,69 @@ export const content = {
   // --- Section Services ---
   services: {
     title: "Nos Solutions de Sécurité Complètes",
-    subtitle: "Protégez ce qui compte le plus avec des technologies de pointe et une expertise locale.",
+    // Answer-First: phrase citable
+    subtitle: "HD Connect propose 9 services de sécurité électronique : vidéosurveillance, alarme, contrôle d'accès, domotique, réseau, maintenance, antennes, portails et location de matériel.",
     items: [
       {
         title: "Vidéosurveillance",
-        description: "Dissuadez les intrus et surveillez vos biens à distance grâce à nos systèmes de vidéosurveillance haute définition. Nous installons des caméras IP discrètes et performantes, des enregistreurs NVR sécurisés et configurons l'accès à distance sur votre smartphone ou ordinateur.",
+        // Answer-First: première phrase autonome
+        description: "L'installation de caméras de vidéosurveillance permet de dissuader les intrusions et de surveiller vos biens 24h/24. HD Connect installe des systèmes 4K avec accès mobile, enregistrement NVR et analyse vidéo IA.",
         icon: "Camera",
         link: "/services/videosurveillance",
       },
       {
         title: "Systèmes d'Alarme",
-        description: "Protégez votre domicile ou votre entreprise contre les effractions avec nos systèmes d'alarme anti-intrusion. Nous proposons des solutions sans fil, connectées à votre smartphone, avec des détecteurs de mouvement, d'ouverture et des sirènes puissantes pour une protection optimale.",
+        // Answer-First
+        description: "Une alarme anti-intrusion certifiée NF&A2P protège efficacement maison et entreprise contre les cambriolages. HD Connect installe des systèmes connectés avec détecteurs, sirènes et télésurveillance 24/7.",
         icon: "Shield",
         link: "/services/alarme",
       },
       {
         title: "Contrôle d'Accès",
-        description: "Contrôlez qui entre et sort de vos locaux avec nos solutions de contrôle d'accès modernes. Nous installons des interphones vidéo, des digicodes, des lecteurs de badges et des systèmes biométriques pour une gestion simple et sécurisée des accès.",
+        // Answer-First
+        description: "Le contrôle d'accès sécurise les entrées de vos locaux avec badges, biométrie ou digicodes. HD Connect installe des systèmes de gestion centralisée pour bureaux, immeubles et sites industriels.",
         icon: "Lock",
         link: "/services/controle-acces",
       },
       {
         title: "Maintenance & Dépannage",
-        description: "Un système de sécurité n'est efficace que s'il est parfaitement fonctionnel. Nous proposons des contrats de maintenance préventive et intervenons rapidement pour tout dépannage afin de garantir la fiabilité de vos installations.",
+        // Answer-First
+        description: "La maintenance préventive garantit le bon fonctionnement de vos systèmes de sécurité. HD Connect propose des contrats annuels et un dépannage urgence 4h en Île-de-France.",
         icon: "Wrench",
         link: "/services/maintenance",
       },
       {
         title: "Réseau & Câblage",
-        description: "Une infrastructure réseau fiable est la base de tout système de sécurité moderne. Nous réalisons l'installation et la certification de votre câblage informatique (RJ45) et fibre optique pour une connectivité sans faille.",
+        // Answer-First
+        description: "Un réseau informatique professionnel garantit la fiabilité de vos systèmes connectés. HD Connect installe le câblage structuré Cat 6/7, la fibre optique et le WiFi entreprise.",
         icon: "Wifi",
         link: "/services/reseau",
       },
       {
         title: "Domotique Sécurité",
-        description: "Simplifiez la gestion de votre sécurité en l'intégrant à votre système domotique. Contrôlez vos alarmes, caméras et accès depuis une seule application, et créez des scénarios automatisés pour une tranquillité d'esprit absolue.",
+        // Answer-First
+        description: "La domotique permet de centraliser et automatiser la gestion de votre sécurité. HD Connect intègre alarme, caméras et éclairage dans une application unique compatible Google Home et Alexa.",
         icon: "Home",
         link: "/services/domotique",
       },
       {
         title: "Antennes & Satellite",
-        description: "Installation et dépannage d'antennes hertziennes, paraboles et systèmes TNT. Nous assurons une réception optimale de vos chaînes TV, que ce soit pour des maisons individuelles, des copropriétés ou des locaux professionnels.",
+        // Answer-First
+        description: "L'installation d'antennes TNT et paraboles satellite assure une réception TV optimale. HD Connect intervient pour particuliers, copropriétés et professionnels avec garantie de signal.",
         icon: "Radio",
         link: "/services/antenne-satellite",
       },
       {
         title: "Portails & Parking",
-        description: "Automatisation et sécurisation de vos accès : portails coulissants et battants, portes de garage, barrières de parking, interphones et vidéophones d'immeuble. Solutions pour résidences et professionnels.",
+        // Answer-First
+        description: "La motorisation de portails et barrières automatise et sécurise vos accès extérieurs. HD Connect installe portails coulissants, portes de garage et systèmes d'interphonie pour résidences et entreprises.",
         icon: "DoorOpen",
         link: "/services/portails-parking",
       },
       {
         title: "Location Matériel",
-        description: "Louez du matériel de sécurité professionnel pour vos événements, chantiers ou besoins temporaires. Caméras autonomes, kits d'alarme portables, systèmes de vidéosurveillance solaires et équipements de contrôle d'accès disponibles à la location.",
+        // Answer-First
+        description: "La location de matériel de sécurité répond aux besoins temporaires : chantiers, événements, surveillance provisoire. HD Connect propose caméras solaires, alarmes portables et kits complets avec installation.",
         icon: "Package",
         link: "/services/location",
       },

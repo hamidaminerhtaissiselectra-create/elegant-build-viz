@@ -18,11 +18,12 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-	  const trustBadges = [
-		    { label: "Intervention Rapide", icon: CheckCircle },
-	    { label: "Systèmes IA 2025-2026", icon: CheckCircle },
-	    { label: "Garantie 5 ans & NF&A2P", icon: CheckCircle },
-	  ];
+  // Trust badges avec preuves d'autorité
+  const trustBadges = [
+    { label: "Intervention 4h Urgence", icon: CheckCircle },
+    { label: "Certifié NF&A2P & APSAD", icon: CheckCircle },
+    { label: "Garantie 5 Ans", icon: CheckCircle },
+  ];
 
   return (
     <section id="accueil" className="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
@@ -50,29 +51,29 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          {/* Badge with entrance animation */}
+          {/* Badge with Answer-First positioning */}
           <div 
             className={`badge-primary mb-8 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             <Shield className="w-5 h-5" />
-            <span>Leader Sécurité 2025-2026 en Île-de-France</span>
+            <span>Spécialiste Sécurité depuis 2015</span>
           </div>
 
-          {/* Main Heading with staggered animation */}
+          {/* Main Heading with Answer-First - phrase autonome et citable */}
           <h1 
             className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-[1.1] text-center md:text-left transition-all duration-700 delay-100 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            Votre Sécurité, Notre Priorité N°1 en 2025-2026 :{" "}
             <span className="text-gradient-animated">Vidéosurveillance</span>,{" "}
             <span className="text-gradient-animated" style={{ animationDelay: '0.5s' }}>Alarme</span> &{" "}
-            <span className="text-gradient-animated" style={{ animationDelay: '1s' }}>Domotique IA</span>
+            <span className="text-gradient-animated" style={{ animationDelay: '1s' }}>Domotique</span> :{" "}
+            Votre Sécurité, Notre Priorité
           </h1>
 
-          {/* Subtitle */}
+          {/* Subtitle - Answer-First: phrase autonome citable par IA */}
           <p 
             className={`text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed text-center md:text-left max-w-2xl transition-all duration-700 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            {heroContent.subtitle}
+            <strong>HD Connect installe des systèmes de sécurité professionnels</strong> pour protéger maisons et entreprises : vidéosurveillance 4K, alarmes certifiées NF&A2P, contrôle d'accès biométrique. Techniciens certifiés, intervention rapide 4h, garantie 5 ans.
           </p>
 
           {/* CTA Buttons */}
