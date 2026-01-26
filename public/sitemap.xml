@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- ========================================== -->
   <!-- SITEMAP HD CONNECT                         -->
-  <!-- Dernière mise à jour: 08 Janvier 2026     -->
-  <!-- Total URLs: 72                            -->
-  <!-- ========================================== -->
+  <!-- Dernière mise à jour: 26 Janvier 2026     -->
+  <!-- Total URLs: 122                           -->
+  <!-- ==========================================  -->
 
   <!-- ========================================== -->
   <!-- NIVEAU 0 - PAGE PRINCIPALE                -->
@@ -192,6 +192,24 @@
   </url>
 
   <!-- ========================================== -->
+  <!-- NIVEAU 3.5 - PAGES DÉPARTEMENTS (14)      -->
+  <!-- ========================================== -->
+  <!-- Île-de-France (8 départements) -->
+  <url><loc>https://hdconnect.fr/departements/paris-75</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hdconnect.fr/departements/hauts-de-seine-92</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hdconnect.fr/departements/seine-saint-denis-93</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hdconnect.fr/departements/val-de-marne-94</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hdconnect.fr/departements/val-d-oise-95</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hdconnect.fr/departements/yvelines-78</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hdconnect.fr/departements/essonne-91</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hdconnect.fr/departements/seine-et-marne-77</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <!-- Départements clés France -->
+  <url><loc>https://hdconnect.fr/departements/rhone-69</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/departements/bouches-du-rhone-13</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/departements/nord-59</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/departements/gironde-33</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/departements/haute-garonne-31</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/departements/alpes-maritimes-06</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <!-- NIVEAU 4 - PAGES VILLES (32 villes)       -->
   <!-- ========================================== -->
   
@@ -258,6 +276,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- Villes IDF Supplémentaires (18 villes) -->
+  <url><loc>https://hdconnect.fr/villes/saint-denis</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/montreuil</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/argenteuil</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/nanterre</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/courbevoie</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/neuilly-sur-seine</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/issy-les-moulineaux</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/levallois-perret</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/vincennes</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/champigny-sur-marne</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/ivry-sur-seine</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/maisons-alfort</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/meaux</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/evry-courcouronnes</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/massy</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/villes/cergy</loc><lastmod>2026-01-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   
   <!-- Auvergne-Rhône-Alpes (3 villes) -->
   <url>
