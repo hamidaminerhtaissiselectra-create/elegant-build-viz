@@ -13,6 +13,7 @@ import LegalPage from "./pages/LegalPage";
 import ZonesIntervention from "./pages/ZonesIntervention";
 import CityPage from "./pages/villes/CityPage";
 import RegionPage from "./pages/regions/RegionPage";
+import DepartmentPage from "./pages/departments/DepartmentPage";
 import ArrondissementPage from "./pages/paris/ArrondissementPage";
 import ParisPage from "./pages/paris/ParisPage";
 import Blog from "./pages/Blog";
@@ -57,6 +58,9 @@ const App = () => (
           
           {/* Legacy redirect pour anciennes URLs /regions/:slug */}
           <Route path="/regions/:regionSlug" element={<RegionPage />} />
+          
+          {/* Pages départements - Niveau 3.5 */}
+          <Route path="/departements/:departmentSlug" element={<DepartmentPage />} />
           
           {/* Pages villes - Niveau 4 */}
           <Route path="/villes/:citySlug" element={<CityPage />} />
