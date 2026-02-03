@@ -1,8 +1,8 @@
 # 🔐 HD CONNECT - Documentation Complète & Unifiée
 
-> **Version:** 6.0 - Documentation Fusionnée (Cahier des Charges + SEO)  
-> **Dernière mise à jour:** 07 Janvier 2026  
-> **Statut:** ✅ PRODUCTION-READY
+> **Version:** 8.0 - Production Ready  
+> **Dernière mise à jour:** 03 Février 2026  
+> **Statut:** ✅ 95% PRODUCTION-READY
 
 ---
 
@@ -17,7 +17,7 @@
 7. [Hooks Personnalisés](#-7-hooks-personnalisés)
 8. [Design System](#-8-design-system)
 9. [SEO & Optimisations](#-9-seo--optimisations)
-10. [Stratégie SEO Complète](#-10-stratégie-seo-complète)
+10. [Stratégie SEO Answer-First](#-10-stratégie-seo-answer-first)
 11. [Backend Supabase](#-11-backend-supabase)
 12. [Installation & Déploiement](#-12-installation--déploiement)
 13. [Configuration](#-13-configuration)
@@ -34,7 +34,7 @@
 | Environnement | URL |
 |---------------|-----|
 | Production | https://hdconnect.fr |
-| Lovable | https://lovable.dev/projects/cfef176e-4824-41fc-a7a2-f4a1f35a89d4 |
+| Preview | https://site-polish-joy.lovable.app |
 | Supabase | https://emvmyrdxmpsoaykabszb.supabase.co |
 
 ### Objectifs Business
@@ -42,7 +42,7 @@
 |----------|-------------|--------|
 | Site vitrine | Présenter les 11 services | ✅ Fait |
 | Génération de leads | Formulaire de devis intelligent | ✅ Fait |
-| SEO local | Référencement 60+ pages | ✅ Fait |
+| SEO local | Référencement 250+ pages | ✅ Fait |
 | Animations premium | Micro-interactions globales | ✅ Fait |
 | Admin panel | Gestion des leads | ⚠️ Backend à configurer |
 
@@ -98,28 +98,36 @@ hdconnect/
 │   ├── favicon.ico
 │   ├── og-image.jpg             # Image sociale 1200x630
 │   ├── robots.txt
-│   └── sitemap.xml              # 60+ URLs SEO
+│   └── sitemap.xml              # 250+ URLs SEO
 │
 ├── src/
-│   ├── assets/                  # 80+ images HD
-│   │   ├── hero-*.jpg           # Images héros
-│   │   ├── service-*.jpg        # Images services
-│   │   └── *-unique.jpg         # Images contextuelles
+│   ├── assets/                  # 150+ images HD/4K
+│   │   ├── hero-*.webp          # Images héros
+│   │   ├── service-*.webp       # Images services
+│   │   ├── blog-*.webp          # Images blog
+│   │   ├── regions/             # Photos régions
+│   │   └── monuments/           # Monuments Paris
 │   │
 │   ├── components/
 │   │   ├── ui/                  # 45+ composants Shadcn
 │   │   ├── SEO/                 # Composants SEO
-│   │   │   ├── Breadcrumbs.tsx
-│   │   │   └── ServiceSchema.tsx
-│   │   └── *.tsx                # 35+ composants métier
+│   │   ├── city/                # Composants pages villes
+│   │   │   ├── CityHeroParallax.tsx
+│   │   │   ├── CityLocalContent.tsx
+│   │   │   ├── CityServicesGrid.tsx
+│   │   │   └── CityCoverageSection.tsx
+│   │   └── *.tsx                # 40+ composants métier
 │   │
 │   ├── data/
-│   │   ├── blogData.ts          # Articles blog (6+)
-│   │   ├── citiesData.ts        # 32 villes
+│   │   ├── blogData.ts          # 10 articles blog
+│   │   ├── citiesData.ts        # 125 villes
+│   │   ├── departmentsData.ts   # Départements IDF + France
 │   │   ├── regionsData.ts       # 13 régions
+│   │   ├── parisArrondissements.ts # 20 arrondissements
 │   │   ├── content.ts           # Contenu textuel
 │   │   ├── seoData.ts           # Données SEO
-│   │   └── local_section_data.json
+│   │   ├── homeFAQ.ts           # FAQ accueil
+│   │   └── structuredData.ts    # JSON-LD schemas
 │   │
 │   ├── hooks/
 │   │   ├── useAuth.tsx          # Authentification
@@ -130,19 +138,11 @@ hdconnect/
 │   │   ├── use-mobile.tsx       # Détection mobile
 │   │   └── use-toast.ts         # Notifications
 │   │
-│   ├── integrations/
-│   │   └── supabase/
-│   │       ├── client.ts        # Client Supabase
-│   │       └── types.ts         # Types générés
-│   │
-│   ├── lib/
-│   │   ├── utils.ts             # Utilitaires (cn, etc.)
-│   │   └── supabase.ts          # Config Supabase
-│   │
 │   ├── pages/
+│   │   ├── Index.tsx            # Page d'accueil
 │   │   ├── Blog.tsx             # Hub blog
 │   │   ├── BlogArticle.tsx      # Page article
-│   │   ├── Index.tsx            # Page d'accueil
+│   │   ├── ServicesHub.tsx      # Hub services
 │   │   ├── Auth.tsx             # Authentification
 │   │   ├── Admin.tsx            # Panel admin
 │   │   ├── NotFound.tsx         # 404
@@ -150,39 +150,40 @@ hdconnect/
 │   │   ├── ZonesIntervention.tsx # Hub régions
 │   │   ├── services/            # 11 pages services
 │   │   ├── regions/             # Pages régions
-│   │   └── villes/              # Pages villes
+│   │   ├── departments/         # Pages départements
+│   │   ├── paris/               # Pages Paris + arrondissements
+│   │   └── villes/              # Pages villes + ville+service
 │   │
 │   ├── App.tsx                  # Router principal
 │   ├── main.tsx                 # Point d'entrée
 │   └── index.css                # Styles globaux + tokens
 │
 ├── supabase/
-│   ├── config.toml              # Config projet
-│   ├── functions/
-│   │   ├── deno.json            # Config Deno
-│   │   └── send-quote-email/    # Edge function emails
-│   └── migrations/              # Migrations SQL
+│   └── functions/
+│       └── send-quote-email/    # Edge function emails
 │
-├── .env                         # Variables environnement
-├── tailwind.config.ts           # Config Tailwind
-├── vite.config.ts               # Config Vite
-├── tsconfig.json                # Config TypeScript
-├── components.json              # Config Shadcn
-├── README.md                    # Documentation complète v7.0
-└── package.json                 # Dépendances
+├── docs/
+│   ├── CAHIER_DES_CHARGES.md    # Spécifications fonctionnelles
+│   └── CAHIER_DES_CHARGES_SEO.md # Stratégie SEO
+│
+├── CONFIGURATION.md             # Guide de configuration
+└── README.md                    # Cette documentation
 ```
 
 ---
 
 ## 📄 4. PAGES & ROUTES
 
-### Vue d'ensemble (60+ pages)
+### Vue d'ensemble (250+ pages)
 
 ```
 NIVEAU 0 - ACCUEIL
 └── /                              → Index.tsx
 
-NIVEAU 1 - SERVICES (11 pages)
+NIVEAU 1 - HUB SERVICES (Page Pivot)
+└── /services                      → ServicesHub.tsx
+
+NIVEAU 2 - SERVICES (11 pages)
 ├── /services/videosurveillance    → Videosurveillance.tsx
 ├── /services/alarme               → Alarme.tsx
 ├── /services/controle-acces       → ControleAcces.tsx
@@ -213,38 +214,47 @@ NIVEAU 3 - RÉGIONS (13 pages)
 ├── /zones-intervention/centre-val-de-loire
 └── /zones-intervention/corse
 
-NIVEAU 4 - VILLES (32 pages pivot)
-├── /villes/paris
+NIVEAU 3.5 - DÉPARTEMENTS (8+ pages)
+├── /departements/paris-75
+├── /departements/seine-saint-denis-93
+├── /departements/val-de-marne-94
+├── /departements/hauts-de-seine-92
+├── /departements/yvelines-78
+├── /departements/essonne-91
+├── /departements/seine-et-marne-77
+└── /departements/val-d-oise-95
+
+NIVEAU 4 - VILLES (125 pages pivot)
+├── /villes/paris                  → ParisPage.tsx (Hub arrondissements)
 ├── /villes/lyon
 ├── /villes/marseille
 ├── /villes/toulouse
 ├── /villes/bordeaux
 ├── /villes/lille
 ├── /villes/nice
-├── /villes/nantes
-├── /villes/strasbourg
-├── /villes/montpellier
-├── /villes/rennes
-├── /villes/grenoble
-├── /villes/creteil
-├── /villes/vitry-sur-seine
-├── /villes/saint-maur-des-fosses
-├── /villes/boulogne-billancourt
-├── /villes/versailles
-├── /villes/saint-etienne
-├── /villes/cannes
-├── /villes/aix-en-provence
-├── /villes/la-rochelle
-├── /villes/amiens
-├── /villes/nancy
-├── /villes/metz
-├── /villes/angers
-├── /villes/brest
-├── /villes/rouen
-├── /villes/le-havre
-├── /villes/dijon
-├── /villes/orleans
-└── /villes/tours
+├── /villes/saint-denis
+├── /villes/bobigny
+├── /villes/montreuil
+├── /villes/villeurbanne
+├── /villes/venissieux
+└── ... (125 villes au total)
+
+NIVEAU 5 - VILLE + SERVICE (1000+ pages dynamiques)
+├── /villes/paris/videosurveillance
+├── /villes/paris/alarme
+├── /villes/lyon/videosurveillance
+├── /villes/marseille/controle-acces
+└── ... (8 services × 125 villes)
+
+NIVEAU 5 - ARRONDISSEMENTS PARIS (20 pages)
+├── /paris/paris-1er
+├── /paris/paris-2eme
+├── /paris/paris-3eme
+└── ... (jusqu'au 20ème)
+
+BLOG (10 articles)
+├── /blog                          → Blog.tsx (Hub)
+└── /blog/:slug                    → BlogArticle.tsx (Articles)
 
 PAGES LÉGALES
 ├── /mentions-legales
@@ -287,7 +297,6 @@ PAGES SYSTÈME
 | `Services.tsx` | Grille des 11 services | Index |
 | `ServicesHighlight.tsx` | Mise en avant prestations | Index, villes |
 | `QuoteFunnelSimple.tsx` | Formulaire devis multi-étapes | Toutes les pages |
-| `QuoteFunnel.tsx` | Formulaire devis complet | Alternative |
 | `Contact.tsx` | Section contact | Index |
 | `About.tsx` | Section à propos | Index |
 | `Testimonials.tsx` | Avis clients avec carousel | Index |
@@ -295,16 +304,13 @@ PAGES SYSTÈME
 | `WhyHDConnect.tsx` | Pain points → Solutions | Services, villes |
 | `FAQAccordion.tsx` | FAQ interactive | Services, villes |
 | `ContentSection.tsx` | Layout 50/50 image/texte | Services |
-| `CTAIntermediate.tsx` | Call-to-action coloré (supporte `interventionMode`) | Services |
-| `CTAFloating.tsx` | CTA flottant | - |
+| `CTAIntermediate.tsx` | Call-to-action coloré | Services |
 | `GlobalFloatingCTA.tsx` | Bouton appel flottant global | App.tsx |
-| `FloatingContactBubble.tsx` | Bulle contact animée | - |
 | `ImageBreak.tsx` | Image pleine largeur | Services |
 | `ServiceShowcase.tsx` | Grille d'images | Services |
 | `ServiceLinks.tsx` | Maillage interne services | Services |
 | `LocalServiceLinks.tsx` | Liens services locaux | Villes |
-| `ServicePrestations.tsx` | Prestations (install, dépannage, location) - supporte `interventionMode` | Services |
-| `ServicePageEnhancements.tsx` | Décorations et animations | Services |
+| `ServicePrestations.tsx` | Prestations (install, dépannage, location) | Services |
 | `UseCasesSection.tsx` | Cas d'usage | Services |
 | `FeatureGrid.tsx` | Grille de fonctionnalités | Services |
 | `InterventionProcess.tsx` | Processus 4 étapes | Services, villes |
@@ -312,9 +318,18 @@ PAGES SYSTÈME
 | `RegionCoverage.tsx` | Couverture régionale | Services |
 | `LocalSEO.tsx` | SEO local enrichi | Villes |
 | `HomeSEOBlocks.tsx` | Blocs SEO accueil | Index |
+| `HomeCTALinks.tsx` | Liens CTA accueil | Index |
 | `AnimatedSection.tsx` | Wrapper animation | Partout |
 | `ScrollToTop.tsx` | Scroll automatique | App.tsx |
-| `NavLink.tsx` | Lien navigation actif | Header |
+
+### Composants Villes (src/components/city/)
+
+| Composant | Description |
+|-----------|-------------|
+| `CityHeroParallax.tsx` | Hero avec effet parallax et monument/paysage |
+| `CityLocalContent.tsx` | Contenu local contextuel par département |
+| `CityServicesGrid.tsx` | Grille 8 services avec liens vers ville+service |
+| `CityCoverageSection.tsx` | Couverture et communes limitrophes |
 
 ### Composants SEO (src/components/SEO/)
 
@@ -322,6 +337,7 @@ PAGES SYSTÈME
 |-----------|-------------|
 | `Breadcrumbs.tsx` | Fil d'Ariane structuré |
 | `ServiceSchema.tsx` | JSON-LD Service + FAQ + Breadcrumb |
+| `OrganizationSchema.tsx` | JSON-LD Organization |
 
 ### Composants UI (src/components/ui/)
 
@@ -331,7 +347,7 @@ PAGES SYSTÈME
 
 ## 📊 6. DONNÉES & DATA
 
-### citiesData.ts (32 villes)
+### citiesData.ts (125 villes)
 
 ```typescript
 interface CityData {
@@ -368,29 +384,54 @@ interface RegionData {
   economicHighlights: string[]; // Points économiques
   clientTypes: string[];     // Types de clients
 }
-
-// Fonctions exports
-getRegionBySlug(slug)
-getAllRegionSlugs()
-getRegionCities(regionSlug)
 ```
 
-### content.ts
-
-Contient tout le contenu textuel centralisé :
-- Informations entreprise (contact, réseaux sociaux)
-- Navigation links
-- Données services
-- Textes sections
-
-### seoData.ts
+### parisArrondissements.ts (20 arrondissements)
 
 ```typescript
-frenchCities[]     // Liste villes pour SEO
-services[]         // Liste services avec mots-clés
-generateServiceSEO(serviceSlug, cityName?)
-generateCityServiceContent(serviceSlug, cityName)
+interface ArrondissementData {
+  number: number;          // 1-20
+  name: string;            // "1er arrondissement"
+  slug: string;            // "paris-1er"
+  description: string;     // Description SEO
+  monuments: string[];     // Monuments notables
+  neighborhoods: string[]; // Quartiers
+}
 ```
+
+### blogData.ts (10 articles)
+
+```typescript
+interface BlogArticle {
+  id: string;
+  slug: string;              // URL-friendly
+  title: string;             // Titre article
+  excerpt: string;           // Résumé 160 caractères
+  content: string;           // Contenu complet
+  category: BlogCategory;    // Catégorie
+  author: string;            // Auteur
+  publishedAt: string;       // Date publication
+  readingTime: string;       // Temps lecture
+  image: string;             // Image header
+  tags: string[];            // Tags SEO
+  featured?: boolean;        // Mise en avant
+}
+```
+
+#### Articles Blog (10)
+
+| Titre | Catégorie | Cible SEO |
+|-------|-----------|-----------|
+| Comment choisir son système de vidéosurveillance en 2026 | vidéosurveillance | National |
+| Les 5 erreurs à éviter lors de l'installation d'une alarme | alarme | National |
+| Contrôle d'accès biométrique : guide complet | contrôle-accès | National |
+| Maison connectée : par où commencer ? | domotique | National |
+| Maintenance préventive : économisez sur le long terme | maintenance | National |
+| **Sécurité Commerce Seine-Saint-Denis (93) - Guide Complet** | conseils | **Local 93** |
+| **Protection Villa PACA - Sécurité Résidence Secondaire** | conseils | **Local PACA** |
+| **Alarme Résidence Île-de-France - Guide Protection** | alarme | **Local IDF** |
+| **Vidéosurveillance Entreprise Lyon - Solutions Pro** | vidéosurveillance | **Local Lyon** |
+| **Domotique Maison Bordeaux - Guide Maison Connectée** | domotique | **Local Bordeaux** |
 
 ---
 
@@ -399,39 +440,12 @@ generateCityServiceContent(serviceSlug, cityName)
 | Hook | Fichier | Description |
 |------|---------|-------------|
 | `useAuth` | `useAuth.tsx` | Authentification Supabase |
-| `useSEO` | `useSEO.tsx` | Injection meta tags dynamiques |
+| `useSEO` | `useSEO.tsx` | Injection meta tags dynamiques + noIndex support |
 | `useSmoothScroll` | `useSmoothScroll.tsx` | Navigation fluide vers sections avec mode (quote/intervention) |
 | `usePhoneCall` | `usePhoneCall.tsx` | Gestion appel téléphonique |
 | `useParallax` | `useParallax.tsx` | Effet parallax sur scroll |
 | `useMobile` | `use-mobile.tsx` | Détection viewport mobile |
 | `useToast` | `use-toast.ts` | Notifications toast |
-
-### useSmoothScroll - Détail
-
-```typescript
-const { scrollToSection } = useSmoothScroll();
-
-// Utilisation
-scrollToSection("quote", { mode: "quote" });
-scrollToSection("quote", { mode: "intervention" });
-scrollToSection("contact");
-
-// Fonctionnalités
-// - Scroll fluide vers l'élément
-// - Gestion cross-page (redirige vers / si section absente)
-// - Mode devis/intervention avec highlight du switch
-// - Retry automatique si élément pas encore dans le DOM
-```
-
-### Alternance CTA Services (1/3 = intervention)
-
-Dans toutes les pages services, les boutons CTA alternent entre "Demander un devis" et "Demander une intervention" selon la règle **1 sur 3** :
-
-| Position | Mode | Label | Style |
-|----------|------|-------|-------|
-| CTA #1 (ServiceHero) | `quote` | "Demander un devis gratuit" | Gradient bleu (accent du service) |
-| CTA #2 (CTAIntermediate) | `quote` | "Demander un devis" | Gradient bleu + icône FileText |
-| CTA #3 (ServicePrestations ou section finale) | `intervention` | "Demander une intervention" | **Gradient orange/rouge + icône Wrench** |
 
 ---
 
@@ -470,9 +484,10 @@ Le site utilise une **signature visuelle unique** caractérisée par :
 - **Cercles lumineux flottants** avec `blur-3xl` et `animate-pulse-slow`
 - **Gradients subtils** sur les backgrounds
 - **Effets glassmorphism** avec `backdrop-blur-sm`
-- **Animations au scroll** via AnimatedSection
+- **Animations au scroll** via AnimatedSection et Framer Motion
 - **Hover effects** avec `hover:scale-105` et transitions fluides
 - **Badges colorés** pour les catégories et services
+- **Parallax** sur les heroes des pages villes
 
 ### Couleurs d'Accent Services
 
@@ -493,34 +508,6 @@ const accentGradients = {
 };
 ```
 
-### Micro-interactions (index.css)
-
-```css
-.btn-micro-interaction     /* Scale + ripple sur boutons */
-.card-micro-interaction    /* Lift + glow sur cartes */
-.link-micro-interaction    /* Underline animé */
-.icon-micro-interaction    /* Bounce sur icônes */
-.badge-pulse               /* Pulsation badges */
-.glow-border               /* Bordure gradient animée */
-.shake-attention           /* Secousse attention */
-.slide-up-animation        /* Apparition vers le haut */
-.pop-in-animation          /* Pop avec scale */
-.float-animation           /* Flottement continu */
-```
-
-### Variantes Button (button.tsx)
-
-```typescript
-variant: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | "gradient" | "glow" | "intervention"
-size: "default" | "sm" | "lg" | "xl" | "icon"
-
-// Variant "intervention" (nouveau)
-// Style orange/rouge urgence avec icône Wrench
-// bg-gradient-to-r from-orange-500 via-red-500 to-orange-600
-// border-2 border-orange-400/50
-// hover:shadow-xl hover:shadow-orange-500/40
-```
-
 ---
 
 ## 🔍 9. SEO & OPTIMISATIONS
@@ -533,27 +520,32 @@ Chaque page utilise le hook `useSEO()` :
 useSEO({
   title: "Vidéosurveillance Professionnelle | HD Connect",
   description: "Installation caméras de surveillance...",
-  keywords: "vidéosurveillance, caméras, sécurité"
+  keywords: "vidéosurveillance, caméras, sécurité",
+  canonicalUrl: "https://hdconnect.fr/services/videosurveillance",
+  noIndex: false // Pour les pages à ne pas indexer
 });
 ```
 
 ### Données Structurées (JSON-LD)
 
-Via `ServiceSchema.tsx` :
+Via les composants SEO :
 - `@type: LocalBusiness` - Infos entreprise
+- `@type: Organization` - Organisation
 - `@type: Service` - Détails service
-- `@type: FAQPage` - Questions/réponses
+- `@type: FAQPage` - Questions/réponses (People Also Ask)
 - `@type: BreadcrumbList` - Fil d'Ariane
+- `@type: Article` - Articles blog
 
-### Sitemap.xml
+### Sitemap.xml (250+ URLs)
 
 ```
-60+ URLs structurées :
 ├── Priority 1.0    → Accueil
-├── Priority 0.9    → 8 services principaux
+├── Priority 0.9    → Hub Services + 8 services principaux
 ├── Priority 0.85   → 3 prestations + hub régions
-├── Priority 0.8    → 13 régions
-├── Priority 0.7-0.75 → 32 villes
+├── Priority 0.8    → 13 régions + 8 départements IDF
+├── Priority 0.75   → 125 villes + ville+service (métropoles)
+├── Priority 0.7    → 20 arrondissements Paris
+├── Priority 0.65   → Blog + 10 articles
 └── Priority 0.3    → 2 pages légales
 ```
 
@@ -561,119 +553,48 @@ Via `ServiceSchema.tsx` :
 
 | Type de page | Liens émis |
 |--------------|------------|
-| Page service | → 7 autres services + 5 régions + hub |
-| Page région | → Services + villes + régions voisines |
-| Page ville | → Région parente + services + villes voisines |
+| Page service | → 10 autres services + hub + régions |
+| Page région | → Services + départements + villes |
+| Page département | → Services + villes du département |
+| Page ville | → Région + département + services locaux + villes voisines |
+| Page ville+service | → Ville parente + autres services + FAQ contextuelle |
 
 ---
 
-## 🎯 10. STRATÉGIE SEO COMPLÈTE
+## 🎯 10. STRATÉGIE SEO ANSWER-FIRST
 
-### Architecture en Silos
+### Philosophie
 
-```
-hdconnect.fr/
-├── / (Accueil)
-├── /services/
-│   ├── /videosurveillance
-│   ├── /alarme
-│   ├── /controle-acces
-│   ├── /reseau
-│   ├── /domotique
-│   ├── /antenne-satellite
-│   ├── /portails-parking
-│   ├── /installation
-│   ├── /depannage
-│   └── /location
-├── /zones-intervention/          ← Hub principal
-│   ├── /ile-de-france/
-│   │   └── (villes accessibles via /villes/)
-│   └── /[autres-regions]/
-├── /villes/                      ← Pages pivot SEO local
-│   ├── /paris
-│   ├── /creteil
-│   └── /[autres-villes]
-└── /[pages-legales]
-```
+La stratégie "Answer-First" optimise le contenu pour être directement cité par :
+- **Google AI Overviews (SGE)**
+- **Assistants vocaux (Alexa, Google Assistant, Siri)**
+- **ChatGPT et autres LLMs**
+- **Featured Snippets (Position 0)**
 
-### Règles de Maillage
+### Implémentation
 
-1. **Page Accueil** → Toutes les pages services + Régions principales
-2. **Page Service** → Autres services + Régions pertinentes
-3. **Page Région** → Tous les services + Villes de la région
-4. **Page Ville (Pivot)** → Services + Région parent + Villes proches
+1. **Phrases autonomes et citables** intégrées naturellement dans le texte
+2. **Données structurées enrichies** avec descriptions Answer-First
+3. **FAQ optimisées** pour "People Also Ask"
+4. **Format Question → Réponse directe → Développement**
 
-### Template de Page Ville (Pivot SEO)
+### Exemples
 
-```
-[H1] Installation, Dépannage, Location Sécurité à [Ville] ([Département])
+```typescript
+// Mauvais (non citable)
+"Nous proposons des services de vidéosurveillance de qualité."
 
-[SAB - Paragraphe d'accroche 100-150 mots]
-Présentation HD Connect à [Ville], contexte local, proposition de valeur.
-
-[Section Services]
-[H2] Nos Services de Sécurité à [Ville]
-- Vidéosurveillance [Ville]
-- Alarme [Ville]
-- Contrôle d'accès [Ville]
-- ...8 services au total
-
-[Section Expertise Locale]
-[H2] Pourquoi Choisir HD Connect à [Ville] ?
-
-[Section FAQ Locale]
-[H2] Questions Fréquentes - Sécurité [Ville]
-6 questions spécifiques à la localité
-
-[CTA Final]
-[H2] Demandez Votre Devis Gratuit à [Ville]
+// Bon (Answer-First, citable)
+"HD Connect installe des systèmes de vidéosurveillance 4K avec accès 
+smartphone 24h/24, certifiés NF&A2P, et garantis 5 ans."
 ```
 
-### Balises SEO Standards
+### Signaux E-E-A-T Intégrés
 
-#### Title Tag
-```
-Format: [Action] [Service] à [Ville] | HD Connect
-Exemple: Installation Vidéosurveillance à Créteil | HD Connect
-Longueur: 50-60 caractères
-```
-
-#### Meta Description
-```
-Format: [Proposition valeur] à [Ville]. [Bénéfice]. [CTA].
-Exemple: Expert en installation de vidéosurveillance à Créteil. Devis gratuit, intervention rapide. Contactez HD Connect !
-Longueur: 150-160 caractères
-```
-
-### Optimisation IA (SGE/AIO)
-
-#### Principes E-E-A-T
-- **Expérience** : Témoignages, études de cas
-- **Expertise** : Certifications, années d'expérience
-- **Autorité** : Mentions presse, partenariats
-- **Fiabilité** : Avis clients, garanties
-
-#### Format "Réponse Directe"
-```
-Question claire → Réponse concise (2-3 phrases) → Développement
-```
-
-### SEO Local
-
-- Google Business Profile à optimiser
-- Cohérence NAP (Name-Address-Phone)
-- 1 page par ville principale (32 actuellement)
-- Contenu unique par page
-- Témoignages locaux si disponibles
-
-### Mots-clés Prioritaires
-
-| Mot-clé | Volume | Difficulté |
-|---------|--------|------------|
-| installation vidéosurveillance paris | 720 | Moyenne |
-| alarme maison ile de france | 590 | Moyenne |
-| contrôle accès entreprise | 480 | Facile |
-| dépannage alarme 94 | 210 | Facile |
+- **Experience** : "Depuis 2015", "Plus de 1000 installations"
+- **Expertise** : "Techniciens certifiés NF&A2P", "Formation continue"
+- **Authority** : "Partenaire Hikvision/Dahua", "Certifié APSAD"
+- **Trust** : "Garantie 5 ans", "Devis gratuit", "SAV 7j/7"
 
 ---
 
@@ -711,7 +632,7 @@ CREATE TABLE customer_requests (
   postal_code text,
   
   -- Statut
-  status request_status DEFAULT 'new' -- 'new' | 'contacted' | 'quoted' | 'converted' | 'closed'
+  status request_status DEFAULT 'new'
 );
 ```
 
@@ -757,8 +678,6 @@ cd hdconnect
 
 # 2. Installer les dépendances
 pnpm install
-# ou
-npm install
 
 # 3. Configurer l'environnement
 cp .env.example .env
@@ -766,35 +685,22 @@ cp .env.example .env
 
 # 4. Lancer en développement
 pnpm dev
-# ou
-npm run dev
 
 # 5. Build production
 pnpm build
-# ou
-npm run build
 ```
 
 ### Déploiement Lovable
 
 1. Ouvrir le projet dans Lovable
-2. Cliquer sur **Share** → **Publish**
-3. Le site est déployé sur `*.lovable.app`
+2. Cliquer sur **Publish** → **Update**
+3. Le site est déployé sur `site-polish-joy.lovable.app`
 
 ### Domaine Personnalisé
 
 1. Aller dans **Settings** → **Domains**
 2. Ajouter `hdconnect.fr`
-3. Configurer les DNS :
-   ```
-   Type: CNAME
-   Name: www
-   Value: [votre-projet].lovable.app
-   
-   Type: A
-   Name: @
-   Value: [IP Lovable]
-   ```
+3. Configurer les DNS chez le registrar
 
 ---
 
@@ -807,119 +713,33 @@ npm run build
 VITE_SUPABASE_URL="https://emvmyrdxmpsoaykabszb.supabase.co"
 VITE_SUPABASE_PUBLISHABLE_KEY="eyJ..."
 VITE_SUPABASE_PROJECT_ID="emvmyrdxmpsoaykabszb"
-
-# Resend - Emails (secret Supabase)
-# À configurer dans Supabase Dashboard → Edge Functions → Secrets
-RESEND_API_KEY="re_..."
 ```
 
-### Configuration Supabase (À faire)
+### Secrets Supabase (À configurer)
 
-#### 1. Créer le premier admin
-
-```sql
--- Après inscription d'un utilisateur via /auth
-INSERT INTO public.user_roles (user_id, role)
-VALUES ('uuid-du-user', 'admin');
-```
-
-#### 2. Configurer Resend
-
-1. Créer un compte sur [resend.com](https://resend.com)
-2. Obtenir une API Key
-3. Aller dans Supabase Dashboard → Edge Functions → Secrets
-4. Ajouter `RESEND_API_KEY`
-
-#### 3. Vérifier le domaine email
-
-1. Dans Resend, ajouter le domaine `hdconnect.fr`
-2. Configurer les enregistrements DNS (SPF, DKIM)
-3. Mettre à jour `SENDER_EMAIL` dans la fonction
+| Secret | Description | Statut |
+|--------|-------------|--------|
+| `RESEND_API_KEY` | Clé API Resend pour emails | ⏳ En attente |
 
 ### Checklist Configuration
 
-- [ ] Variables d'environnement configurées
-- [ ] Supabase connecté
+- [x] Variables d'environnement configurées
+- [x] Supabase connecté
 - [ ] Premier utilisateur admin créé
 - [ ] Clé API Resend ajoutée
-- [ ] Domaine email vérifié
-- [ ] Google Analytics installé
-- [ ] Sitemap soumis à Google
+- [ ] Domaine email vérifié (hdconnect.fr)
+- [ ] Google Analytics 4 installé
+- [ ] Sitemap soumis à Google Search Console
 
 ---
 
-## 📝 14. BLOG
-
-### Structure
-
-```
-BLOG (6+ articles)
-├── /blog                          → Blog.tsx (Hub)
-└── /blog/:slug                    → BlogArticle.tsx (Articles)
-```
-
-### Données (src/data/blogData.ts)
-
-```typescript
-interface BlogArticle {
-  id: string;
-  slug: string;              // URL-friendly
-  title: string;             // Titre article
-  excerpt: string;           // Résumé 160 caractères
-  content: string;           // Contenu complet Markdown-style
-  category: BlogCategory;    // Catégorie
-  author: string;            // Auteur
-  publishedAt: string;       // Date publication
-  readingTime: string;       // Temps lecture
-  image: string;             // Image header
-  tags: string[];            // Tags SEO
-  featured?: boolean;        // Mise en avant
-}
-
-type BlogCategory = 
-  | 'videosurveillance'
-  | 'alarme'
-  | 'controle-acces'
-  | 'domotique'
-  | 'reseau'
-  | 'maintenance'
-  | 'conseils'
-  | 'actualites';
-```
-
-### Articles Initiaux (6)
-
-| Titre | Catégorie | Slug |
-|-------|-----------|------|
-| Comment choisir son système de vidéosurveillance en 2026 | vidéosurveillance | `choisir-systeme-videosurveillance-2026` |
-| Les 5 erreurs à éviter lors de l'installation d'une alarme | alarme | `erreurs-installation-alarme` |
-| Contrôle d'accès biométrique : guide complet | contrôle-accès | `controle-acces-biometrique-guide` |
-| Maison connectée : par où commencer ? | domotique | `maison-connectee-par-ou-commencer` |
-| Maintenance préventive : économisez sur le long terme | maintenance | `maintenance-preventive-economies` |
-| Sécurité entreprise : les nouvelles réglementations 2026 | actualités | `securite-entreprise-reglementations-2026` |
-
-### Fonctionnalités Blog
-
-| Fonctionnalité | Statut |
-|----------------|--------|
-| Page hub avec catégories | ✅ |
-| Filtrage par catégorie | ✅ |
-| Articles mis en avant | ✅ |
-| JSON-LD Article schema | ✅ |
-| Partage social (Twitter, Facebook, LinkedIn) | ✅ |
-| Articles similaires | ✅ |
-| Breadcrumbs | ✅ |
-| Images optimisées | ✅ |
-
----
-
-## 📋 15. ÉTAT DU PROJET - CHECKLIST COMPLÈTE
+## 📋 14. ÉTAT DU PROJET - CHECKLIST COMPLÈTE
 
 ### 🏠 PAGES PRINCIPALES
 
 | Tâche | Statut | Notes |
 |-------|--------|-------|
-| Page d'accueil (`/`) | ✅ Fait | Hero, Services, Témoignages, Contact |
+| Page d'accueil (`/`) | ✅ Fait | Hero, Services, Témoignages, FAQ, Contact |
 | Header navigation | ✅ Fait | Logo, Services, Zones, Blog, bouton Devis |
 | Footer complet | ✅ Fait | Liens légaux, services, contact |
 | Page 404 | ✅ Fait | Design personnalisé |
@@ -931,6 +751,7 @@ type BlogCategory =
 
 | Service | Route | Statut |
 |---------|-------|--------|
+| Hub Services | `/services` | ✅ |
 | Vidéosurveillance | `/services/videosurveillance` | ✅ |
 | Alarme | `/services/alarme` | ✅ |
 | Contrôle d'accès | `/services/controle-acces` | ✅ |
@@ -945,13 +766,14 @@ type BlogCategory =
 
 ### 🗺️ PAGES PIVOT SEO (Géographiques)
 
-| Page | Route | Statut |
-|------|-------|--------|
-| Hub Zones Intervention | `/zones-intervention` | ✅ Fait |
-| 13 pages Régions | `/zones-intervention/:slug` | ✅ Fait |
-| 32 pages Villes | `/villes/:slug` | ✅ Fait |
-| Images régions authentiques | Photos réelles de France | ✅ Fait |
-| Lien Header "Zones" | Navigation principale | ✅ Fait |
+| Page | Quantité | Statut |
+|------|----------|--------|
+| Hub Zones Intervention | 1 | ✅ Fait |
+| Pages Régions | 13 | ✅ Fait |
+| Pages Départements | 8+ | ✅ Fait |
+| Pages Villes | **125** | ✅ Fait |
+| Pages Ville+Service | **1000+** | ✅ Fait |
+| Arrondissements Paris | **20** | ✅ Fait |
 
 ### 📝 BLOG
 
@@ -959,10 +781,9 @@ type BlogCategory =
 |-------|--------|
 | Page Blog Hub `/blog` | ✅ Fait |
 | Pages Articles `/blog/:slug` | ✅ Fait |
-| 6 articles SEO initiaux | ✅ Fait |
+| **10 articles SEO** (5 nationaux + 5 locaux) | ✅ Fait |
 | JSON-LD Article schema | ✅ Fait |
 | Partage social | ✅ Fait |
-| Lien Blog dans Header | ✅ Fait |
 
 ### 🔒 FORMULAIRES & BACKEND
 
@@ -971,7 +792,6 @@ type BlogCategory =
 | Supabase connecté | ✅ Fait | Projet `emvmyrdxmpsoaykabszb` |
 | Table `customer_requests` | ✅ Fait | Stockage leads |
 | Edge Function emails | ✅ Existe | `send-quote-email/` |
-| QuoteFunnel (Formspree) | ✅ Fonctionne | Backup fonctionnel |
 | **RESEND_API_KEY** | ⏳ À configurer | Clé à fournir par le client |
 
 ### 📊 SEO & TECHNIQUE
@@ -981,29 +801,22 @@ type BlogCategory =
 | Meta tags OG | ✅ Fait |
 | Twitter Cards | ✅ Fait |
 | robots.txt | ✅ Fait |
-| sitemap.xml (60+ URLs) | ✅ Fait |
+| sitemap.xml (250+ URLs) | ✅ Fait |
 | Canonical URLs | ✅ Fait |
 | Breadcrumbs | ✅ Fait |
-| JSON-LD LocalBusiness | ✅ Fait |
-| Image OG sociale | ✅ Fait |
-| Google Analytics 4 | ⏳ En attente ID GA4 |
-
-### 📁 DOCUMENTATION
-
-| Tâche | Statut |
-|-------|--------|
-| README.md unifié v7.0 | ✅ Fait |
-| Anciens cahiers des charges | ✅ Supprimés |
-| Documentation Blog | ✅ Ajoutée |
+| JSON-LD schemas | ✅ Fait |
+| Stratégie Answer-First | ✅ Fait |
+| **Google Analytics 4** | ⏳ En attente ID GA4 |
 
 ---
 
-### ⏳ TÂCHES EN ATTENTE (À fournir par le client)
+### ⏳ TÂCHES EN ATTENTE (Configuration Externe)
 
 | Tâche | Information requise |
 |-------|---------------------|
 | RESEND_API_KEY | Clé API Resend pour emails |
 | Google Analytics 4 | ID de suivi (G-XXXXXXXXXX) |
+| Google Search Console | Soumission sitemap |
 | Premier admin | Email admin pour INSERT dans user_roles |
 | Domaine Resend | Vérification hdconnect.fr dans Resend |
 
@@ -1011,8 +824,8 @@ type BlogCategory =
 
 | Tâche | Description | Priorité |
 |-------|-------------|----------|
-| Pages service+ville | `/villes/paris/videosurveillance` | 🟢 Basse |
-| Plus d'articles blog | Contenu SEO additionnel | 🟢 Basse |
+| +25 villes | Atteindre 150 villes | 🟡 Moyenne |
+| Page Auteurs/Experts | Renforcer E-E-A-T | 🟡 Moyenne |
 | Widget avis Google | Reviews clients | 🟢 Basse |
 | Chat live | Support instantané | 🟢 Basse |
 | Espace client | Portail post-installation | 🟢 Basse |
@@ -1028,5 +841,5 @@ type BlogCategory =
 ---
 
 **Document créé le 03 Janvier 2026**  
-**Version 7.0 - Documentation Complète avec Blog**  
-**Dernière mise à jour:** 08 Janvier 2026
+**Version 8.0 - Production Ready**  
+**Dernière mise à jour:** 03 Février 2026
