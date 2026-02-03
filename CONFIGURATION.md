@@ -1,93 +1,34 @@
 # ⚙️ Guide de Configuration HD Connect
 
-> Ce document détaille toutes les étapes de configuration pour rendre le site 100% fonctionnel.
+> **Version:** 3.0  
+> **Dernière mise à jour:** 03 Février 2026  
+> **Statut:** Configuration externe en attente
 
 ---
 
 ## 📋 Checklist Rapide
 
-- [ ] Variables d'environnement configurées
-- [ ] Supabase connecté
-- [ ] Premier utilisateur admin créé
-- [ ] Clé API Resend ajoutée
-- [ ] Domaine email vérifié
-- [ ] Google Analytics installé
-- [ ] Sitemap soumis à Google
+### ✅ Déjà Configuré
+- [x] Variables d'environnement Supabase
+- [x] Tables base de données
+- [x] Edge Function send-quote-email
+- [x] Sitemap.xml (250+ URLs)
+- [x] robots.txt
+- [x] Meta tags SEO
+
+### ⏳ À Configurer par le Client
+- [ ] Clé API Resend (RESEND_API_KEY)
+- [ ] Premier utilisateur admin
+- [ ] Vérification domaine email
+- [ ] Google Analytics 4
+- [ ] Google Search Console
+- [ ] Domaine personnalisé (hdconnect.fr)
 
 ---
 
-## 1. Variables d'Environnement
+## 1. Configuration Resend (Emails)
 
-### Fichier .env (racine du projet)
-
-```bash
-# Supabase - Ces valeurs sont déjà configurées
-VITE_SUPABASE_URL="https://emvmyrdxmpsoaykabszb.supabase.co"
-VITE_SUPABASE_PUBLISHABLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-VITE_SUPABASE_PROJECT_ID="emvmyrdxmpsoaykabszb"
-```
-
-> ⚠️ Ces variables sont publiques (VITE_*) et peuvent être exposées côté client.
-
----
-
-## 2. Configuration Supabase
-
-### 2.1 Accès au Dashboard
-
-1. Aller sur [supabase.com](https://supabase.com)
-2. Se connecter
-3. Sélectionner le projet `emvmyrdxmpsoaykabszb`
-
-### 2.2 Vérifier les Tables
-
-Dans **Table Editor**, vérifier que les tables existent :
-
-#### Table `customer_requests`
-
-| Colonne | Type | Description |
-|---------|------|-------------|
-| id | uuid | Identifiant unique |
-| created_at | timestamptz | Date création |
-| updated_at | timestamptz | Date mise à jour |
-| name | text | Nom du client |
-| email | text | Email |
-| phone | text | Téléphone |
-| request_type | enum | quote/intervention/contact |
-| services | text[] | Services demandés |
-| message | text | Message libre |
-| city | text | Ville |
-| postal_code | text | Code postal |
-| status | enum | Statut de la demande |
-
-#### Table `user_roles`
-
-| Colonne | Type | Description |
-|---------|------|-------------|
-| id | uuid | Identifiant unique |
-| user_id | uuid | Référence auth.users |
-| role | enum | admin/user |
-| created_at | timestamptz | Date création |
-
-### 2.3 Créer le Premier Admin
-
-1. Aller sur `/auth` de votre site
-2. Créer un compte avec email/mot de passe
-3. Noter l'UUID de l'utilisateur créé (visible dans **Authentication** → **Users**)
-4. Aller dans **SQL Editor** et exécuter :
-
-```sql
-INSERT INTO public.user_roles (user_id, role)
-VALUES ('VOTRE-UUID-ICI', 'admin');
-```
-
-5. Vous pouvez maintenant accéder à `/admin`
-
----
-
-## 3. Configuration des Emails (Resend)
-
-### 3.1 Créer un Compte Resend
+### 1.1 Créer un Compte Resend
 
 1. Aller sur [resend.com](https://resend.com)
 2. Créer un compte gratuit
@@ -95,15 +36,15 @@ VALUES ('VOTRE-UUID-ICI', 'admin');
 4. Créer une nouvelle clé avec les permissions `sending_access`
 5. Copier la clé (commence par `re_`)
 
-### 3.2 Ajouter la Clé dans Supabase
+### 1.2 Ajouter la Clé dans Lovable Cloud
 
-1. Dans Supabase Dashboard, aller dans **Edge Functions** → **Secrets**
-2. Cliquer **Add new secret**
+1. Dans votre projet Lovable, aller dans **Cloud** → **Secrets**
+2. Cliquer **Add Secret**
 3. Nom : `RESEND_API_KEY`
 4. Valeur : Votre clé `re_...`
 5. Sauvegarder
 
-### 3.3 Vérifier le Domaine (Optionnel mais recommandé)
+### 1.3 Vérifier le Domaine (Recommandé)
 
 Pour envoyer des emails depuis `@hdconnect.fr` :
 
@@ -114,23 +55,41 @@ Pour envoyer des emails depuis `@hdconnect.fr` :
    - DKIM
    - DMARC (optionnel)
 
-4. Mettre à jour la constante dans `supabase/functions/send-quote-email/index.ts` :
+### 1.4 Tester l'Envoi
 
-```typescript
-const SENDER_EMAIL = "HD Connect <contact@hdconnect.fr>";
-```
-
-### 3.4 Tester l'Envoi
-
-1. Aller sur le site
+1. Aller sur le site (preview ou production)
 2. Remplir le formulaire de devis
 3. Vérifier que l'email arrive à `kamal@hdconnect.fr`
 
 ---
 
-## 4. Google Analytics
+## 2. Créer le Premier Admin
 
-### 4.1 Créer une Propriété
+### 2.1 Créer un Compte Utilisateur
+
+1. Aller sur `/auth` de votre site
+2. Créer un compte avec email/mot de passe
+3. Noter l'email utilisé
+
+### 2.2 Attribuer le Rôle Admin
+
+1. Dans Lovable, aller dans **Cloud** → **Database** → **Tables**
+2. Ouvrir la table `user_roles` (ou utiliser **Run SQL**)
+3. Trouver l'UUID de l'utilisateur dans la table `auth.users`
+4. Exécuter :
+
+```sql
+INSERT INTO public.user_roles (user_id, role)
+VALUES ('VOTRE-UUID-ICI', 'admin');
+```
+
+5. Vous pouvez maintenant accéder à `/admin`
+
+---
+
+## 3. Google Analytics 4
+
+### 3.1 Créer une Propriété
 
 1. Aller sur [analytics.google.com](https://analytics.google.com)
 2. Créer un compte ou sélectionner un compte existant
@@ -138,9 +97,9 @@ const SENDER_EMAIL = "HD Connect <contact@hdconnect.fr>";
 4. Configurer pour "Web"
 5. Copier l'ID de mesure (format `G-XXXXXXXXXX`)
 
-### 4.2 Ajouter le Script
+### 3.2 Ajouter le Script
 
-Modifier `index.html` :
+Modifier `index.html` (à la racine du projet) :
 
 ```html
 <!DOCTYPE html>
@@ -157,61 +116,52 @@ Modifier `index.html` :
       gtag('config', 'G-XXXXXXXXXX');
     </script>
   </head>
-  <body>
-    <!-- ... -->
-  </body>
+  <!-- ... -->
 </html>
 ```
 
+Remplacer `G-XXXXXXXXXX` par votre ID réel.
+
 ---
 
-## 5. Google Search Console
+## 4. Google Search Console
 
-### 5.1 Ajouter le Site
+### 4.1 Ajouter le Site
 
 1. Aller sur [search.google.com/search-console](https://search.google.com/search-console)
 2. Ajouter une propriété
 3. Choisir "Préfixe de l'URL" : `https://hdconnect.fr`
 4. Vérifier la propriété (DNS, balise HTML, ou Google Analytics)
 
-### 5.2 Soumettre le Sitemap
+### 4.2 Soumettre le Sitemap
 
 1. Dans Search Console, aller dans **Sitemaps**
 2. Ajouter : `https://hdconnect.fr/sitemap.xml`
 3. Cliquer **Envoyer**
 
-### 5.3 Demander l'Indexation
+Le sitemap contient **250+ URLs** incluant :
+- 11 pages services
+- 13 pages régions
+- 8+ pages départements
+- 125 pages villes
+- 50+ pages ville+service prioritaires
+- 20 arrondissements Paris
+- 10 articles blog
 
-1. Dans **Inspection de l'URL**
-2. Entrer l'URL de la page d'accueil
-3. Cliquer **Demander une indexation**
-4. Répéter pour les pages importantes
+### 4.3 Demander l'Indexation
 
----
-
-## 6. Liens Réseaux Sociaux
-
-Mettre à jour dans `src/data/content.ts` :
-
-```typescript
-export const content = {
-  contact: {
-    // ... autres infos ...
-    social: {
-      facebook: "https://facebook.com/hdconnect.fr",
-      instagram: "https://instagram.com/hdconnect_fr",
-      linkedin: "https://linkedin.com/company/hdconnect",
-      twitter: "https://twitter.com/hdconnect_fr"
-    }
-  }
-};
-```
+Pages prioritaires à indexer en premier :
+1. `/` (accueil)
+2. `/services` (hub services)
+3. `/zones-intervention` (hub géographique)
+4. `/blog` (hub blog)
+5. Pages services principales
 
 ---
 
-## 7. Domaine Personnalisé
+## 5. Domaine Personnalisé
 
-### 7.1 Configuration DNS
+### 5.1 Configuration DNS
 
 Ajouter ces enregistrements chez votre registrar :
 
@@ -223,100 +173,53 @@ TTL: 3600
 
 Type: CNAME
 Name: www
-Value: [votre-projet].lovable.app
+Value: site-polish-joy.lovable.app
 TTL: 3600
 ```
 
-### 7.2 Configuration Lovable
+### 5.2 Configuration Lovable
 
 1. Dans Lovable, ouvrir le projet
 2. Aller dans **Settings** → **Domains**
 3. Ajouter `hdconnect.fr`
 4. Attendre la propagation DNS (jusqu'à 48h)
 
-### 7.3 Redirection www → apex
+### 5.3 Redirection www → apex
 
-Configurer une redirection 301 de `www.hdconnect.fr` vers `hdconnect.fr` :
-- Soit via Lovable (automatique)
-- Soit via Cloudflare ou votre CDN
+Configurer une redirection 301 de `www.hdconnect.fr` vers `hdconnect.fr`.
 
 ---
 
-## 8. Sécurité
+## 6. Vérification Post-Configuration
 
-### 8.1 En-têtes de Sécurité
+### 6.1 Checklist de Test
 
-À ajouter dans la configuration du serveur/CDN :
+- [ ] Formulaire de devis → Email reçu
+- [ ] Connexion admin → `/admin` accessible
+- [ ] Google Analytics → Données en temps réel
+- [ ] Search Console → Sitemap accepté
+- [ ] Domaine → `hdconnect.fr` fonctionne
+- [ ] SSL → Certificat valide
 
-```
-Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self';
-X-Frame-Options: DENY
-X-Content-Type-Options: nosniff
-Referrer-Policy: strict-origin-when-cross-origin
-Permissions-Policy: camera=(), microphone=(), geolocation=()
-```
+### 6.2 Métriques à Surveiller
 
-### 8.2 Certificat SSL
-
-Automatiquement géré par Lovable pour les domaines personnalisés.
-
----
-
-## 9. Performance
-
-### 9.1 Optimisation Images
-
-Les images sont déjà :
-- En format JPG optimisé
-- Chargées en lazy loading
-- Redimensionnées selon le viewport
-
-### 9.2 Vérifier les Métriques
-
-1. Aller sur [PageSpeed Insights](https://pagespeed.web.dev)
-2. Entrer `https://hdconnect.fr`
-3. Objectifs :
-   - Performance : > 85
-   - Accessibilité : > 90
-   - Best Practices : > 90
-   - SEO : > 95
+| Métrique | Outil | Objectif |
+|----------|-------|----------|
+| Trafic organique | Google Analytics | Croissance mensuelle |
+| Positions mots-clés | Search Console | Top 10 → Top 3 |
+| Indexation | Search Console | 250+ pages indexées |
+| Leads | Base de données | 100+/mois |
+| Performance | PageSpeed Insights | Score > 85 |
 
 ---
 
-## 10. Maintenance
-
-### 10.1 Mises à Jour Dépendances
-
-```bash
-# Vérifier les mises à jour disponibles
-pnpm outdated
-
-# Mettre à jour les dépendances
-pnpm update
-```
-
-### 10.2 Surveillance Supabase
-
-- Vérifier régulièrement l'utilisation dans le Dashboard
-- Surveiller les logs d'erreurs des Edge Functions
-- Exporter les données de `customer_requests` périodiquement
-
-### 10.3 Backup
-
-```bash
-# Exporter les données (via Supabase CLI)
-supabase db dump -f backup.sql
-```
-
----
-
-## 📞 Support
+## 7. Support
 
 En cas de problème :
-1. Consulter les logs dans Supabase Dashboard
-2. Vérifier la console du navigateur
-3. Contacter le développeur
+1. Consulter les logs dans **Cloud** → **Edge Functions**
+2. Vérifier la console du navigateur (F12)
+3. Tester les formulaires en mode preview
 
 ---
 
-**Document créé le 03 Janvier 2026**
+**Document mis à jour le 03 Février 2026**
