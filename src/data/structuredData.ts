@@ -249,10 +249,51 @@ export const websiteSchema = {
   "@id": "https://hdconnect.fr/#website",
   "url": "https://hdconnect.fr",
   "name": "HD Connect",
-  "description": "Expert français en installation de systèmes de sécurité",
+  "description": "HD Connect est le spécialiste français de l'installation de systèmes de sécurité professionnels depuis 2015.",
   "publisher": { "@id": "https://hdconnect.fr/#organization" },
-  "inLanguage": "fr-FR"
+  "inLanguage": "fr-FR",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://hdconnect.fr/recherche?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 };
+
+// Schema Speakable pour optimisation IA/Recherche vocale
+export const speakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "HD Connect - Installation Sécurité France",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", ".answer-first", ".hero-subtitle", ".faq-answer"]
+  },
+  "about": [
+    { "@type": "Thing", "name": "Vidéosurveillance" },
+    { "@type": "Thing", "name": "Alarme anti-intrusion" },
+    { "@type": "Thing", "name": "Contrôle d'accès" },
+    { "@type": "Thing", "name": "Domotique" }
+  ]
+};
+
+// Schema HowTo pour guides d'installation (Featured Snippets)
+export const getHowToSchema = (title: string, steps: { name: string; text: string }[]) => ({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": title,
+  "description": `Guide complet pour ${title.toLowerCase()} par HD Connect, expert sécurité certifié.`,
+  "totalTime": "PT30M",
+  "tool": [
+    { "@type": "HowToTool", "name": "Équipement de sécurité certifié" },
+    { "@type": "HowToTool", "name": "Outils d'installation professionnels" }
+  ],
+  "step": steps.map((step, index) => ({
+    "@type": "HowToStep",
+    "position": index + 1,
+    "name": step.name,
+    "text": step.text
+  }))
+});
 
 // Fonction pour générer le JSON-LD complet de la page d'accueil
 export const getHomePageJsonLd = () => {
@@ -260,6 +301,7 @@ export const getHomePageJsonLd = () => {
     organizationSchema,
     localBusinessSchema,
     servicesSchema,
-    websiteSchema
+    websiteSchema,
+    speakableSchema
   ];
 };
