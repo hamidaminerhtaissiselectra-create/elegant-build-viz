@@ -220,7 +220,11 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/60">
             <p>© {currentYear} HD Connect. Tous droits réservés.</p>
-            <p>Conçu avec passion pour votre sécurité</p>
+            <div className="flex items-center gap-4">
+              <Link to="/mentions-legales" className="hover:text-primary transition-colors">Mentions légales</Link>
+              <Link to="/politique-confidentialite" className="hover:text-primary transition-colors">Confidentialité</Link>
+              <Link to="/cgv" className="hover:text-primary transition-colors">CGV</Link>
+            </div>
           </div>
         </div>
       </div>

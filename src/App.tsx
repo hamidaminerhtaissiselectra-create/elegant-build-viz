@@ -9,7 +9,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
-import LegalPage from "./pages/LegalPage";
+import MentionsLegales from "./pages/MentionsLegales";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
+import CGV from "./pages/CGV";
 import ZonesIntervention from "./pages/ZonesIntervention";
 import CityPage from "./pages/villes/CityPage";
 import CityServiceDetailPage from "./pages/villes/CityServiceDetailPage";
@@ -96,8 +98,9 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogArticle />} />
           
           {/* Pages légales */}
-          <Route path="/mentions-legales" element={<LegalPage />} />
-          <Route path="/politique-confidentialite" element={<LegalPage />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+          <Route path="/cgv" element={<CGV />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
