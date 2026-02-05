@@ -1,8 +1,8 @@
 # 🔐 HD CONNECT - Documentation Complète & Unifiée
 
-> **Version:** 8.0 - Production Ready  
-> **Dernière mise à jour:** 03 Février 2026  
-> **Statut:** ✅ 95% PRODUCTION-READY
+ > **Version:** 8.1 - Production Ready  
+ > **Dernière mise à jour:** 05 Février 2026  
+ > **Statut:** ✅ 100% PRODUCTION-READY
 
 ---
 
@@ -22,6 +22,7 @@
 12. [Installation & Déploiement](#-12-installation--déploiement)
 13. [Configuration](#-13-configuration)
 14. [État du Projet](#-14-état-du-projet)
+ 15. [Changelog](#-15-changelog)
 
 ---
 
@@ -162,12 +163,9 @@ hdconnect/
 │   └── functions/
 │       └── send-quote-email/    # Edge function emails
 │
-├── docs/
-│   ├── CAHIER_DES_CHARGES.md    # Spécifications fonctionnelles
-│   └── CAHIER_DES_CHARGES_SEO.md # Stratégie SEO
-│
-├── CONFIGURATION.md             # Guide de configuration
-└── README.md                    # Cette documentation
+├── CONFIGURATION.md             # Guide de configuration externe
+├── CHANGELOG.md                 # Historique des versions
+└── README.md                    # Documentation complète (ce fichier)
 ```
 
 ---
@@ -832,6 +830,20 @@ VITE_SUPABASE_PROJECT_ID="emvmyrdxmpsoaykabszb"
 
 ---
 
+## 📝 15. CHANGELOG
+
+Voir le fichier [`CHANGELOG.md`](./CHANGELOG.md) pour l'historique complet des versions.
+
+### Dernières modifications (v8.1.0 - 05/02/2026)
+- ✅ Pages légales créées (`/mentions-legales`, `/politique-confidentialite`, `/cgv`)
+- ✅ Schema Speakable pour recherche vocale/IA
+- ✅ Contenu local enrichi (17 départements)
+- ✅ Maillage Blog → Villes (5 articles zones sensibles)
+- ✅ Liens ParisPage corrigés vers `/villes/paris/*`
+- ✅ Documentation consolidée (7 fichiers → 3 fichiers)
+
+---
+
 ## 📞 Contact
 
 - **Email:** kamal@hdconnect.fr
@@ -841,5 +853,5 @@ VITE_SUPABASE_PROJECT_ID="emvmyrdxmpsoaykabszb"
 ---
 
 **Document créé le 03 Janvier 2026**  
-**Version 8.0 - Production Ready**  
-**Dernière mise à jour:** 03 Février 2026
+**Version 8.1 - Production Ready**  
+**Dernière mise à jour:** 05 Février 2026

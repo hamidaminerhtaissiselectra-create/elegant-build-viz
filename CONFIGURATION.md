@@ -1,7 +1,7 @@
 # ⚙️ Guide de Configuration HD Connect
 
-> **Version:** 3.0  
-> **Dernière mise à jour:** 03 Février 2026  
+> **Version:** 3.1  
+> **Dernière mise à jour:** 05 Février 2026  
 > **Statut:** Configuration externe en attente
 
 ---
@@ -15,6 +15,8 @@
 - [x] Sitemap.xml (250+ URLs)
 - [x] robots.txt
 - [x] Meta tags SEO
+- [x] Pages légales (Mentions, RGPD, CGV)
+- [x] Schema Speakable (IA/vocale)
 
 ### ⏳ À Configurer par le Client
 - [ ] Clé API Resend (RESEND_API_KEY)
@@ -222,4 +224,14 @@ En cas de problème :
 
 ---
 
-**Document mis à jour le 03 Février 2026**
+---
+
+## 📚 Documentation
+
+- **README.md** : Documentation technique complète
+- **CHANGELOG.md** : Historique des versions
+- **CONFIGURATION.md** : Ce guide
+
+---
+
+**Document mis à jour le 05 Février 2026**
