@@ -29,6 +29,7 @@ export interface BlogArticle {
   image: string;
   seoTitle: string;
   seoDescription: string;
+  relatedCities?: { name: string; slug: string }[];
 }
 
 export type BlogCategory = 
@@ -1670,7 +1671,14 @@ La sécurité de votre commerce en Seine-Saint-Denis nécessite une approche pro
     featured: true,
     image: blogSecuriteCommerce93,
     seoTitle: "Sécurité Commerce Seine-Saint-Denis 93 : Guide Complet | HD Connect",
-    seoDescription: "Protégez votre commerce en Seine-Saint-Denis (93) : solutions vidéosurveillance, alarme anti-intrusion adaptées. Devis gratuit HD Connect Bobigny, Saint-Denis."
+    seoDescription: "Protégez votre commerce en Seine-Saint-Denis (93) : solutions vidéosurveillance, alarme anti-intrusion adaptées. Devis gratuit HD Connect Bobigny, Saint-Denis.",
+    relatedCities: [
+      { name: "Saint-Denis", slug: "saint-denis" },
+      { name: "Montreuil", slug: "montreuil" },
+      { name: "Aubervilliers", slug: "aubervilliers" },
+      { name: "Bobigny", slug: "bobigny" },
+      { name: "Pantin", slug: "pantin" }
+    ]
   },
   {
     id: "13",
@@ -1827,7 +1835,14 @@ Votre villa en PACA mérite une protection à la hauteur de sa valeur. Ne faites
     featured: true,
     image: blogProtectionVillaPaca,
     seoTitle: "Protection Villa PACA Côte d'Azur : Sécurité Résidence Secondaire | HD Connect",
-    seoDescription: "Sécurisez votre villa en PACA : vidéosurveillance, alarme haut de gamme, télésurveillance. Expert Nice, Marseille, Cannes. Devis gratuit HD Connect."
+    seoDescription: "Sécurisez votre villa en PACA : vidéosurveillance, alarme haut de gamme, télésurveillance. Expert Nice, Marseille, Cannes. Devis gratuit HD Connect.",
+    relatedCities: [
+      { name: "Nice", slug: "nice" },
+      { name: "Cannes", slug: "cannes" },
+      { name: "Marseille", slug: "marseille" },
+      { name: "Aix-en-Provence", slug: "aix-en-provence" },
+      { name: "Antibes", slug: "antibes" }
+    ]
   },
   {
     id: "14",
@@ -1974,7 +1989,14 @@ L'Île-de-France nécessite une approche sécuritaire professionnelle adaptée �
     featured: false,
     image: blogAlarmeResidenceIdf,
     seoTitle: "Alarme Résidence Île-de-France 2026 : Guide Protection | HD Connect",
-    seoDescription: "Choisir la meilleure alarme pour votre résidence en Île-de-France : appartement Paris, pavillon banlieue. Conseils experts, devis gratuit HD Connect IDF."
+    seoDescription: "Choisir la meilleure alarme pour votre résidence en Île-de-France : appartement Paris, pavillon banlieue. Conseils experts, devis gratuit HD Connect IDF.",
+    relatedCities: [
+      { name: "Paris", slug: "paris" },
+      { name: "Boulogne-Billancourt", slug: "boulogne-billancourt" },
+      { name: "Versailles", slug: "versailles" },
+      { name: "Créteil", slug: "creteil" },
+      { name: "Nanterre", slug: "nanterre" }
+    ]
   },
   {
     id: "15",
@@ -2133,7 +2155,12 @@ La vidéosurveillance est un investissement stratégique pour votre entreprise l
     featured: false,
     image: blogVideosurveillanceEntrepriseLyon,
     seoTitle: "Vidéosurveillance Entreprise Lyon 2026 : Solutions Pro | HD Connect",
-    seoDescription: "Équipez votre entreprise à Lyon en vidéosurveillance : PME, entrepôts, commerces. Installation professionnelle, conformité RGPD. Devis gratuit HD Connect Lyon."
+    seoDescription: "Équipez votre entreprise à Lyon en vidéosurveillance : PME, entrepôts, commerces. Installation professionnelle, conformité RGPD. Devis gratuit HD Connect Lyon.",
+    relatedCities: [
+      { name: "Lyon", slug: "lyon" },
+      { name: "Villeurbanne", slug: "villeurbanne" },
+      { name: "Vénissieux", slug: "venissieux" }
+    ]
   },
   {
     id: "16",
@@ -2305,7 +2332,12 @@ La domotique transforme votre habitat bordelais en maison du futur, alliant conf
     featured: false,
     image: blogDomotiqueMaisonBordeaux,
     seoTitle: "Domotique Maison Bordeaux 2026 : Guide Maison Connectée | HD Connect",
-    seoDescription: "Transformez votre maison à Bordeaux en smart home : domotique, sécurité, économies d'énergie. Échoppe, villa, neuf. Devis gratuit HD Connect Bordeaux."
+    seoDescription: "Transformez votre maison à Bordeaux en smart home : domotique, sécurité, économies d'énergie. Échoppe, villa, neuf. Devis gratuit HD Connect Bordeaux.",
+    relatedCities: [
+      { name: "Bordeaux", slug: "bordeaux" },
+      { name: "Mérignac", slug: "merignac" },
+      { name: "Pessac", slug: "pessac" }
+    ]
   }
 ];
 
