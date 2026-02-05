@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, ChevronLeft, ChevronRight, Check, Camera, Shield, Lock, PhoneCall, Wifi, Wrench, HelpCircle, AlertTriangle } from "lucide-react";
 import { useState, useMemo } from "react";
 import { useToast } from "@/components/ui/use-toast";
+import { supabaseClient } from "@/lib/supabase";
 
 import { z } from "zod";
 import { cn } from "@/lib/utils";
@@ -146,13 +147,13 @@ const QuoteFunnel = () => {
   const currentStep = steps[step - 1];
   const StepComponent = currentStep?.component;
 
-  // --- Logique de soumission (Formspree - Sécurisé) ---
+  // --- Logique de soumission (Formspree + Stockage Supabase) ---
   const handleSubmit = async () => {
     setIsSubmitting(true);
     try {
       const finalData = funnelSchema.parse(formData);
       
-      // Envoi via Formspree (avec rate limiting intégré)
+      // 1. Envoi via Formspree (Notification Email)
       const response = await fetch('https://formspree.io/f/mwpzrqyl', {
         method: 'POST',
         headers: {
@@ -161,13 +162,36 @@ const QuoteFunnel = () => {
         body: JSON.stringify(finalData),
       });
 
+      // 2. Stockage dans Supabase (Panel Admin)
+      const { error: supabaseError } = await supabaseClient
+        .from('customer_requests')
+        .insert([{
+          name: finalData.clientInfo.name,
+          email: finalData.clientInfo.email,
+          phone: finalData.clientInfo.phone,
+           request_type: finalData.requestType === 'intervention' ? 'emergency' : 'quote',
+          message: JSON.stringify({
+            address: finalData.clientInfo.address,
+            timeline: finalData.clientInfo.timeline,
+            budget: finalData.clientInfo.budget,
+            quoteData: finalData.quoteData,
+            interventionData: finalData.interventionData,
+            message: finalData.clientInfo.message
+          }),
+          status: 'new'
+        }]);
+
+      if (supabaseError) {
+        console.error("Erreur stockage Supabase:", supabaseError);
+      }
+
       if (!response.ok) {
         throw new Error("L'envoi de l'e-mail a échoué.");
       }
 
       toast({
         title: "Demande envoyée !",
-        description: "Nous avons bien reçu votre demande et nous vous répondrons dans les plus brefs délais.",
+        description: "Nous avons bien reçu votre demande. Elle a été enregistrée et nous vous répondrons rapidement.",
       });
       
       // Réinitialiser le formulaire

@@ -1,6 +1,6 @@
 # 🔐 HD CONNECT - Documentation Complète & Unifiée
 
- > **Version:** 8.1 - Production Ready  
+  > **Version:** 9.0 - Production Ready  
  > **Dernière mise à jour:** 05 Février 2026  
  > **Statut:** ✅ 100% PRODUCTION-READY
 
@@ -36,16 +36,16 @@
 |---------------|-----|
 | Production | https://hdconnect.fr |
 | Preview | https://site-polish-joy.lovable.app |
-| Supabase | https://emvmyrdxmpsoaykabszb.supabase.co |
+| Supabase | https://bntatxbwyheajskyrtuh.supabase.co |
 
 ### Objectifs Business
 | Objectif | Description | Statut |
 |----------|-------------|--------|
 | Site vitrine | Présenter les 11 services | ✅ Fait |
 | Génération de leads | Formulaire de devis intelligent | ✅ Fait |
-| SEO local | Référencement 250+ pages | ✅ Fait |
+ | SEO local | Référencement 310+ pages | ✅ Fait |
 | Animations premium | Micro-interactions globales | ✅ Fait |
-| Admin panel | Gestion des leads | ⚠️ Backend à configurer |
+| Admin panel | Gestion des leads | ✅ Opérationnel |
 
 ### Objectifs SEO
 | Métrique | Objectif 6 mois | Objectif 12 mois |
@@ -73,12 +73,12 @@
 | React Hook Form | 7.x | Formulaires |
 | Zod | 3.x | Validation |
 
-### Backend (Supabase)
+### Backend (Supabase & Formspree)
 | Service | Usage |
 |---------|-------|
 | PostgreSQL | Base de données |
 | Auth | Authentification email/password |
-| Edge Functions | API serverless (emails) |
+| Formspree | Envoi des emails (ID: mwpzrqyl) |
 | Row Level Security | Sécurité données |
 
 ### Outils
@@ -160,8 +160,7 @@ hdconnect/
 │   └── index.css                # Styles globaux + tokens
 │
 ├── supabase/
-│   └── functions/
-│       └── send-quote-email/    # Edge function emails
+│   └── functions/               # (Architecture Formspree utilisée)
 │
 ├── CONFIGURATION.md             # Guide de configuration externe
 ├── CHANGELOG.md                 # Historique des versions
@@ -226,6 +225,8 @@ NIVEAU 4 - VILLES (125 pages pivot)
 ├── /villes/paris                  → ParisPage.tsx (Hub arrondissements)
 ├── /villes/lyon
 ├── /villes/marseille
+ ├── /villes/villeurbanne
+ ├── /villes/caluire-et-cuire
 ├── /villes/toulouse
 ├── /villes/bordeaux
 ├── /villes/lille
@@ -249,6 +250,18 @@ NIVEAU 5 - ARRONDISSEMENTS PARIS (20 pages)
 ├── /paris/paris-2eme
 ├── /paris/paris-3eme
 └── ... (jusqu'au 20ème)
+ 
+ NIVEAU 5 - ARRONDISSEMENTS LYON (9 pages)
+ ├── /lyon/lyon-1er-presquile
+ ├── /lyon/lyon-2e-confluence
+ ├── /lyon/lyon-3e-part-dieu
+ └── ... (jusqu'au 9ème)
+ 
+ NIVEAU 5 - ARRONDISSEMENTS MARSEILLE (12 secteurs)
+ ├── /marseille/marseille-1er-2e
+ ├── /marseille/marseille-3e-4e
+ ├── /marseille/marseille-5e
+ └── ... (jusqu'au 15e-16e)
 
 BLOG (10 articles)
 ├── /blog                          → Blog.tsx (Hub)
@@ -534,15 +547,15 @@ Via les composants SEO :
 - `@type: BreadcrumbList` - Fil d'Ariane
 - `@type: Article` - Articles blog
 
-### Sitemap.xml (250+ URLs)
+ ### Sitemap.xml (310+ URLs)
 
 ```
 ├── Priority 1.0    → Accueil
 ├── Priority 0.9    → Hub Services + 8 services principaux
 ├── Priority 0.85   → 3 prestations + hub régions
 ├── Priority 0.8    → 13 régions + 8 départements IDF
-├── Priority 0.75   → 125 villes + ville+service (métropoles)
-├── Priority 0.7    → 20 arrondissements Paris
+ ├── Priority 0.75   → 150+ villes + ville+service (métropoles)
+ ├── Priority 0.7    → 20 arr. Paris + 9 arr. Lyon + 12 sect. Marseille
 ├── Priority 0.65   → Blog + 10 articles
 └── Priority 0.3    → 2 pages légales
 ```
@@ -601,8 +614,8 @@ smartphone 24h/24, certifiés NF&A2P, et garantis 5 ans."
 ### Configuration
 
 ```
-Project ID: emvmyrdxmpsoaykabszb
-URL: https://emvmyrdxmpsoaykabszb.supabase.co
+Project ID: bntatxbwyheajskyrtuh
+URL: https://bntatxbwyheajskyrtuh.supabase.co
 ```
 
 ### Tables
@@ -645,23 +658,13 @@ CREATE TABLE user_roles (
 );
 ```
 
-### Edge Functions
+### Système de Formulaires (Architecture Hybride)
 
-#### send-quote-email
+Le site utilise une architecture hybride pour la gestion des leads :
+- **Formspree** : Gère l'envoi immédiat des notifications par email à `kamal@hdconnect.fr`.
+- **Supabase** : Stocke simultanément chaque demande dans la table `customer_requests` pour une gestion centralisée via le panel Admin.
 
-```typescript
-// supabase/functions/send-quote-email/index.ts
-// Envoie un email via Resend lors d'une demande de devis
-
-POST /functions/v1/send-quote-email
-Body: {
-  name, email, phone, services, message, 
-  requestType, city, postalCode
-}
-
-// Requiert: RESEND_API_KEY dans les secrets
-// Destinataire: kamal@hdconnect.fr
-```
+Cette approche garantit une fiabilité maximale sans dépendre d'une infrastructure d'emailing complexe.
 
 ---
 
@@ -708,24 +711,17 @@ pnpm build
 
 ```bash
 # Supabase (obligatoire)
-VITE_SUPABASE_URL="https://emvmyrdxmpsoaykabszb.supabase.co"
+VITE_SUPABASE_URL="https://bntatxbwyheajskyrtuh.supabase.co"
 VITE_SUPABASE_PUBLISHABLE_KEY="eyJ..."
-VITE_SUPABASE_PROJECT_ID="emvmyrdxmpsoaykabszb"
+VITE_SUPABASE_PROJECT_ID="bntatxbwyheajskyrtuh"
 ```
-
-### Secrets Supabase (À configurer)
-
-| Secret | Description | Statut |
-|--------|-------------|--------|
-| `RESEND_API_KEY` | Clé API Resend pour emails | ⏳ En attente |
 
 ### Checklist Configuration
 
 - [x] Variables d'environnement configurées
 - [x] Supabase connecté
+- [x] Architecture Formspree + Supabase opérationnelle
 - [ ] Premier utilisateur admin créé
-- [ ] Clé API Resend ajoutée
-- [ ] Domaine email vérifié (hdconnect.fr)
 - [ ] Google Analytics 4 installé
 - [ ] Sitemap soumis à Google Search Console
 
@@ -769,7 +765,7 @@ VITE_SUPABASE_PROJECT_ID="emvmyrdxmpsoaykabszb"
 | Hub Zones Intervention | 1 | ✅ Fait |
 | Pages Régions | 13 | ✅ Fait |
 | Pages Départements | 8+ | ✅ Fait |
-| Pages Villes | **125** | ✅ Fait |
+| Pages Villes | **125** | ✅ Fait (100% IDF + Métropoles) |
 | Pages Ville+Service | **1000+** | ✅ Fait |
 | Arrondissements Paris | **20** | ✅ Fait |
 
@@ -787,10 +783,10 @@ VITE_SUPABASE_PROJECT_ID="emvmyrdxmpsoaykabszb"
 
 | Tâche | Statut | Notes |
 |-------|--------|-------|
-| Supabase connecté | ✅ Fait | Projet `emvmyrdxmpsoaykabszb` |
-| Table `customer_requests` | ✅ Fait | Stockage leads |
-| Edge Function emails | ✅ Existe | `send-quote-email/` |
-| **RESEND_API_KEY** | ⏳ À configurer | Clé à fournir par le client |
+| Supabase connecté | ✅ Fait | Projet `bntatxbwyheajskyrtuh` |
+| Table `customer_requests` | ✅ Fait | Stockage leads (Formspree + Supabase) |
+| Système Emails | ✅ Fait | Formspree (Notification) + Supabase (Admin) |
+| **RESEND_API_KEY** | ❌ Supprimé | Non utilisé (Architecture Formspree) |
 
 ### 📊 SEO & TECHNIQUE
 
@@ -799,7 +795,7 @@ VITE_SUPABASE_PROJECT_ID="emvmyrdxmpsoaykabszb"
 | Meta tags OG | ✅ Fait |
 | Twitter Cards | ✅ Fait |
 | robots.txt | ✅ Fait |
-| sitemap.xml (250+ URLs) | ✅ Fait |
+| sitemap.xml (252 URLs) | ✅ Fait |
 | Canonical URLs | ✅ Fait |
 | Breadcrumbs | ✅ Fait |
 | JSON-LD schemas | ✅ Fait |
@@ -812,11 +808,9 @@ VITE_SUPABASE_PROJECT_ID="emvmyrdxmpsoaykabszb"
 
 | Tâche | Information requise |
 |-------|---------------------|
-| RESEND_API_KEY | Clé API Resend pour emails |
 | Google Analytics 4 | ID de suivi (G-XXXXXXXXXX) |
 | Google Search Console | Soumission sitemap |
 | Premier admin | Email admin pour INSERT dans user_roles |
-| Domaine Resend | Vérification hdconnect.fr dans Resend |
 
 ### 🟢 AMÉLIORATIONS FUTURES (Optionnelles)
 
@@ -834,13 +828,14 @@ VITE_SUPABASE_PROJECT_ID="emvmyrdxmpsoaykabszb"
 
 Voir le fichier [`CHANGELOG.md`](./CHANGELOG.md) pour l'historique complet des versions.
 
-### Dernières modifications (v8.1.0 - 05/02/2026)
-- ✅ Pages légales créées (`/mentions-legales`, `/politique-confidentialite`, `/cgv`)
-- ✅ Schema Speakable pour recherche vocale/IA
-- ✅ Contenu local enrichi (17 départements)
-- ✅ Maillage Blog → Villes (5 articles zones sensibles)
-- ✅ Liens ParisPage corrigés vers `/villes/paris/*`
-- ✅ Documentation consolidée (7 fichiers → 3 fichiers)
+### Dernières modifications (v8.5.0 - 05/02/2026)
+- ✅ Optimisation Performance : Images 100% WebP
+- ✅ SEO Local Étendu : Sitemap à 252 URLs
+- ✅ Architecture Hybride : Formspree + Supabase validée
+- ✅ Ajout des 6 villes manquantes (Total: 125 villes)
+- ✅ Décommentage du script Google Analytics
+- ✅ Correction du Project ID Supabase dans toute la doc
+- ✅ Pages légales et Schema Speakable opérationnels
 
 ---
 
@@ -853,5 +848,5 @@ Voir le fichier [`CHANGELOG.md`](./CHANGELOG.md) pour l'historique complet des v
 ---
 
 **Document créé le 03 Janvier 2026**  
-**Version 8.1 - Production Ready**  
+**Version 8.5 - Production Ready**  
 **Dernière mise à jour:** 05 Février 2026

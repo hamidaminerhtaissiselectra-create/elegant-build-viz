@@ -1,6 +1,6 @@
 # ⚙️ Guide de Configuration HD Connect
 
-> **Version:** 3.1  
+ > **Version:** 3.2  
 > **Dernière mise à jour:** 05 Février 2026  
 > **Statut:** Configuration externe en attente
 
@@ -11,57 +11,49 @@
 ### ✅ Déjà Configuré
 - [x] Variables d'environnement Supabase
 - [x] Tables base de données
-- [x] Edge Function send-quote-email
-- [x] Sitemap.xml (250+ URLs)
+ - [x] Sitemap.xml (310 URLs)
 - [x] robots.txt
 - [x] Meta tags SEO
 - [x] Pages légales (Mentions, RGPD, CGV)
 - [x] Schema Speakable (IA/vocale)
+ - [x] Pages arrondissements Lyon (9)
+ - [x] Pages arrondissements Marseille (12 secteurs)
+ - [x] CityLocalContent anti-duplicate
 
 ### ⏳ À Configurer par le Client
-- [ ] Clé API Resend (RESEND_API_KEY)
+- [ ] Compte Formspree (ID: mwpzrqyl)
 - [ ] Premier utilisateur admin
-- [ ] Vérification domaine email
 - [ ] Google Analytics 4
 - [ ] Google Search Console
 - [ ] Domaine personnalisé (hdconnect.fr)
 
 ---
 
-## 1. Configuration Resend (Emails)
+## 1. Configuration Formspree (Emails)
 
-### 1.1 Créer un Compte Resend
+### 1.1 Utilisation de Formspree
 
-1. Aller sur [resend.com](https://resend.com)
-2. Créer un compte gratuit
-3. Aller dans **API Keys**
-4. Créer une nouvelle clé avec les permissions `sending_access`
-5. Copier la clé (commence par `re_`)
+Le site utilise **Formspree** pour la gestion des formulaires de contact et de devis. L'ID actuel configuré est `mwpzrqyl`.
 
-### 1.2 Ajouter la Clé dans Lovable Cloud
+1. Les formulaires envoient les données à `https://formspree.io/f/mwpzrqyl`.
+2. Pour recevoir les emails sur votre propre adresse, vous devez posséder cet ID Formspree ou le remplacer par le vôtre dans les fichiers :
+   - `src/components/Contact.tsx`
+   - `src/components/QuoteFunnel.tsx`
+   - `src/components/QuoteFunnelSimple.tsx`
 
-1. Dans votre projet Lovable, aller dans **Cloud** → **Secrets**
-2. Cliquer **Add Secret**
-3. Nom : `RESEND_API_KEY`
-4. Valeur : Votre clé `re_...`
-5. Sauvegarder
+### 1.2 Avantages de Formspree
 
-### 1.3 Vérifier le Domaine (Recommandé)
+- Gestion automatique du spam.
+- Notification par email instantanée.
+- Archivage des messages sur le tableau de bord Formspree.
+- **Note** : Le site a été configuré pour stocker également les demandes dans votre base de données Supabase (table `customer_requests`) pour un suivi dans votre panel Admin.
 
-Pour envoyer des emails depuis `@hdconnect.fr` :
+### 1.3 Tester l'Envoi
 
-1. Dans Resend, aller dans **Domains**
-2. Ajouter `hdconnect.fr`
-3. Suivre les instructions pour ajouter les enregistrements DNS :
-   - SPF
-   - DKIM
-   - DMARC (optionnel)
-
-### 1.4 Tester l'Envoi
-
-1. Aller sur le site (preview ou production)
-2. Remplir le formulaire de devis
-3. Vérifier que l'email arrive à `kamal@hdconnect.fr`
+1. Aller sur le site (preview ou production).
+2. Remplir le formulaire de devis.
+3. Vérifier que l'email arrive sur votre compte Formspree.
+4. Vérifier que la demande apparaît dans votre panel Admin (`/admin`).
 
 ---
 
@@ -141,13 +133,15 @@ Remplacer `G-XXXXXXXXXX` par votre ID réel.
 2. Ajouter : `https://hdconnect.fr/sitemap.xml`
 3. Cliquer **Envoyer**
 
-Le sitemap contient **250+ URLs** incluant :
+ Le sitemap contient **310 URLs** incluant :
 - 11 pages services
 - 13 pages régions
 - 8+ pages départements
-- 125 pages villes
-- 50+ pages ville+service prioritaires
+ - 150+ pages villes
+- 62+ pages ville+service prioritaires
 - 20 arrondissements Paris
+ - 9 arrondissements Lyon
+ - 12 secteurs Marseille
 - 10 articles blog
 
 ### 4.3 Demander l'Indexation
@@ -235,3 +229,18 @@ En cas de problème :
 ---
 
 **Document mis à jour le 05 Février 2026**
+ 
+ ---
+ 
+ ## 📈 Prochaines Étapes
+ 
+ ### Reporté (À finaliser en fin de projet)
+ - [ ] Google Analytics 4 (ID de mesure)
+ - [ ] Soumission sitemap Search Console
+ - [ ] Création premier admin
+ 
+ ### Fonctionnalités futures
+ - [ ] Espace client sécurisé
+ - [ ] Système de rendez-vous
+ - [ ] Intégration Stripe
+ - [ ] Chat en direct

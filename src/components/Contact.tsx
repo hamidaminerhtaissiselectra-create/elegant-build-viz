@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabaseClient } from "@/lib/supabase";
 import { z } from "zod";
 import { cn } from "@/lib/utils";
 import { content } from "@/data/content";
@@ -62,13 +63,29 @@ const Contact = () => {
         }),
       });
 
+      // 2. Stockage dans Supabase (Panel Admin)
+      const { error: supabaseError } = await supabaseClient
+        .from('customer_requests')
+        .insert([{
+          name: validatedData.name,
+          email: validatedData.email,
+          phone: validatedData.phone,
+          request_type: requestType,
+          message: validatedData.message,
+          status: 'new'
+        }]);
+
+      if (supabaseError) {
+        console.error("Erreur stockage Supabase:", supabaseError);
+      }
+
       if (!response.ok) {
         throw new Error('Erreur lors de l\'envoi du formulaire.');
       }
 
       toast({
         title: "Message envoyé !",
-        description: "Nous vous recontacterons rapidement.",
+        description: "Nous vous recontacterons rapidement. Votre demande a été enregistrée.",
       });
 
       setFormData({ name: "", email: "", phone: "", message: "" });

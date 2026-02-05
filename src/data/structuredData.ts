@@ -10,11 +10,11 @@ export const organizationSchema = {
   "url": "https://hdconnect.fr",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://hdconnect.fr/logo.png",
+    "url": "https://hdconnect.fr/og-image.jpg",
     "width": 512,
     "height": 512
   },
-  "image": "https://hdconnect.fr/og-image.webp",
+  "image": "https://hdconnect.fr/og-image.jpg",
   // Answer-First: description autonome et citable
   "description": "HD Connect est le spécialiste français de l'installation de systèmes de sécurité professionnels. Vidéosurveillance 4K, alarmes certifiées NF&A2P et contrôle d'accès biométrique pour particuliers et entreprises depuis 2015.",
   "foundingDate": "2015",
@@ -77,7 +77,7 @@ export const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://hdconnect.fr/#localbusiness",
   "name": "HD Connect - Sécurité et Domotique",
-  "image": "https://hdconnect.fr/og-image.webp",
+  "image": "https://hdconnect.fr/og-image.jpg",
   "url": "https://hdconnect.fr",
   "telephone": "+33 6 27 13 53 04",
   "email": "kamal@hdconnect.fr",
@@ -252,6 +252,8 @@ export const websiteSchema = {
   "description": "HD Connect est le spécialiste français de l'installation de systèmes de sécurité professionnels depuis 2015.",
   "publisher": { "@id": "https://hdconnect.fr/#organization" },
   "inLanguage": "fr-FR",
+  "abstract": "HD Connect is a specialized security systems integrator in France, providing AI-enhanced video surveillance, certified alarms, and networking solutions for a secure environment.",
+  "keywords": "security systems, video surveillance, alarm installation, access control, networking, home automation, France",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "https://hdconnect.fr/recherche?q={search_term_string}",
@@ -268,6 +270,8 @@ export const speakableSchema = {
     "@type": "SpeakableSpecification",
     "cssSelector": ["h1", ".answer-first", ".hero-subtitle", ".faq-answer"]
   },
+  "usageInfo": "https://hdconnect.fr/ai-instructions.md",
+  "creativeWorkStatus": "Published",
   "about": [
     { "@type": "Thing", "name": "Vidéosurveillance" },
     { "@type": "Thing", "name": "Alarme anti-intrusion" },
