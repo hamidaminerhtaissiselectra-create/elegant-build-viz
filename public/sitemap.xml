@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- ========================================== -->
   <!-- SITEMAP HD CONNECT                         -->
-  <!-- Dernière mise à jour: 05 Février 2026     -->
-  <!-- Total URLs: 310 (150+ villes + arrondissements)      -->
+  <!-- Dernière mise à jour: 06 Février 2026     -->
+  <!-- Total URLs: ~375 (155+ villes + arrondissements + services)  -->
   <!-- ==========================================  -->
 
   <!-- ========================================== -->
@@ -1037,4 +1037,63 @@
    <url><loc>https://hdconnect.fr/villes/gennevilliers</loc><lastmod>2026-02-05</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
    <url><loc>https://hdconnect.fr/villes/clichy</loc><lastmod>2026-02-05</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
    <url><loc>https://hdconnect.fr/villes/puteaux</loc><lastmod>2026-02-05</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+
+   <!-- ========================================== -->
+   <!-- EXPANSION NATIONALE v8.6 (32 villes)      -->
+   <!-- ========================================== -->
+   
+   <!-- Hauts-de-France -->
+   <url><loc>https://hdconnect.fr/villes/calais</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/valenciennes</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/douai</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/boulogne-sur-mer</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   
+   <!-- Auvergne-Rhône-Alpes -->
+   <url><loc>https://hdconnect.fr/villes/valence</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   
+   <!-- Nouvelle-Aquitaine -->
+   <url><loc>https://hdconnect.fr/villes/angouleme</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/perigueux</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/niort</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/agen</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   
+   <!-- Occitanie -->
+   <url><loc>https://hdconnect.fr/villes/narbonne</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/carcassonne</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/albi</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/tarbes</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/sete</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   
+   <!-- Bretagne -->
+   <url><loc>https://hdconnect.fr/villes/saint-malo</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/saint-brieuc</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   
+   <!-- Normandie -->
+   <url><loc>https://hdconnect.fr/villes/evreux</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   
+   <!-- Pays de la Loire -->
+   <url><loc>https://hdconnect.fr/villes/la-roche-sur-yon</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/cholet</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/laval</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   
+   <!-- Centre-Val de Loire -->
+   <url><loc>https://hdconnect.fr/villes/chartres</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/bourges</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/blois</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   
+   <!-- Bourgogne-Franche-Comté -->
+   <url><loc>https://hdconnect.fr/villes/belfort</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/auxerre</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/macon</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   
+   <!-- Grand Est -->
+   <url><loc>https://hdconnect.fr/villes/thionville</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   
+   <!-- PACA -->
+   <url><loc>https://hdconnect.fr/villes/salon-de-provence</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/arles</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   
+   <!-- Corse -->
+   <url><loc>https://hdconnect.fr/villes/porto-vecchio</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+   <url><loc>https://hdconnect.fr/villes/calvi</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
 </urlset>

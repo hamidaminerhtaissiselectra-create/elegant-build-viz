@@ -3,6 +3,16 @@
  > **Format:** [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/)  
  > **Versioning:** [Semantic Versioning](https://semver.org/lang/fr/)
 
+ ## [8.6.0] - 2026-02-06
+ 
+ ### ✅ Ajouté
+ - **Expansion Nationale Complète** : Ajout de 32 grandes villes manquantes (Calais, Valenciennes, Valence, Angoulême, Narbonne, Carcassonne, Saint-Malo, Saint-Brieuc, Chartres, Bourges, Belfort, Arles, etc.).
+ - **Couverture Totale** : Passage à **157+ villes** couvrant toutes les grandes villes de France métropolitaine et Corse.
+ - **Sitemap Étendu** : Passage à **~375 URLs** pour un maillage SEO maximal.
+ - **13 régions complètes** : Toutes les villes principales listées dans `regionsData` ont désormais une page dédiée.
+
+ ---
+
  ## [8.5.0] - 2026-02-05
  
  ### ✅ Ajouté
