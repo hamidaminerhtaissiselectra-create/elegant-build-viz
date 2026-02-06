@@ -1972,25 +1972,413 @@ const additionalIdfCities: CityData[] = [
   }
 ];
 
+// ===== VILLES NATIONALES COMPLÉMENTAIRES =====
+const nationalExpansionCities: CityData[] = [
+  // HAUTS-DE-FRANCE
+  {
+    name: "Calais",
+    slug: "calais",
+    department: "Pas-de-Calais",
+    departmentCode: "62",
+    region: "Hauts-de-France",
+    regionSlug: "hauts-de-france",
+    population: "73 000",
+    description: "Expert sécurité Calais par HD Connect. Protection port transmanche, zones industrielles et commerces frontaliers. Vidéosurveillance renforcée, alarmes certifiées NF&A2P.",
+    neighborhoods: ["Centre-Ville", "Saint-Pierre", "Beau Marais", "Fort Nieulay", "Les Cailloux"],
+    nearbyTowns: ["Boulogne-sur-Mer", "Coquelles", "Sangatte", "Marck", "Guînes"]
+  },
+  {
+    name: "Valenciennes",
+    slug: "valenciennes",
+    department: "Nord",
+    departmentCode: "59",
+    region: "Hauts-de-France",
+    regionSlug: "hauts-de-france",
+    population: "43 000",
+    description: "HD Connect Valenciennes : sécurité pour industries automobiles Toyota, commerces et résidences du Hainaut. Vidéosurveillance IA, alarmes connectées.",
+    neighborhoods: ["Centre-Ville", "Faubourg de Paris", "Dutemple", "Saint-Waast", "La Briquette"],
+    nearbyTowns: ["Denain", "Anzin", "Marly", "Petite-Forêt", "Saint-Amand-les-Eaux"]
+  },
+  {
+    name: "Douai",
+    slug: "douai",
+    department: "Nord",
+    departmentCode: "59",
+    region: "Hauts-de-France",
+    regionSlug: "hauts-de-france",
+    population: "39 000",
+    description: "Sécurité Douai par HD Connect. Protection Renault Douai, beffroi et commerces. Vidéosurveillance, alarmes certifiées pour industries et particuliers.",
+    neighborhoods: ["Centre-Ville", "Frais Marais", "Dorignies", "Faubourg de Béthune", "Gayant"],
+    nearbyTowns: ["Sin-le-Noble", "Dechy", "Waziers", "Flers-en-Escrebieux", "Lambres-lez-Douai"]
+  },
+  {
+    name: "Boulogne-sur-Mer",
+    slug: "boulogne-sur-mer",
+    department: "Pas-de-Calais",
+    departmentCode: "62",
+    region: "Hauts-de-France",
+    regionSlug: "hauts-de-france",
+    population: "41 000",
+    description: "Expert sécurité Boulogne-sur-Mer par HD Connect. Protection premier port de pêche français, Nausicaá et commerces. Vidéosurveillance maritime.",
+    neighborhoods: ["Ville Haute", "Capécure", "Le Portel", "Outreau", "Bréquerecque"],
+    nearbyTowns: ["Le Portel", "Outreau", "Saint-Martin-Boulogne", "Wimille", "Wimereux"]
+  },
+  // AUVERGNE-RHÔNE-ALPES
+  {
+    name: "Valence",
+    slug: "valence",
+    department: "Drôme",
+    departmentCode: "26",
+    region: "Auvergne-Rhône-Alpes",
+    regionSlug: "auvergne-rhone-alpes",
+    population: "63 000",
+    description: "HD Connect Valence : sécurité vallée du Rhône. Protection industries agroalimentaires, commerces et résidences. Vidéosurveillance, alarmes certifiées.",
+    neighborhoods: ["Centre-Ville", "Fontbarlettes", "Plan", "Briffaut", "Châteauvert"],
+    nearbyTowns: ["Bourg-lès-Valence", "Portes-lès-Valence", "Guilherand-Granges", "Saint-Marcel-lès-Valence", "Chabeuil"]
+  },
+  // NOUVELLE-AQUITAINE
+  {
+    name: "Angoulême",
+    slug: "angouleme",
+    department: "Charente",
+    departmentCode: "16",
+    region: "Nouvelle-Aquitaine",
+    regionSlug: "nouvelle-aquitaine",
+    population: "42 000",
+    description: "Expert sécurité Angoulême par HD Connect. Protection festival BD, industries papetières et résidences. Vidéosurveillance, alarmes connectées.",
+    neighborhoods: ["Centre-Ville", "Ma Campagne", "Basseau", "Grande Garenne", "Saint-Cybard"],
+    nearbyTowns: ["Soyaux", "L'Isle-d'Espagnac", "Ruelle-sur-Touvre", "Gond-Pontouvre", "Saint-Michel"]
+  },
+  {
+    name: "Périgueux",
+    slug: "perigueux",
+    department: "Dordogne",
+    departmentCode: "24",
+    region: "Nouvelle-Aquitaine",
+    regionSlug: "nouvelle-aquitaine",
+    population: "30 000",
+    description: "HD Connect Périgueux : sécurité Périgord. Protection sites touristiques, commerces gastronomiques et résidences. Vidéosurveillance discrète.",
+    neighborhoods: ["Centre Historique", "Toulon", "Cité", "Chamiers", "Le Gour de l'Arche"],
+    nearbyTowns: ["Boulazac Isle Manoire", "Trélissac", "Coulounieix-Chamiers", "Marsac-sur-l'Isle", "Chancelade"]
+  },
+  {
+    name: "Niort",
+    slug: "niort",
+    department: "Deux-Sèvres",
+    departmentCode: "79",
+    region: "Nouvelle-Aquitaine",
+    regionSlug: "nouvelle-aquitaine",
+    population: "60 000",
+    description: "Sécurité Niort par HD Connect. Capitale française des mutuelles : protection sièges sociaux, commerces et résidences. Vidéosurveillance, contrôle d'accès.",
+    neighborhoods: ["Centre-Ville", "Tour Chabot", "Gavacherie", "Souché", "Saint-Florent"],
+    nearbyTowns: ["Chauray", "Aiffres", "Saint-Liguaire", "Bessines", "Magné"]
+  },
+  {
+    name: "Agen",
+    slug: "agen",
+    department: "Lot-et-Garonne",
+    departmentCode: "47",
+    region: "Nouvelle-Aquitaine",
+    regionSlug: "nouvelle-aquitaine",
+    population: "35 000",
+    description: "HD Connect Agen : expert sécurité Lot-et-Garonne. Protection exploitations agricoles, commerces et résidences. Vidéosurveillance, alarmes certifiées.",
+    neighborhoods: ["Centre-Ville", "Mondésir", "Pin", "Montanou", "Tapie"],
+    nearbyTowns: ["Bon-Encontre", "Le Passage", "Boé", "Foulayronnes", "Pont-du-Casse"]
+  },
+  // OCCITANIE
+  {
+    name: "Narbonne",
+    slug: "narbonne",
+    department: "Aude",
+    departmentCode: "11",
+    region: "Occitanie",
+    regionSlug: "occitanie",
+    population: "54 000",
+    description: "Expert sécurité Narbonne par HD Connect. Protection zones viticoles, commerces et résidences méditerranéennes. Vidéosurveillance, alarmes adaptées climat.",
+    neighborhoods: ["Centre Historique", "Bourg", "Razimbaud", "Saint-Jean-Saint-Pierre", "Nouveau Narbonne"],
+    nearbyTowns: ["Narbonne-Plage", "Gruissan", "Coursan", "Cuxac-d'Aude", "Lézignan-Corbières"]
+  },
+  {
+    name: "Carcassonne",
+    slug: "carcassonne",
+    department: "Aude",
+    departmentCode: "11",
+    region: "Occitanie",
+    regionSlug: "occitanie",
+    population: "46 000",
+    description: "Sécurité Carcassonne par HD Connect. Protection Cité médiévale UNESCO, commerces et résidences. Vidéosurveillance discrète patrimoine.",
+    neighborhoods: ["La Cité", "Bastide Saint-Louis", "La Conte", "Grazailles", "Montredon"],
+    nearbyTowns: ["Trèbes", "Berriac", "Cazilhac", "Pennautier", "Cavanac"]
+  },
+  {
+    name: "Albi",
+    slug: "albi",
+    department: "Tarn",
+    departmentCode: "81",
+    region: "Occitanie",
+    regionSlug: "occitanie",
+    population: "49 000",
+    description: "HD Connect Albi : sécurité cité épiscopale UNESCO. Protection patrimoine, commerces et résidences. Vidéosurveillance, alarmes certifiées.",
+    neighborhoods: ["Centre Historique", "Cantepau", "Lapanouse", "Rayssac", "Fonlabour"],
+    nearbyTowns: ["Lescure-d'Albigeois", "Le Sequestre", "Puygouzon", "Saint-Juéry", "Arthès"]
+  },
+  {
+    name: "Tarbes",
+    slug: "tarbes",
+    department: "Hautes-Pyrénées",
+    departmentCode: "65",
+    region: "Occitanie",
+    regionSlug: "occitanie",
+    population: "41 000",
+    description: "Expert sécurité Tarbes par HD Connect. Protection industries aéronautiques, résidences et commerces. Vidéosurveillance, alarmes Pyrénées.",
+    neighborhoods: ["Centre-Ville", "Laubadère", "Ormeau", "Solazur", "Bel Air"],
+    nearbyTowns: ["Aureilhan", "Bordères-sur-l'Échez", "Séméac", "Ibos", "Juillan"]
+  },
+  {
+    name: "Sète",
+    slug: "sete",
+    department: "Hérault",
+    departmentCode: "34",
+    region: "Occitanie",
+    regionSlug: "occitanie",
+    population: "44 000",
+    description: "Sécurité Sète par HD Connect. Protection port de pêche, commerces et résidences. Vidéosurveillance maritime, caméras résistantes sel.",
+    neighborhoods: ["Centre-Ville", "Corniche", "Ile de Thau", "Mont Saint-Clair", "Métairies"],
+    nearbyTowns: ["Frontignan", "Marseillan", "Balaruc-les-Bains", "Mèze", "Bouzigues"]
+  },
+  // BRETAGNE
+  {
+    name: "Saint-Malo",
+    slug: "saint-malo",
+    department: "Ille-et-Vilaine",
+    departmentCode: "35",
+    region: "Bretagne",
+    regionSlug: "bretagne",
+    population: "46 000",
+    description: "HD Connect Saint-Malo : sécurité cité corsaire. Protection intra-muros, hôtels, commerces et résidences. Vidéosurveillance résistante embruns.",
+    neighborhoods: ["Intra-Muros", "Saint-Servan", "Paramé", "Rothéneuf", "Courtoisville"],
+    nearbyTowns: ["Dinard", "Saint-Jouan-des-Guérets", "Saint-Méloir-des-Ondes", "Cancale", "Châteauneuf-d'Ille-et-Vilaine"]
+  },
+  {
+    name: "Saint-Brieuc",
+    slug: "saint-brieuc",
+    department: "Côtes-d'Armor",
+    departmentCode: "22",
+    region: "Bretagne",
+    regionSlug: "bretagne",
+    population: "45 000",
+    description: "Expert sécurité Saint-Brieuc par HD Connect. Protection commerces, industries agroalimentaires et résidences. Vidéosurveillance, alarmes certifiées.",
+    neighborhoods: ["Centre-Ville", "Cesson", "Robien", "Le Plateau", "La Croix-Saint-Lambert"],
+    nearbyTowns: ["Plérin", "Langueux", "Trégueux", "Ploufragan", "Hillion"]
+  },
+  // NORMANDIE
+  {
+    name: "Évreux",
+    slug: "evreux",
+    department: "Eure",
+    departmentCode: "27",
+    region: "Normandie",
+    regionSlug: "normandie",
+    population: "49 000",
+    description: "Sécurité Évreux par HD Connect. Préfecture de l'Eure : protection base aérienne, commerces et résidences. Vidéosurveillance, alarmes.",
+    neighborhoods: ["Centre-Ville", "La Madeleine", "Navarre", "Nétreville", "Saint-Michel"],
+    nearbyTowns: ["Gravigny", "Guichainville", "Normanville", "Parville", "Saint-Sébastien-de-Morsent"]
+  },
+  // PAYS DE LA LOIRE
+  {
+    name: "La Roche-sur-Yon",
+    slug: "la-roche-sur-yon",
+    department: "Vendée",
+    departmentCode: "85",
+    region: "Pays de la Loire",
+    regionSlug: "pays-de-la-loire",
+    population: "55 000",
+    description: "HD Connect La Roche-sur-Yon : sécurité Vendée. Protection commerces, industries et résidences. Vidéosurveillance, alarmes certifiées NF&A2P.",
+    neighborhoods: ["Centre-Ville", "Les Pyramides", "Jean Yole", "Val d'Ornay", "La Généraudière"],
+    nearbyTowns: ["Mouilleron-le-Captif", "Dompierre-sur-Yon", "La Ferrière", "Nesmy", "Aubigny-Les Clouzeaux"]
+  },
+  {
+    name: "Cholet",
+    slug: "cholet",
+    department: "Maine-et-Loire",
+    departmentCode: "49",
+    region: "Pays de la Loire",
+    regionSlug: "pays-de-la-loire",
+    population: "54 000",
+    description: "Expert sécurité Cholet par HD Connect. Capitale industrielle des Mauges : protection usines, commerces et résidences. Vidéosurveillance, alarmes.",
+    neighborhoods: ["Centre-Ville", "Bonnevay", "Jean Monnet", "Bretagne", "Turbaudières"],
+    nearbyTowns: ["Trémentines", "Saint-Léger-sous-Cholet", "La Séguinière", "Nuaillé", "Maulévrier"]
+  },
+  {
+    name: "Laval",
+    slug: "laval",
+    department: "Mayenne",
+    departmentCode: "53",
+    region: "Pays de la Loire",
+    regionSlug: "pays-de-la-loire",
+    population: "52 000",
+    description: "Sécurité Laval par HD Connect. Protection industries agroalimentaires, commerces et résidences mayennaises. Vidéosurveillance, alarmes connectées.",
+    neighborhoods: ["Centre-Ville", "Saint-Nicolas", "Les Pommeraies", "Hilard", "Ferrié"],
+    nearbyTowns: ["Changé", "L'Huisserie", "Bonchamp-lès-Laval", "Saint-Berthevin", "Entrammes"]
+  },
+  // CENTRE-VAL DE LOIRE
+  {
+    name: "Chartres",
+    slug: "chartres",
+    department: "Eure-et-Loir",
+    departmentCode: "28",
+    region: "Centre-Val de Loire",
+    regionSlug: "centre-val-de-loire",
+    population: "39 000",
+    description: "HD Connect Chartres : sécurité Cosmetic Valley. Protection cathédrale, industries cosmétiques et résidences. Vidéosurveillance, alarmes.",
+    neighborhoods: ["Centre-Ville", "Beaulieu", "Maunoury", "La Madeleine", "Rechèvres"],
+    nearbyTowns: ["Lucé", "Mainvilliers", "Champhol", "Lèves", "Luisant"]
+  },
+  {
+    name: "Bourges",
+    slug: "bourges",
+    department: "Cher",
+    departmentCode: "18",
+    region: "Centre-Val de Loire",
+    regionSlug: "centre-val-de-loire",
+    population: "66 000",
+    description: "Expert sécurité Bourges par HD Connect. Protection industries MBDA, cathédrale UNESCO et commerces. Vidéosurveillance, alarmes certifiées.",
+    neighborhoods: ["Centre-Ville", "Val d'Auron", "Aéroport", "Gionne", "Chancellerie"],
+    nearbyTowns: ["Saint-Doulchard", "La Chapelle-Saint-Ursin", "Trouy", "Marmagne", "Berry-Bouy"]
+  },
+  {
+    name: "Blois",
+    slug: "blois",
+    department: "Loir-et-Cher",
+    departmentCode: "41",
+    region: "Centre-Val de Loire",
+    regionSlug: "centre-val-de-loire",
+    population: "46 000",
+    description: "Sécurité Blois par HD Connect. Protection château royal, commerces et résidences. Vidéosurveillance discrète patrimoine Loire.",
+    neighborhoods: ["Centre-Ville", "Vienne", "Cabochon", "Quinière", "Les Grouëts"],
+    nearbyTowns: ["Vineuil", "Saint-Gervais-la-Forêt", "La Chaussée-Saint-Victor", "Villebarou", "Fossé"]
+  },
+  // BOURGOGNE-FRANCHE-COMTÉ
+  {
+    name: "Belfort",
+    slug: "belfort",
+    department: "Territoire de Belfort",
+    departmentCode: "90",
+    region: "Bourgogne-Franche-Comté",
+    regionSlug: "bourgogne-franche-comte",
+    population: "47 000",
+    description: "HD Connect Belfort : sécurité industrielle Lion. Protection sites Alstom, commerces et résidences. Vidéosurveillance, alarmes certifiées.",
+    neighborhoods: ["Centre-Ville", "Résidences", "Glacis du Château", "Les Barres", "Mont"],
+    nearbyTowns: ["Bavilliers", "Danjoutin", "Offemont", "Essert", "Valdoie"]
+  },
+  {
+    name: "Auxerre",
+    slug: "auxerre",
+    department: "Yonne",
+    departmentCode: "89",
+    region: "Bourgogne-Franche-Comté",
+    regionSlug: "bourgogne-franche-comte",
+    population: "35 000",
+    description: "Expert sécurité Auxerre par HD Connect. Protection vignobles Chablis, patrimoine et commerces. Vidéosurveillance, alarmes connectées.",
+    neighborhoods: ["Centre-Ville", "Sainte-Geneviève", "Les Rosoirs", "Saint-Siméon", "Rive Droite"],
+    nearbyTowns: ["Appoigny", "Moneteau", "Perrigny", "Champs-sur-Yonne", "Venoy"]
+  },
+  {
+    name: "Mâcon",
+    slug: "macon",
+    department: "Saône-et-Loire",
+    departmentCode: "71",
+    region: "Bourgogne-Franche-Comté",
+    regionSlug: "bourgogne-franche-comte",
+    population: "34 000",
+    description: "Sécurité Mâcon par HD Connect. Protection vignobles mâconnais, commerces et résidences. Vidéosurveillance, alarmes certifiées NF&A2P.",
+    neighborhoods: ["Centre-Ville", "Les Blanchettes", "Saint-Clément", "Flacé", "Saugeraies"],
+    nearbyTowns: ["Charnay-lès-Mâcon", "Sancé", "Crèches-sur-Saône", "Hurigny", "Prissé"]
+  },
+  // GRAND EST
+  {
+    name: "Thionville",
+    slug: "thionville",
+    department: "Moselle",
+    departmentCode: "57",
+    region: "Grand Est",
+    regionSlug: "grand-est",
+    population: "42 000",
+    description: "HD Connect Thionville : sécurité transfrontalière Luxembourg. Protection entreprises, commerces et résidences. Vidéosurveillance, contrôle d'accès.",
+    neighborhoods: ["Centre-Ville", "Beauregard", "Côte des Roses", "Garche", "Veymerange"],
+    nearbyTowns: ["Yutz", "Terville", "Hettange-Grande", "Manom", "Florange"]
+  },
+  // PACA
+  {
+    name: "Salon-de-Provence",
+    slug: "salon-de-provence",
+    department: "Bouches-du-Rhône",
+    departmentCode: "13",
+    region: "Provence-Alpes-Côte d'Azur",
+    regionSlug: "provence-alpes-cote-d-azur",
+    population: "45 000",
+    description: "Expert sécurité Salon-de-Provence par HD Connect. Protection base aérienne, commerces et résidences. Vidéosurveillance, alarmes Patrouille de France.",
+    neighborhoods: ["Centre-Ville", "Canourgue", "La Crau", "Les Canourgues", "Bel Air"],
+    nearbyTowns: ["Pélissanne", "Lançon-Provence", "La Fare-les-Oliviers", "Eyguières", "Grans"]
+  },
+  {
+    name: "Arles",
+    slug: "arles",
+    department: "Bouches-du-Rhône",
+    departmentCode: "13",
+    region: "Provence-Alpes-Côte d'Azur",
+    regionSlug: "provence-alpes-cote-d-azur",
+    population: "52 000",
+    description: "Sécurité Arles par HD Connect. Protection patrimoine romain UNESCO, Rencontres photo et résidences. Vidéosurveillance discrète.",
+    neighborhoods: ["Centre Historique", "Trinquetaille", "Barriol", "Griffeuille", "Trébon"],
+    nearbyTowns: ["Tarascon", "Saint-Martin-de-Crau", "Fontvieille", "Les Saintes-Maries-de-la-Mer", "Raphèle-les-Arles"]
+  },
+  // CORSE
+  {
+    name: "Porto-Vecchio",
+    slug: "porto-vecchio",
+    department: "Corse-du-Sud",
+    departmentCode: "2A",
+    region: "Corse",
+    regionSlug: "corse",
+    population: "12 000",
+    description: "HD Connect Porto-Vecchio : sécurité villas de luxe et résidences balnéaires. Protection commerces touristiques et ports. Vidéosurveillance haut de gamme.",
+    neighborhoods: ["Centre-Ville", "Palombaggia", "Santa Giulia", "Marine", "Cala Rossa"],
+    nearbyTowns: ["Lecci", "Zonza", "Sainte-Lucie-de-Porto-Vecchio", "Sari-Solenzara", "Bonifacio"]
+  },
+  {
+    name: "Calvi",
+    slug: "calvi",
+    department: "Haute-Corse",
+    departmentCode: "2B",
+    region: "Corse",
+    regionSlug: "corse",
+    population: "5 500",
+    description: "Expert sécurité Calvi par HD Connect. Protection citadelle, hôtels de luxe et résidences. Vidéosurveillance adaptée environnement insulaire.",
+    neighborhoods: ["Citadelle", "Marine", "Centre-Ville", "Revellata", "Lumio"],
+    nearbyTowns: ["Lumio", "Calenzana", "L'Île-Rousse", "Galeria", "Monticello"]
+  }
+];
+
 export const getCityBySlug = (slug: string): CityData | undefined => {
-  return [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities].find(city => city.slug === slug);
+  return [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities, ...nationalExpansionCities].find(city => city.slug === slug);
 };
 
 export const getCitiesByRegion = (region: string): CityData[] => {
-  return [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities].filter(city => city.region === region);
+  return [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities, ...nationalExpansionCities].filter(city => city.region === region);
 };
 
 export const getCitiesByRegionSlug = (regionSlug: string): CityData[] => {
-  return [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities].filter(city => city.regionSlug === regionSlug);
+  return [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities, ...nationalExpansionCities].filter(city => city.regionSlug === regionSlug);
 };
 
 export const getCitiesByDepartment = (departmentCode: string): CityData[] => {
-  return [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities].filter(city => city.departmentCode === departmentCode);
+  return [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities, ...nationalExpansionCities].filter(city => city.departmentCode === departmentCode);
 };
 
 export const getAllCitySlugs = (): string[] => {
-  return [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities].map(city => city.slug);
+  return [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities, ...nationalExpansionCities].map(city => city.slug);
 };
 
 // Export all cities combined
-export const allCitiesData: CityData[] = [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities];
+export const allCitiesData: CityData[] = [...citiesData, ...lyonSuburbs, ...marseilleSuburbs, ...additionalIdfCities, ...nationalExpansionCities];
