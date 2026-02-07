@@ -69,6 +69,51 @@ const getSecurityTips = (city: CityData) => {
       "Privilégiez les systèmes certifiés APSAD pour les locaux industriels",
       "Installez un contrôle d'accès biométrique pour les zones sensibles",
       "Optez pour une vidéosurveillance analytique avec reconnaissance de plaques"
+    ],
+    "13": [
+      "Choisissez des caméras IP66 résistantes aux embruns et à la chaleur",
+      "Installez une alarme connectée avec levée de doute vidéo",
+      "Protégez votre résidence secondaire avec une télésurveillance à distance"
+    ],
+    "59": [
+      "Sécurisez vos entrepôts logistiques avec une vidéosurveillance périmétrique",
+      "Installez un contrôle d'accès poids-lourds pour vos zones de chargement",
+      "Optez pour des caméras analytiques avec reconnaissance de plaques"
+    ],
+    "33": [
+      "Protégez vos chais avec des caméras thermiques et des capteurs hygrométriques",
+      "Installez une alarme adaptée aux grandes propriétés viticoles",
+      "Sécurisez l'accès aux domaines avec un portail motorisé connecté"
+    ],
+    "31": [
+      "Optez pour un contrôle d'accès biométrique conforme aux normes aéronautiques",
+      "Installez une vidéosurveillance certifiée pour les sites industriels",
+      "Protégez votre résidence avec une alarme connectée et détection IA"
+    ],
+    "51": [
+      "Équipez vos caves avec des caméras infrarouges adaptées à l'obscurité",
+      "Installez des capteurs de température et humidité connectés pour vos stocks",
+      "Sécurisez l'accès aux vignobles avec une détection périmétrique longue portée"
+    ],
+    "83": [
+      "Installez des caméras résistantes au sel et aux UV méditerranéens",
+      "Protégez votre résidence saisonnière avec une télésurveillance cloud",
+      "Optez pour une alarme avec levée de doute vidéo pour éviter les fausses alertes"
+    ],
+    "67": [
+      "Privilégiez des systèmes conformes aux normes européennes",
+      "Installez un contrôle d'accès multilingue pour les entreprises internationales",
+      "Optez pour une vidéosurveillance IA avec détection comportementale"
+    ],
+    "44": [
+      "Sécurisez vos locaux avec une vidéosurveillance cloud accessible à distance",
+      "Installez un contrôle d'accès smartphone pour vos espaces de coworking",
+      "Protégez vos entrepôts portuaires avec des caméras anti-corrosion"
+    ],
+    "38": [
+      "Optez pour des systèmes conformes aux normes ISO pour salles blanches",
+      "Installez un contrôle d'accès anti-contamination pour vos laboratoires",
+      "Privilégiez la vidéosurveillance certifiée ATEX pour sites à risque"
     ]
   };
 
@@ -278,6 +323,322 @@ const getLocalContent = (city: CityData) => {
       industries: ["Santé", "Informatique", "Recherche", "Tourisme"],
       stats: "1ère ville française en croissance démographique",
       specificContext: "Montpellier est la métropole la plus dynamique de France avec une croissance démographique record. Les nouveaux quartiers (Port Marianne, Odysseum) et le tissu de start-ups nécessitent des solutions évolutives : vidéosurveillance scalable, alarmes modulaires et domotique connectée."
+    },
+    // === NOUVEAUX DÉPARTEMENTS ===
+    "42": {
+      title: "Bassin industriel historique",
+      highlights: ["Industrie mécanique et métallurgique", "Design et innovation (Cité du design)", "Stade Geoffroy-Guichard"],
+      industries: ["Mécanique", "Métallurgie", "Design", "Commerce"],
+      stats: "2e ville d'Auvergne-Rhône-Alpes",
+      specificContext: "La Loire combine tradition industrielle (armes, rubans, cycles) et renouveau créatif avec la Cité du design. Les sites de production et entrepôts nécessitent une vidéosurveillance industrielle certifiée APSAD et des alarmes anti-intrusion renforcées contre les vols de métaux."
+    },
+    "63": {
+      title: "Capital de l'Auvergne",
+      highlights: ["Siège mondial Michelin", "Puy de Dôme et volcans", "Recherche universitaire"],
+      industries: ["Pneumatique", "Pharmacie", "Agroalimentaire", "Tourisme"],
+      stats: "Michelin : 13 000 salariés à Clermont-Ferrand",
+      specificContext: "Clermont-Ferrand est le berceau de Michelin et un pôle d'innovation en caoutchouc et pharmacie. La sécurisation des sites industriels classés nécessite des systèmes conformes aux normes ATEX pour les zones à risque et une vidéosurveillance connectée au réseau de l'entreprise."
+    },
+    "74": {
+      title: "Haute-Savoie dynamique",
+      highlights: ["Annecy, Venise des Alpes", "Stations de ski internationales", "Frontaliers Suisse-Genève"],
+      industries: ["Décolletage", "Tourisme", "Horlogerie", "Commerce frontalier"],
+      stats: "75 000 travailleurs frontaliers vers la Suisse",
+      specificContext: "La Haute-Savoie bénéficie de la proximité genevoise et d'un pouvoir d'achat élevé. Les résidences de standing autour du lac d'Annecy et les chalets d'altitude nécessitent des systèmes autonomes : caméras solaires 4G, alarmes GSM et domotique adaptée aux conditions hivernales extrêmes."
+    },
+    "73": {
+      title: "Savoie alpine",
+      highlights: ["Stations de ski de renommée mondiale", "Thermalisme Aix-les-Bains", "Industries de montagne"],
+      industries: ["Tourisme hivernal", "Thermalisme", "Énergie hydraulique", "Fromages AOP"],
+      stats: "15 millions de journées-skieurs par saison",
+      specificContext: "La Savoie attire des millions de touristes hivernaux dans ses stations (Courchevel, Val Thorens, Méribel). La sécurité des résidences de tourisme et chalets haut de gamme exige des équipements résistants au froid extrême (-30°C) et des systèmes de vidéosurveillance connectés à distance."
+    },
+    "30": {
+      title: "Gard romain et culturel",
+      highlights: ["Arènes de Nîmes", "Pont du Gard UNESCO", "Férias et traditions"],
+      industries: ["Tourisme culturel", "Viticulture", "Commerce", "Agroalimentaire"],
+      stats: "2e département d'Occitanie en tourisme",
+      specificContext: "Le Gard combine patrimoine romain exceptionnel et dynamisme viticole. La protection des sites touristiques, des domaines viticoles et des commerces du centre-ville historique nécessite des solutions discrètes intégrées au bâti ancien : mini-caméras, alarmes sans fil et contrôle d'accès design."
+    },
+    "66": {
+      title: "Pyrénées-Orientales solaires",
+      highlights: ["Département le plus ensoleillé de France", "Frontière espagnole", "Agriculture maraîchère"],
+      industries: ["Tourisme balnéaire", "Viticulture", "Commerce transfrontalier", "Agriculture"],
+      stats: "320 jours d'ensoleillement par an",
+      specificContext: "Les Pyrénées-Orientales, département frontalier ensoleillé, attirent résidences secondaires et retraités. Les cambriolages saisonniers estivaux nécessitent des systèmes de télésurveillance à distance, des caméras résistantes aux UV intenses et des alarmes avec levée de doute vidéo."
+    },
+    "84": {
+      title: "Vaucluse provençal",
+      highlights: ["Festival d'Avignon", "Mont Ventoux", "Marchés provençaux"],
+      industries: ["Tourisme culturel", "Agriculture", "Agroalimentaire", "Vin"],
+      stats: "Festival d'Avignon : 130 000 spectateurs par an",
+      specificContext: "Le Vaucluse vit au rythme du Festival d'Avignon et de ses marchés provençaux. La sécurisation des bâtiments historiques intra-muros et des mas provençaux requiert des solutions respectueuses du patrimoine : caméras miniatures, alarmes discrètes et vidéosurveillance connectée."
+    },
+    "51": {
+      title: "Capital mondiale du Champagne",
+      highlights: ["Maisons de Champagne prestigieuses", "Cathédrale des sacres", "Caves classées UNESCO"],
+      industries: ["Champagne", "Agroalimentaire", "Tourisme", "Logistique"],
+      stats: "300 millions de bouteilles produites par an",
+      specificContext: "La Marne est le berceau du champagne avec des caves souterraines classées UNESCO à protéger. Les maisons de champagne nécessitent une vidéosurveillance spécifique : caméras infrarouges pour caves, contrôle hygrométrique et sécurité périmétrique des vignobles."
+    },
+    "67": {
+      title: "Capitale européenne",
+      highlights: ["Parlement européen", "Quartier européen", "Industries rhénanes"],
+      industries: ["Institutions européennes", "Automobile", "Pharma", "Tech"],
+      stats: "Capitale parlementaire de l'Union européenne",
+      specificContext: "Le Bas-Rhin accueille les institutions européennes avec des exigences de sécurité diplomatique. La proximité allemande et le dynamisme industriel rhénan nécessitent des systèmes multilingues, conformes aux normes européennes et interopérables avec les standards transfrontaliers."
+    },
+    "54": {
+      title: "Lorraine Art nouveau",
+      highlights: ["Place Stanislas UNESCO", "Pôle universitaire", "Industries sidérurgiques reconverties"],
+      industries: ["Recherche", "Numérique", "Santé", "Énergie"],
+      stats: "50 000 étudiants à Nancy",
+      specificContext: "La Meurthe-et-Moselle se réinvente autour de l'innovation et de la recherche. Les campus universitaires, incubateurs et zones d'activités reconverties nécessitent des solutions de sécurité modernes : badges dématérialisés, vidéosurveillance cloud et accès smartphone."
+    },
+    "57": {
+      title: "Moselle transfrontalière",
+      highlights: ["Centre Pompidou-Metz", "Proximité Luxembourg", "Industries automobiles"],
+      industries: ["Automobile", "Sidérurgie", "Commerce transfrontalier", "Culture"],
+      stats: "100 000 frontaliers vers le Luxembourg",
+      specificContext: "La Moselle bénéficie du dynamisme luxembourgeois avec un pouvoir d'achat frontalier élevé. Les résidences de standing et commerces premium nécessitent des systèmes de sécurité haut de gamme : domotique intégrée, contrôle d'accès biométrique et vidéosurveillance IA."
+    },
+    "68": {
+      title: "Alsace viticole",
+      highlights: ["Route des Vins d'Alsace", "Musées de Mulhouse", "Industries automobiles Peugeot"],
+      industries: ["Automobile", "Chimie", "Viticulture", "Tourisme"],
+      stats: "170 km de Route des Vins",
+      specificContext: "Le Haut-Rhin combine industrie automobile (PSA Mulhouse) et tourisme viticole. La sécurisation des domaines viticoles alsaciens et des sites industriels nécessite des caméras adaptées aux conditions climatiques continentales et des alarmes certifiées pour zones Seveso."
+    },
+    "10": {
+      title: "Aube textile et commerciale",
+      highlights: ["Magasins d'usine de Troyes", "Industries textiles", "Champagne méridional"],
+      industries: ["Textile", "Commerce", "Champagne", "Logistique"],
+      stats: "4 millions de visiteurs/an dans les magasins d'usine",
+      specificContext: "L'Aube est la capitale des magasins d'usine avec 4 millions de visiteurs annuels. Les centres de marques et entrepôts textiles nécessitent une vidéosurveillance analytique avec comptage de flux, détection de vol et alarmes anti-intrusion pour les stocks de valeur."
+    },
+    "25": {
+      title: "Doubs horloger",
+      highlights: ["Citadelle Vauban UNESCO", "Industrie horlogère et microtechnique", "Forêts du Jura"],
+      industries: ["Horlogerie", "Microtechnique", "Automobile", "Fromage Comté"],
+      stats: "1er département français en microtechnique",
+      specificContext: "Le Doubs est le cœur de la microtechnique française avec un savoir-faire horloger séculaire. Les ateliers de précision et laboratoires nécessitent des salles sécurisées avec contrôle d'accès anti-contamination, vidéosurveillance haute résolution et traçabilité des accès."
+    },
+    "71": {
+      title: "Saône-et-Loire bourguignonne",
+      highlights: ["Vignobles de Bourgogne sud", "Chalon-sur-Saône berceau de la photo", "Industries métallurgiques"],
+      industries: ["Viticulture", "Métallurgie", "Élevage charolais", "Tourisme"],
+      stats: "Berceau de la photographie (Nicéphore Niépce)",
+      specificContext: "La Saône-et-Loire allie vignobles prestigieux et industries métallurgiques. La protection des domaines viticoles bourguignons avec leurs chais de vieillissement nécessite des systèmes discrets : caméras thermiques périmétrique, capteurs hygrométriques et alarmes silencieuses."
+    },
+    "2A": {
+      title: "Corse-du-Sud insulaire",
+      highlights: ["Ajaccio capitale régionale", "Golfe de Porto UNESCO", "Tourisme balnéaire"],
+      industries: ["Tourisme", "Agroalimentaire", "Administration", "BTP"],
+      stats: "3 millions de touristes par an en Corse",
+      specificContext: "La Corse-du-Sud attire un tourisme haut de gamme autour d'Ajaccio et Porto-Vecchio. L'insularité impose des solutions autonomes : équipements résistants aux embruns (IP66/IP67), alimentation solaire pour sites isolés et télésurveillance via 4G/satellite."
+    },
+    "2B": {
+      title: "Haute-Corse sauvage",
+      highlights: ["Bastia port principal", "Cap Corse", "Montagne et littoral"],
+      industries: ["Tourisme", "Nautisme", "Agriculture", "Pêche"],
+      stats: "Port de Bastia : 2,5 millions de passagers/an",
+      specificContext: "La Haute-Corse combine zones portuaires actives et arrière-pays montagnard. La sécurisation des ports de plaisance, hôtels et résidences secondaires nécessite des caméras anti-corrosion marine, des alarmes GSM pour zones sans fibre et une surveillance adaptée au tourisme saisonnier."
+    },
+    "76": {
+      title: "Seine-Maritime portuaire",
+      highlights: ["Port du Havre, 1er port conteneurs français", "Rouen capitale normande", "Falaises d'Étretat"],
+      industries: ["Maritime", "Pétrochimie", "Automobile", "Agroalimentaire"],
+      stats: "Le Havre : 2,9 millions de conteneurs EVP/an",
+      specificContext: "La Seine-Maritime combine activité portuaire internationale et industrie lourde. Les terminaux portuaires et sites pétrochimiques nécessitent une vidéosurveillance certifiée ATEX, des contrôles d'accès biométriques sécurisés et des systèmes résistants aux conditions maritimes."
+    },
+    "14": {
+      title: "Calvados mémoriel",
+      highlights: ["Plages du Débarquement", "Caen mémorial", "Station balnéaire Deauville"],
+      industries: ["Tourisme mémoriel", "Automobile", "Agroalimentaire laitier", "Numérique"],
+      stats: "5 millions de visiteurs aux sites du D-Day/an",
+      specificContext: "Le Calvados attire un tourisme mémoriel international et un tourisme balnéaire de luxe (Deauville). Les sites historiques, hôtels de prestige et villas normandes nécessitent une vidéosurveillance intégrée au paysage et des alarmes adaptées aux grandes propriétés."
+    },
+    "35": {
+      title: "Ille-et-Vilaine numérique",
+      highlights: ["Rennes capitale cyber", "Pôle cybersécurité DGA", "Universités et grandes écoles"],
+      industries: ["Cybersécurité", "Agroalimentaire", "Automobile", "Numérique"],
+      stats: "Rennes : 1er pôle cybersécurité français",
+      specificContext: "L'Ille-et-Vilaine est le premier pôle de cybersécurité français avec la DGA-MI et de nombreuses start-ups. Les data centers, laboratoires de recherche et entreprises tech nécessitent des solutions de sécurité physique et logique intégrées : accès multi-facteurs et vidéosurveillance analytique."
+    },
+    "29": {
+      title: "Finistère maritime",
+      highlights: ["Port militaire de Brest", "Océanopolis", "Industrie navale"],
+      industries: ["Naval militaire", "Pêche", "Agroalimentaire", "Tourisme"],
+      stats: "2e port militaire français",
+      specificContext: "Le Finistère combine industrie navale militaire et agroalimentaire. Les zones portuaires militaires, les conserveries et les stations balnéaires nécessitent des caméras résistantes aux embruns, des alarmes IP66 et des systèmes de contrôle d'accès adaptés aux environnements corrosifs."
+    },
+    "56": {
+      title: "Morbihan nautique",
+      highlights: ["Golfe du Morbihan", "Lorient base sous-marine", "Carnac mégalithes"],
+      industries: ["Nautisme", "Pêche", "Tourisme", "Agroalimentaire"],
+      stats: "3e destination nautique de France",
+      specificContext: "Le Morbihan est un département nautique par excellence. Les ports de plaisance, chantiers navals et résidences côtières du Golfe nécessitent des équipements anti-sel (IP67), des caméras résistantes aux vents violents et des systèmes d'alarme adaptés à l'habitat dispersé breton."
+    },
+    "49": {
+      title: "Maine-et-Loire angevin",
+      highlights: ["Château d'Angers", "Vignobles Loire", "Industrie électronique"],
+      industries: ["Électronique", "Végétal", "Viticulture", "Logistique"],
+      stats: "Angers : 1ère ville verte de France",
+      specificContext: "Le Maine-et-Loire est le cœur du végétal spécialisé et de l'électronique en France. Les pépinières, serres high-tech et sites de production électronique nécessitent des systèmes de vidéosurveillance avec contrôle climatique intégré et une sécurité périmétrique adaptée."
+    },
+    "45": {
+      title: "Loiret logistique",
+      highlights: ["Orléans centre logistique national", "Cosmetic Valley", "Cathédrale Sainte-Croix"],
+      industries: ["Logistique", "Cosmétique", "Commerce", "Administration"],
+      stats: "1er hub logistique du centre de la France",
+      specificContext: "Le Loiret est un carrefour logistique majeur avec d'immenses entrepôts le long de l'A10. Les plateformes logistiques, zones commerciales et sites industriels cosmétiques nécessitent une vidéosurveillance périmétrique à grande échelle et des systèmes de contrôle d'accès véhicules."
+    },
+    "37": {
+      title: "Indre-et-Loire tourangelle",
+      highlights: ["Châteaux de la Loire", "Gastronomie et vins", "Tourisme culturel"],
+      industries: ["Tourisme", "Pharmacie", "Électronique", "Viticulture"],
+      stats: "3 millions de visiteurs aux Châteaux de la Loire/an",
+      specificContext: "L'Indre-et-Loire est le joyau des Châteaux de la Loire avec Amboise, Chenonceau et Villandry. La protection des sites patrimoniaux, des domaines viticoles et des résidences tourangelles nécessite une vidéosurveillance ultra-discrète respectueuse de l'architecture Renaissance."
+    },
+    "80": {
+      title: "Somme picarde",
+      highlights: ["Cathédrale d'Amiens UNESCO", "Baie de Somme", "Pôle universitaire"],
+      industries: ["Agroalimentaire", "Logistique", "Tourisme nature", "Industrie"],
+      stats: "Baie de Somme : plus belle baie du monde",
+      specificContext: "La Somme allie patrimoine gothique (cathédrale UNESCO) et nature sauvage (Baie de Somme). Les résidences de la baie, soumises à une fréquentation touristique saisonnière, nécessitent des systèmes de télésurveillance à distance et des caméras résistantes à l'environnement salin."
+    },
+    "17": {
+      title: "Charente-Maritime atlantique",
+      highlights: ["La Rochelle port historique", "Île de Ré", "Fort Boyard"],
+      industries: ["Tourisme", "Ostréiculture", "Nautisme", "Agriculture"],
+      stats: "Île de Ré : 2,5 millions de visiteurs/an",
+      specificContext: "La Charente-Maritime combine tourisme balnéaire de masse et résidences de prestige sur l'Île de Ré. La protection des propriétés insulaires et côtières nécessite des équipements anti-sel, des caméras autonomes solaires et une télésurveillance 4G pour les zones isolées."
+    },
+    "87": {
+      title: "Haute-Vienne limousine",
+      highlights: ["Limoges capitale de la porcelaine", "Industries céramiques", "Tradition élevage"],
+      industries: ["Porcelaine", "Luxe", "Élevage", "Agroalimentaire"],
+      stats: "Limoges : 1ère ville mondiale de la porcelaine",
+      specificContext: "La Haute-Vienne est le berceau mondial de la porcelaine avec des manufactures d'exception. La sécurisation des ateliers d'art, des stocks de porcelaine fine et des musées nécessite des systèmes anti-vibration, des alarmes haute sensibilité et une vidéosurveillance HD."
+    },
+    "86": {
+      title: "Vienne futuroscopique",
+      highlights: ["Futuroscope", "Patrimoine roman", "Universités de Poitiers"],
+      industries: ["Tourisme", "Numérique", "Agroalimentaire", "Éducation"],
+      stats: "Futuroscope : 2 millions de visiteurs/an",
+      specificContext: "La Vienne est dynamisée par le Futuroscope et son écosystème numérique. Les parcs d'attractions, campus universitaires et zones d'activités tech nécessitent des systèmes de vidéosurveillance haute capacité avec gestion de flux et contrôle d'accès événementiel."
+    },
+    "64": {
+      title: "Pyrénées-Atlantiques basques",
+      highlights: ["Côte Basque (Biarritz, Bayonne)", "Pyrénées", "Tradition gastronomique"],
+      industries: ["Tourisme", "Aéronautique", "Agroalimentaire", "Surf"],
+      stats: "Biarritz : capitale européenne du surf",
+      specificContext: "Les Pyrénées-Atlantiques combinent élégance basque et dynamisme béarnais. Les villas côtières de Biarritz et les résidences de montagne nécessitent des systèmes de sécurité résistants aux conditions océaniques (IP66) et aux altitudes pyrénéennes."
+    },
+    "72": {
+      title: "Sarthe automobile",
+      highlights: ["24 Heures du Mans", "Circuit Bugatti", "Industries automobiles"],
+      industries: ["Automobile", "Assurance", "Agroalimentaire", "Logistique"],
+      stats: "24H du Mans : 250 000 spectateurs par édition",
+      specificContext: "La Sarthe est mondialement connue pour les 24 Heures du Mans. Les infrastructures événementielles, circuits et zones industrielles automobiles nécessitent des systèmes de vidéosurveillance événementielle scalable et une sécurité périmétrique des sites de production."
+    },
+    "21": {
+      title: "Côte-d'Or bourguignonne",
+      highlights: ["Climats de Bourgogne UNESCO", "Palais des Ducs", "Route des Grands Crus"],
+      industries: ["Viticulture", "Gastronomie", "Pharmacie", "Tourisme"],
+      stats: "Grands Crus : les vins les plus chers du monde",
+      specificContext: "La Côte-d'Or abrite les vignobles les plus prestigieux du monde (Romanée-Conti, Clos Vougeot). La protection des cuveries, des stocks de grands crus et des domaines viticoles d'exception nécessite une sécurité invisible et ultra-performante : capteurs vibration, caméras thermiques et coffres sécurisés connectés."
+    },
+    "50": {
+      title: "Manche maritime",
+      highlights: ["Cherbourg arsenal", "Mont-Saint-Michel", "Industries nucléaires"],
+      industries: ["Naval", "Nucléaire", "Pêche", "Tourisme"],
+      stats: "La Hague : plus grand centre de retraitement nucléaire mondial",
+      specificContext: "La Manche combine industrie nucléaire stratégique et patrimoine mondial (Mont-Saint-Michel). Les sites sensibles ORANO/EDF nécessitent des systèmes de sécurité certifiés aux normes les plus strictes : vidéosurveillance ATEX, contrôle d'accès multi-facteurs et détection périmétrique."
+    },
+    "89": {
+      title: "Yonne bourguignonne",
+      highlights: ["Vignobles de Chablis", "Auxerre patrimoine", "Porte de la Bourgogne"],
+      industries: ["Viticulture", "Agriculture", "Logistique", "Tourisme"],
+      stats: "Chablis : 1er vignoble de Bourgogne en volume",
+      specificContext: "L'Yonne est la porte nord de la Bourgogne avec le vignoble mondialement connu de Chablis. Les domaines viticoles, caves de vieillissement et propriétés rurales nécessitent des systèmes de sécurité autonomes adaptés aux zones agricoles : caméras 4G solaires et alarmes GSM."
+    },
+    "90": {
+      title: "Territoire de Belfort industriel",
+      highlights: ["Lion de Belfort", "Industries Alstom/GE", "Technopole"],
+      industries: ["Énergie", "Transport", "Microtechnique", "Numérique"],
+      stats: "GE/Alstom : 3 000 emplois industriels",
+      specificContext: "Le Territoire de Belfort est un bastion industriel majeur avec Alstom/GE dans l'énergie et le transport. Les sites de production de turbines, sous-traitants et PME industrielles nécessitent une vidéosurveillance certifiée et un contrôle d'accès sécurisé pour zones de défense."
+    },
+    "16": {
+      title: "Charente cognac",
+      highlights: ["Cognac, capitale des spiritueux", "Angoulême bande dessinée", "Industries papetières"],
+      industries: ["Spiritueux", "BD/Animation", "Papier", "Électronique"],
+      stats: "200 millions de bouteilles de cognac exportées/an",
+      specificContext: "La Charente est le berceau du cognac avec des chais de vieillissement qui représentent un patrimoine financier considérable. La protection des stocks de cognac (le 'paradis' des maisons) nécessite des systèmes anti-incendie connectés, une vidéosurveillance hygrométrique et des alarmes spécialisées."
+    },
+    "24": {
+      title: "Dordogne périgordine",
+      highlights: ["Lascaux et préhistoire", "Sarlat patrimoine", "Gastronomie périgourdine"],
+      industries: ["Tourisme", "Agroalimentaire", "Artisanat", "Agriculture"],
+      stats: "Lascaux IV : 600 000 visiteurs/an",
+      specificContext: "La Dordogne attire un tourisme patrimonial et gastronomique international. Les châteaux, manoirs et résidences de charme périgourdines nécessitent des systèmes de sécurité respectueux du patrimoine : vidéosurveillance miniature, alarmes sans fil et télésurveillance pour propriétés isolées."
+    },
+    "11": {
+      title: "Aude cathare",
+      highlights: ["Cité de Carcassonne UNESCO", "Canal du Midi", "Vignobles du Languedoc"],
+      industries: ["Tourisme", "Viticulture", "Commerce", "Énergie éolienne"],
+      stats: "Cité de Carcassonne : 2 millions de visiteurs/an",
+      specificContext: "L'Aude abrite la Cité de Carcassonne, site le plus visité de France après Paris. La sécurisation des environs de la Cité, des domaines viticoles du Minervois et des résidences touristiques nécessite des caméras discrètes, une vidéosurveillance périmétrique et des alarmes connectées."
+    },
+    "53": {
+      title: "Mayenne agricole",
+      highlights: ["Laval préfecture", "Industries agroalimentaires", "Bocage mayennais"],
+      industries: ["Agroalimentaire", "Agriculture", "Logistique", "Industrie"],
+      stats: "1er département laitier de France",
+      specificContext: "La Mayenne est le premier département laitier français avec des coopératives et usines agroalimentaires majeures (Lactalis). Les sites de production, exploitations agricoles et entrepôts frigorifiques nécessitent une vidéosurveillance adaptée aux normes HACCP et des alarmes anti-intrusion."
+    },
+    "28": {
+      title: "Eure-et-Loir beauce",
+      highlights: ["Cathédrale de Chartres UNESCO", "Cosmetic Valley", "Beauce céréalière"],
+      industries: ["Cosmétique", "Agriculture", "Logistique", "Pharmacie"],
+      stats: "Cosmetic Valley : 800 entreprises, 70 000 emplois",
+      specificContext: "L'Eure-et-Loir est le cœur de la Cosmetic Valley, premier pôle mondial de la parfumerie-cosmétique. Les laboratoires de R&D, usines de production et entrepôts logistiques nécessitent des systèmes de sécurité conformes aux normes GMP : contrôle d'accès traçable et vidéosurveillance analytique."
+    },
+    "18": {
+      title: "Cher berrichon",
+      highlights: ["Bourges cathédrale UNESCO", "Industries MBDA", "Marais de Bourges"],
+      industries: ["Défense", "Armement", "Agroalimentaire", "Tourisme"],
+      stats: "MBDA : 3 000 emplois à Bourges",
+      specificContext: "Le Cher accueille le site MBDA de Bourges, leader européen des missiles. Les industries de défense et sites classés secret-défense nécessitent des systèmes de sécurité du plus haut niveau : contrôle d'accès biométrique multi-facteurs, vidéosurveillance certifiée et conformité aux normes militaires."
+    },
+    "41": {
+      title: "Loir-et-Cher ligérien",
+      highlights: ["Château de Chambord", "Zoo de Beauval", "Vignobles de Touraine"],
+      industries: ["Tourisme", "Viticulture", "Pharmacie", "Logistique"],
+      stats: "Chambord : 1 million de visiteurs/an",
+      specificContext: "Le Loir-et-Cher abrite Chambord et le ZooParc de Beauval, 2e zoo mondial. La sécurisation des sites touristiques majeurs, des châteaux et des domaines viticoles nécessite une vidéosurveillance événementielle avec gestion de flux importants et détection périmétrique nocturne."
+    },
+    "22": {
+      title: "Côtes-d'Armor armoricaines",
+      highlights: ["Côte de Granit Rose", "Saint-Brieuc préfecture", "Agroalimentaire"],
+      industries: ["Agroalimentaire", "Pêche", "Tourisme", "Agriculture"],
+      stats: "1er département breton en production porcine",
+      specificContext: "Les Côtes-d'Armor combinent industrie agroalimentaire majeure et tourisme côtier. Les usines de transformation alimentaire, les exploitations d'élevage et les stations balnéaires de la Côte de Granit Rose nécessitent des systèmes adaptés : vidéosurveillance hygiénique et alarmes résistantes au climat breton."
+    },
+    "62": {
+      title: "Pas-de-Calais portuaire",
+      highlights: ["Calais 1er port passagers d'Europe", "Côte d'Opale", "Bassin minier UNESCO"],
+      industries: ["Transport maritime", "Logistique", "Tourisme", "Commerce transfrontalier"],
+      stats: "Port de Calais : 10 millions de passagers/an",
+      specificContext: "Le Pas-de-Calais est le premier point de passage transmanche avec un trafic massif. Les infrastructures portuaires, zones logistiques du tunnel et résidences côtières nécessitent une vidéosurveillance haute capacité, un contrôle d'accès véhicules et des systèmes anti-intrusion renforcés."
+    },
+    "26": {
+      title: "Drôme provençale",
+      highlights: ["Lavande et Drôme Provençale", "Vallée du Rhône nucléaire", "Agriculture diversifiée"],
+      industries: ["Agriculture", "Nucléaire", "Tourisme", "Agroalimentaire"],
+      stats: "1er département bio de France",
+      specificContext: "La Drôme combine agriculture biologique pionnière et industrie nucléaire (Tricastin). Les exploitations agricoles bio, les sites nucléaires et les villages de charme drômois nécessitent des solutions de sécurité adaptées à chaque contexte : du certifié Seveso au discret patrimonial."
     }
   };
 

@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- ========================================== -->
   <!-- SITEMAP HD CONNECT                         -->
-  <!-- Dernière mise à jour: 06 Février 2026     -->
-  <!-- Total URLs: ~375 (155+ villes + arrondissements + services)  -->
+  <!-- Dernière mise à jour: 07 Février 2026     -->
+  <!-- Total URLs: ~450 (157+ villes + arrondissements + services + ville+service)  -->
   <!-- ==========================================  -->
 
   <!-- ========================================== -->
@@ -1096,4 +1096,52 @@
    <!-- Corse -->
    <url><loc>https://hdconnect.fr/villes/porto-vecchio</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
    <url><loc>https://hdconnect.fr/villes/calvi</loc><lastmod>2026-02-06</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+
+   <!-- ========================================== -->
+   <!-- PAGES VILLE+SERVICE - MÉTROPOLES v8.7     -->
+   <!-- ========================================== -->
+   <url><loc>https://hdconnect.fr/villes/rennes/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/rennes/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/toulon/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/toulon/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/reims/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/reims/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/grenoble/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/grenoble/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/montpellier/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/montpellier/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/dijon/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/dijon/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/angers/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/angers/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/le-havre/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/le-havre/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/rouen/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/rouen/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/caen/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/caen/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/nancy/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/nancy/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/clermont-ferrand/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/clermont-ferrand/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/perpignan/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/perpignan/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/nimes/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/nimes/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/tours/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/tours/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/orleans/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/orleans/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/avignon/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/avignon/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/cannes/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/cannes/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+   <url><loc>https://hdconnect.fr/villes/brest/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/brest/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/limoges/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/limoges/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/la-rochelle/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/la-rochelle/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/le-mans/videosurveillance</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://hdconnect.fr/villes/le-mans/alarme</loc><lastmod>2026-02-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
