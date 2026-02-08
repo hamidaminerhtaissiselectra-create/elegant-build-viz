@@ -74,13 +74,37 @@ const CityCoverageSection = ({ city }: CityCoverageSectionProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed max-w-3xl mx-auto"
+            className="text-white/90 text-lg md:text-xl mb-4 leading-relaxed max-w-3xl mx-auto"
           >
-            Nos techniciens interviennent dans tous les quartiers de {city.name} et communes environnantes
-            {city.nearbyTowns && city.nearbyTowns.length > 0 && (
-              <span> : <strong>{city.nearbyTowns.slice(0, 5).join(", ")}</strong></span>
-            )}.
+            Nos techniciens interviennent dans tous les quartiers de {city.name} et communes environnantes du {city.department} ({city.departmentCode}).
           </motion.p>
+          
+          {/* Affichage de toutes les villes secondaires */}
+          {city.nearbyTowns && city.nearbyTowns.length > 0 && (
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="mb-6"
+            >
+              <p className="text-white/80 text-sm mb-3">Communes rattachées et villes voisines :</p>
+              <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+                {city.nearbyTowns.map((town, index) => (
+                  <motion.span 
+                    key={town}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + index * 0.03 }}
+                    className="px-3 py-1 bg-white/15 backdrop-blur-sm rounded-full text-sm border border-white/20 text-white/90"
+                  >
+                    {town}
+                  </motion.span>
+                ))}
+              </div>
+            </motion.div>
+          )}
           
           {city.neighborhoods && city.neighborhoods.length > 0 && (
             <motion.div 
