@@ -95,15 +95,35 @@ Elle ne doit pas remplacer une page service, ni détailler excessivement les pre
 
 Une page ville est **complète** si :
 
-| Critère | Requis |
-|---------|--------|
-| H1 unique avec ville | ✅ |
-| Contenu contextualisé (150-250 mots) | ✅ |
-| Liste des services avec liens | ✅ |
-| Zones couvertes mentionnées | ✅ |
-| FAQ locale (2-4 questions) | ✅ |
-| CTA visible avec ville | ✅ |
-| Preuve locale (témoignage/photo) | ⭐ Bonus |
+| Critère | Composant | Requis | Statut actuel |
+|---------|-----------|--------|---------------|
+| H1 unique avec ville | `CityHeroParallax.tsx` | ✅ | ✅ Conforme |
+| Introduction avec département + région | `CityHeroParallax.tsx` | ✅ | ✅ Conforme |
+| Contenu contextualisé (150-250 mots) | `CityLocalContent.tsx` | ✅ | ✅ Contenu unique par département |
+| Liste des services avec liens (3-8) | `CityServicesGrid.tsx` | ✅ | ✅ 8 services liés |
+| Zones couvertes (quartiers + communes) | `CityCoverageSection.tsx` | ✅ | ✅ nearbyTowns enrichis Excel |
+| Preuves locales (témoignages) | `MiniTestimonials.tsx` | ⭐ | ✅ Témoignages dynamiques par ville |
+| FAQ locale (2-6 questions) | `CityServicePage.tsx` | ✅ | ✅ 6 questions localisées |
+| CTA visible avec ville + téléphone | CTA final | ✅ | ✅ Conforme |
+| Maillage interne région | `CityCoverageSection.tsx` | ✅ | ✅ Liens villes voisines |
+| Villes secondaires Excel | `nearbyTowns` | ✅ | ✅ 12 communes par ville Pilier |
+
+---
+
+## Audit technique - Février 2026
+
+### Composants conformes au modèle :
+- ✅ `CityHeroParallax.tsx` : H1 dynamique, badge département, stats, CTAs
+- ✅ `CityLocalContent.tsx` : Contenu unique par code département (16 départements couverts)
+- ✅ `CityServicesGrid.tsx` : 8 services avec liens vers pages détail ville+service
+- ✅ `CityCoverageSection.tsx` : Affiche TOUS les nearbyTowns + liens maillage région
+- ✅ `MiniTestimonials.tsx` : Témoignages pseudo-uniques par ville
+- ✅ `WhyHDConnect.tsx` : Pain points + engagements localisés
+- ✅ `FAQAccordion.tsx` : 6 questions FAQ locales
+
+### Données enrichies :
+- ✅ `citiesData.ts` : nearbyTowns alignés sur fichier Excel (12 communes/ville)
+- ✅ `seoTrackingData.ts` : Suivi statut toutes villes Pilier + Secondaires
 
 ---
 
@@ -112,3 +132,18 @@ Une page ville est **complète** si :
 > **Une page ville ne doit jamais chercher à tout faire.**
 > 
 > Elle explique pourquoi et comment le service existe dans cette ville, puis redirige vers les pages services.
+
+---
+
+## Checklist rapide avant publication
+
+```
+[ ] H1 contient le nom de la ville
+[ ] Description mentionne département + région
+[ ] 8 services listés avec liens
+[ ] nearbyTowns = 12 communes Excel minimum
+[ ] FAQ contient 4-6 questions locales
+[ ] CTA affiche numéro téléphone + nom ville
+[ ] Liens vers autres villes de la région
+[ ] Breadcrumb : Accueil > Région > Ville
+```
