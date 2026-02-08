@@ -24,7 +24,7 @@ export const citiesData: CityData[] = [
     population: "2,1 millions",
     description: "Atteignez le Top 3 Sécurité à Paris en 2025-2026. HD Connect, expert certifié NF&A2P, installe des systèmes de vidéosurveillance IA 4K et des alarmes intelligentes. Audit gratuit, intervention 4h urgence dans tous les arrondissements.",
     neighborhoods: ["Le Marais", "Montmartre", "Saint-Germain", "Bastille", "Belleville", "Auteuil", "Passy", "Nation", "République", "Opéra", "Châtelet", "La Défense"],
-    nearbyTowns: ["Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret", "Vincennes", "Saint-Denis", "Montreuil"]
+    nearbyTowns: ["Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret", "Vincennes", "Saint-Denis", "Montreuil", "Issy-les-Moulineaux", "Saint-Cloud", "Vanves", "Malakoff", "Suresnes", "Puteaux"]
   },
   {
     name: "Créteil",
@@ -290,7 +290,7 @@ export const citiesData: CityData[] = [
     population: "522 000",
     description: "Sécurité 2025-2026 à Lyon : HD Connect vous propulse au Top 3. Installation de vidéosurveillance IA 4K, contrôle d'accès biométrique et alarmes APSAD. Expertise reconnue en Auvergne-Rhône-Alpes. Devis gratuit rapidement.",
     neighborhoods: ["Presqu'île", "Vieux Lyon", "Part-Dieu", "Croix-Rousse", "Confluence", "Gerland", "Villeurbanne"],
-    nearbyTowns: ["Villeurbanne", "Vénissieux", "Caluire-et-Cuire", "Saint-Priest", "Vaulx-en-Velin", "Bron"]
+    nearbyTowns: ["La Mulatière", "Sainte-Foy-lès-Lyon", "Villeurbanne", "Caluire-et-Cuire", "Écully", "Oullins-Pierre-Bénite", "Champagne-au-Mont-d'Or", "Bron", "Tassin-la-Demi-Lune", "Saint-Fons", "Francheville", "Collonges-au-Mont-d'Or"]
   },
   {
     name: "Grenoble",
@@ -302,7 +302,7 @@ export const citiesData: CityData[] = [
     population: "158 000",
     description: "Expert sécurité à Grenoble. HD Connect installe vidéosurveillance, alarmes et contrôle d'accès pour entreprises tech et résidences. Couverture Isère complète.",
     neighborhoods: ["Centre-Ville", "Europole", "Berriat", "Eaux-Claires", "Île Verte", "Bastille"],
-    nearbyTowns: ["Échirolles", "Saint-Martin-d'Hères", "Fontaine", "Meylan", "Seyssinet-Pariset"]
+    nearbyTowns: ["Fontaine", "La Tronche", "Seyssinet-Pariset", "Saint-Martin-le-Vinoux", "Saint-Martin-d'Hères", "Eybens", "Échirolles", "Seyssins", "Corenc", "Sassenage", "Saint-Égrève", "Gières"]
   },
   {
     name: "Saint-Étienne",
@@ -314,7 +314,7 @@ export const citiesData: CityData[] = [
     population: "173 000",
     description: "HD Connect à Saint-Étienne : sécurité électronique pour industries et commerces. Vidéosurveillance, alarmes certifiées, maintenance 24/7.",
     neighborhoods: ["Centre-Ville", "Châteaucreux", "Bellevue", "Montreynaud", "Jacquard"],
-    nearbyTowns: ["Saint-Priest-en-Jarez", "Saint-Jean-Bonnefonds", "Villars", "La Talaudière", "Roche-la-Molière"]
+    nearbyTowns: ["La Ricamarie", "Roche-la-Molière", "Saint-Genest-Lerpt", "Le Chambon-Feugerolles", "Villars", "Saint-Priest-en-Jarez", "Saint-Jean-Bonnefonds", "La Talaudière", "Firminy", "Unieux", "La Fouillouse", "Fraisses"]
   },
   // ===== PROVENCE-ALPES-CÔTE D'AZUR =====
   {
@@ -327,7 +327,7 @@ export const citiesData: CityData[] = [
     population: "870 000",
     description: "HD Connect, votre partenaire Top 3 Sécurité à Marseille. Installation de systèmes d'alarme NF&A2P et vidéosurveillance IA. Protection optimale pour résidences et entreprises en PACA. Intervention rapide et garantie 5 ans.",
     neighborhoods: ["Vieux-Port", "Joliette", "Prado", "Castellane", "La Valentine", "Les Catalans", "Endoume"],
-    nearbyTowns: ["Aix-en-Provence", "Aubagne", "Martigues", "Vitrolles", "Marignane", "La Ciotat"]
+    nearbyTowns: ["La Penne-sur-Huveaune", "Plan-de-Cuques", "Septèmes-les-Vallons", "Le Rove", "Carnoux-en-Provence", "Cassis", "Simiane-Collongue", "Gignac-la-Nerthe", "Mimet", "Ensuès-la-Redonne", "Saint-Victoret", "Saint-Savournin"]
   },
   {
     name: "Nice",
@@ -339,7 +339,7 @@ export const citiesData: CityData[] = [
     population: "342 000",
     description: "Expert sécurité sur la Côte d'Azur. HD Connect Nice installe vos systèmes de vidéosurveillance, alarmes et domotique. Protection optimale pour villas, appartements et commerces.",
     neighborhoods: ["Vieux-Nice", "Promenade des Anglais", "Cimiez", "Libération", "Port", "Saint-Roch"],
-    nearbyTowns: ["Cannes", "Antibes", "Cagnes-sur-Mer", "Grasse", "Saint-Laurent-du-Var", "Menton"]
+    nearbyTowns: ["Saint-André-de-la-Roche", "Villefranche-sur-Mer", "Saint-Laurent-du-Var", "Beaulieu-sur-Mer", "Colomars", "La Gaude", "La Trinité", "Cagnes-sur-Mer", "Drap", "Tourrette-Levens", "Gattières", "Saint-Jeannet"]
   },
   {
     name: "Cannes",
@@ -363,7 +363,7 @@ export const citiesData: CityData[] = [
     population: "145 000",
     description: "HD Connect Aix-en-Provence : installation sécurité pour bastides, commerces et entreprises. Vidéosurveillance, alarmes, domotique provençale.",
     neighborhoods: ["Centre Historique", "Mazarin", "Jas de Bouffan", "Pont de l'Arc", "Les Milles"],
-    nearbyTowns: ["Marseille", "Gardanne", "Vitrolles", "Venelles", "Meyreuil", "Bouc-Bel-Air"]
+    nearbyTowns: ["Éguilles", "Ventabren", "Cabriès", "Bouc-Bel-Air", "Meyreuil", "Saint-Cannat", "Coudoux", "Venelles", "Velaux", "Gardanne", "Rognac", "Le Puy-Sainte-Réparade"]
   },
   // ===== NOUVELLE-AQUITAINE =====
   {
@@ -376,7 +376,7 @@ export const citiesData: CityData[] = [
     population: "260 000",
     description: "HD Connect Bordeaux : solutions de sécurité complètes. Vidéosurveillance, alarmes, contrôle d'accès pour maisons, commerces et entreprises. Intervention rapide en Gironde.",
     neighborhoods: ["Chartrons", "Saint-Pierre", "Bacalan", "Bastide", "Caudéran", "Mériadeck"],
-    nearbyTowns: ["Mérignac", "Pessac", "Talence", "Bègles", "Villenave-d'Ornon", "Gradignan"]
+    nearbyTowns: ["Le Bouscat", "Bruges", "Cenon", "Eysines", "Lormont", "Floirac", "Talence", "Bassens", "Blanquefort", "Bègles", "Artigues-près-Bordeaux", "Carbon-Blanc"]
   },
   {
     name: "La Rochelle",
@@ -388,7 +388,7 @@ export const citiesData: CityData[] = [
     population: "77 000",
     description: "Installation sécurité La Rochelle par HD Connect. Protection résidences côtières, commerces du port. Vidéosurveillance, alarmes adaptées environnement marin.",
     neighborhoods: ["Vieux Port", "Les Minimes", "La Pallice", "Saint-Nicolas", "Tasdon"],
-    nearbyTowns: ["Aytré", "Lagord", "Puilboreau", "Périgny", "Châtelaillon-Plage"]
+    nearbyTowns: ["Lagord", "L'Houmeau", "Nieul-sur-Mer", "Puilboreau", "Aytré", "Périgny", "Angoulins", "Marsilly", "Saint-Xandre", "Dompierre-sur-Mer", "La Flotte", "Sainte-Marie-de-Ré"]
   },
   // ===== OCCITANIE =====
   {
@@ -401,7 +401,7 @@ export const citiesData: CityData[] = [
     population: "493 000",
     description: "Installation sécurité à Toulouse par HD Connect. Caméras HD, alarmes connectées, domotique intelligente. Expert en protection des biens pour particuliers et professionnels toulousains.",
     neighborhoods: ["Capitole", "Saint-Cyprien", "Compans-Caffarelli", "Minimes", "Rangueil", "Blagnac"],
-    nearbyTowns: ["Blagnac", "Colomiers", "Tournefeuille", "Muret", "Balma", "L'Union"]
+    nearbyTowns: ["Blagnac", "Colomiers", "Tournefeuille", "Balma", "L'Union", "Cugnaux", "Ramonville-Saint-Agne", "Saint-Orens-de-Gameville", "Portet-sur-Garonne", "Muret", "Plaisance-du-Touch", "Castanet-Tolosan"]
   },
   {
     name: "Montpellier",
@@ -413,7 +413,7 @@ export const citiesData: CityData[] = [
     population: "295 000",
     description: "HD Connect Montpellier : expert sécurité électronique. Vidéosurveillance, alarmes, contrôle d'accès pour résidences, commerces et entreprises héraultaises.",
     neighborhoods: ["Écusson", "Antigone", "Port Marianne", "Les Arceaux", "Richter", "Odysseum"],
-    nearbyTowns: ["Castelnau-le-Lez", "Lattes", "Pérols", "Mauguio", "Saint-Jean-de-Védas"]
+    nearbyTowns: ["Castelnau-le-Lez", "Lattes", "Mauguio", "Saint-Jean-de-Védas", "Juvignac", "Clapiers", "Le Crès", "Jacou", "Saint-Gély-du-Fesc", "Grabels", "Vendargues", "Pérols"]
   },
   // ===== HAUTS-DE-FRANCE =====
   {
@@ -426,7 +426,7 @@ export const citiesData: CityData[] = [
     population: "236 000",
     description: "Expert sécurité à Lille. HD Connect installe vos systèmes de vidéosurveillance, alarmes et contrôle d'accès. Protection optimale pour résidences et locaux professionnels dans le Nord. **Intervention Rapide** possible.",
     neighborhoods: ["Vieux-Lille", "Wazemmes", "Vauban", "Centre", "Bois-Blancs", "Fives"],
-    nearbyTowns: ["Roubaix", "Tourcoing", "Villeneuve-d'Ascq", "Marcq-en-Barœul", "Lambersart", "Wasquehal"]
+    nearbyTowns: ["Lambersart", "La Madeleine", "Loos", "Saint-André-lez-Lille", "Sequedin", "Faches-Thumesnil", "Ronchin", "Mons-en-Barœul", "Marquette-lez-Lille", "Wattignies", "Haubourdin", "Emmerin"]
   },
   {
     name: "Amiens",
@@ -451,7 +451,7 @@ export const citiesData: CityData[] = [
     population: "287 000",
     description: "HD Connect Strasbourg : solutions de sécurité sur mesure. Caméras de surveillance, systèmes d'alarme certifiés, contrôle d'accès. Intervention dans toute l'Alsace.",
     neighborhoods: ["Grande Île", "Neudorf", "Cronenbourg", "Hautepierre", "Koenigshoffen", "Robertsau"],
-    nearbyTowns: ["Illkirch-Graffenstaden", "Schiltigheim", "Lingolsheim", "Bischheim", "Hoenheim", "Ostwald"]
+    nearbyTowns: ["Ostwald", "Schiltigheim", "Bischheim", "Illkirch-Graffenstaden", "Eckbolsheim", "Lingolsheim", "Hœnheim", "Oberhausbergen", "Souffelweyersheim", "Wolfisheim", "Holtzheim", "Mundolsheim"]
   },
   {
     name: "Nancy",
@@ -488,7 +488,7 @@ export const citiesData: CityData[] = [
     population: "320 000",
     description: "HD Connect à Nantes : installation et maintenance de systèmes de sécurité. Vidéosurveillance, alarmes anti-intrusion, domotique. Devis gratuit pour particuliers et professionnels.",
     neighborhoods: ["Centre-Ville", "Île de Nantes", "Doulon", "Chantenay", "Erdre", "Zola"],
-    nearbyTowns: ["Saint-Herblain", "Rezé", "Orvault", "Saint-Nazaire", "Carquefou", "Vertou"]
+    nearbyTowns: ["Saint-Herblain", "Saint-Sébastien-sur-Loire", "Orvault", "Sainte-Luce-sur-Loire", "Rezé", "La Chapelle-sur-Erdre", "Basse-Goulaine", "Bouguenais", "Indre", "Carquefou", "Treillières", "Sautron"]
   },
   {
     name: "Angers",
@@ -513,7 +513,7 @@ export const citiesData: CityData[] = [
     population: "222 000",
     description: "HD Connect Rennes : expert sécurité électronique Bretagne. Vidéosurveillance, alarmes, contrôle d'accès pour entreprises tech et particuliers.",
     neighborhoods: ["Centre Historique", "Villejean", "Beaulieu", "Saint-Martin", "Thabor"],
-    nearbyTowns: ["Cesson-Sévigné", "Saint-Jacques-de-la-Lande", "Bruz", "Chantepie", "Pacé"]
+    nearbyTowns: ["Vezin-le-Coquet", "Montgermont", "Saint-Grégoire", "Saint-Jacques-de-la-Lande", "Cesson-Sévigné", "Chantepie", "Noyal-Châtillon-sur-Seiche", "Pacé", "Le Rheu", "Betton", "La Chapelle-des-Fougeretz", "Chartres-de-Bretagne"]
   },
   {
     name: "Brest",
@@ -525,7 +525,7 @@ export const citiesData: CityData[] = [
     population: "139 000",
     description: "Installation sécurité Brest par HD Connect. Protection sites portuaires, entreprises, résidences. Vidéosurveillance adaptée environnement marin.",
     neighborhoods: ["Centre-Ville", "Recouvrance", "Saint-Marc", "Lambézellec", "Saint-Pierre"],
-    nearbyTowns: ["Guipavas", "Plouzané", "Le Relecq-Kerhuon", "Plougastel-Daoulas", "Gouesnou"]
+    nearbyTowns: ["Bohars", "Guilers", "Gouesnou", "Le Relecq-Kerhuon", "Guipavas", "Plouzané", "Milizac-Guipronvel", "Saint-Renan", "Bourg-Blanc", "Plougastel-Daoulas", "Plabennec", "Locmaria-Plouzané"]
   },
   // ===== NORMANDIE =====
   {
@@ -538,7 +538,7 @@ export const citiesData: CityData[] = [
     population: "113 000",
     description: "HD Connect Rouen : sécurité électronique Seine-Maritime. Vidéosurveillance, alarmes, contrôle d'accès pour industries et commerces normands.",
     neighborhoods: ["Centre Historique", "Saint-Sever", "Grammont", "Martainville", "Mont-Saint-Aignan"],
-    nearbyTowns: ["Mont-Saint-Aignan", "Bois-Guillaume", "Sotteville-lès-Rouen", "Petit-Quevilly", "Grand-Quevilly"]
+    nearbyTowns: ["Mont-Saint-Aignan", "Le Petit-Quevilly", "Sotteville-lès-Rouen", "Bonsecours", "Bihorel", "Bois-Guillaume", "Déville-lès-Rouen", "Darnétal", "Amfreville-la-Mi-Voie", "Le Grand-Quevilly", "Le Mesnil-Esnard", "Saint-Léger-du-Bourg-Denis"]
   },
   {
     name: "Le Havre",
@@ -550,7 +550,7 @@ export const citiesData: CityData[] = [
     population: "170 000",
     description: "Expert sécurité Le Havre. HD Connect protège zones portuaires, entrepôts, commerces. Vidéosurveillance industrielle, alarmes certifiées.",
     neighborhoods: ["Centre Reconstruit", "Sainte-Adresse", "Sanvic", "Caucriauville", "Danton"],
-    nearbyTowns: ["Sainte-Adresse", "Harfleur", "Gonfreville-l'Orcher", "Montivilliers", "Octeville-sur-Mer"]
+    nearbyTowns: ["Sainte-Adresse", "Harfleur", "Gonfreville-l'Orcher", "Montivilliers", "Octeville-sur-Mer", "Honfleur", "Trouville-sur-Mer", "Touques", "Deauville", "Saint-Romain-de-Colbosc", "Beuzeville", "Pont-l'Évêque"]
   },
   // ===== BOURGOGNE-FRANCHE-COMTÉ =====
   {
@@ -563,7 +563,7 @@ export const citiesData: CityData[] = [
     population: "158 000",
     description: "HD Connect Dijon : installation sécurité Bourgogne. Vidéosurveillance, alarmes pour domaines viticoles, commerces, résidences.",
     neighborhoods: ["Centre Historique", "Toison d'Or", "Fontaine-d'Ouche", "Grésilles", "Montchapet"],
-    nearbyTowns: ["Chenôve", "Talant", "Quetigny", "Chevigny-Saint-Sauveur", "Longvic"]
+    nearbyTowns: ["Fontaine-lès-Dijon", "Talant", "Saint-Apollinaire", "Chenôve", "Longvic", "Quetigny", "Marsannay-la-Côte", "Chevigny-Saint-Sauveur", "Neuilly-Crimolois", "Genlis", "Nuits-Saint-Georges", "Is-sur-Tille"]
   },
   // ===== CENTRE-VAL DE LOIRE =====
   {
@@ -576,7 +576,7 @@ export const citiesData: CityData[] = [
     population: "116 000",
     description: "Sécurité électronique Orléans par HD Connect. Vidéosurveillance, alarmes, contrôle d'accès pour entreprises logistiques et particuliers.",
     neighborhoods: ["Centre-Ville", "Source", "Argonne", "Saint-Marceau", "Madeleine"],
-    nearbyTowns: ["Olivet", "Saint-Jean-de-Braye", "Fleury-les-Aubrais", "Saran", "Saint-Jean-de-la-Ruelle"]
+    nearbyTowns: ["Saint-Jean-le-Blanc", "Olivet", "Saint-Denis-en-Val", "Saint-Jean-de-la-Ruelle", "Saint-Pryvé-Saint-Mesmin", "La Chapelle-Saint-Mesmin", "Saint-Hilaire-Saint-Mesmin", "Saint-Jean-de-Braye", "Saint-Cyr-en-Val", "Fleury-les-Aubrais", "Semoy", "Saran"]
   },
   {
     name: "Tours",
@@ -588,7 +588,7 @@ export const citiesData: CityData[] = [
     population: "136 000",
     description: "HD Connect Tours : expert sécurité Val de Loire. Protection châteaux, résidences, commerces. Vidéosurveillance discrète, alarmes.",
     neighborhoods: ["Vieux Tours", "Grammont", "Sanitas", "Deux-Lions", "Rabelais"],
-    nearbyTowns: ["Saint-Cyr-sur-Loire", "Saint-Pierre-des-Corps", "Joué-lès-Tours", "La Riche", "Chambray-lès-Tours"]
+    nearbyTowns: ["Saint-Pierre-des-Corps", "Saint-Cyr-sur-Loire", "La Riche", "Saint-Avertin", "La Ville-aux-Dames", "Rochecorbon", "Notre-Dame-d'Oé", "Joué-lès-Tours", "Chambray-lès-Tours", "Fondettes", "La Membrolle-sur-Choisille", "Chanceaux-sur-Choisille"]
   },
   // ===== NOUVELLES VILLES - EXTENSION NATIONALE =====
   // HAUTS-DE-FRANCE
