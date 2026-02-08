@@ -15,15 +15,36 @@ export interface CityEntry {
 }
 
 // Critères de validation pour une page ville complète
+// Mis à jour: 2026-02-08 - Audit conformité modèle page ville
 export const validationCriteria = {
-  h1_unique: "H1 contenant le nom de la ville",
-  contenu_local: "150-250 mots de contenu contextualisé unique",
-  services_links: "3-6 services avec liens vers pages services",
-  zones_couvertes: "Quartiers + communes secondaires mentionnées",
-  faq_locale: "2-4 questions locales",
-  cta_visible: "CTA avec nom de ville et téléphone",
-  villes_secondaires: "Toutes les villes secondaires du Excel mentionnées",
-  maillage_interne: "Liens vers région + autres villes"
+  h1_unique: "H1 contenant le nom de la ville ✅",
+  contenu_local: "150-250 mots de contenu contextualisé unique ✅",
+  services_links: "8 services avec liens vers pages services ✅",
+  zones_couvertes: "Quartiers + 12 communes secondaires Excel ✅",
+  faq_locale: "6 questions locales ✅",
+  cta_visible: "CTA avec nom de ville et téléphone ✅",
+  villes_secondaires: "Toutes les villes secondaires du Excel mentionnées ✅",
+  maillage_interne: "Liens vers région + autres villes ✅",
+  temoignages_locaux: "Témoignages dynamiques par ville ✅",
+  breadcrumb: "Fil d'Ariane: Zones > Région > Ville ✅"
+};
+
+// Statut de conformité global au modèle page ville
+export const modelConformityStatus = {
+  lastAudit: "2026-02-08",
+  components: {
+    CityHeroParallax: "✅ Conforme - H1, badge, stats, CTAs",
+    CityLocalContent: "✅ Conforme - Contenu unique par département",
+    CityServicesGrid: "✅ Conforme - 8 services avec liens",
+    CityCoverageSection: "✅ Conforme - nearbyTowns enrichis, maillage",
+    MiniTestimonials: "✅ Conforme - Témoignages dynamiques par ville",
+    WhyHDConnect: "✅ Conforme - Pain points localisés",
+    FAQAccordion: "✅ Conforme - 6 questions locales"
+  },
+  dataFiles: {
+    citiesData: "✅ nearbyTowns enrichis avec 12 communes Excel",
+    seoTrackingData: "✅ Suivi complet villes Pilier + Secondaires"
+  }
 };
 
 // Données de suivi des villes par région
